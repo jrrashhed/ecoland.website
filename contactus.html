@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ECOLAND | Contact Us</title>
+  <meta name="description" content="Get in touch with ECOLAND for certified Egyptian agricultural exports." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- Header -->
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="logo-with-name">
+      <a href="index.html" class="logo">
+        <img src="assets/onlypalm.png" alt="ECOLAND" />
+      </a>
+      <span class="logo-text">ECOLAND</span>
+    </div>
+
+    <nav class="nav" aria-label="Primary">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="sr-only">Toggle menu</span>
+      </button>
+      <ul id="primary-menu" class="nav-list">
+        <li><a href="index.html" class="active">Home</a></li>
+
+        <!-- Dropdown Products -->
+        <li class="dropdown">
+          <a href="products.html" class="nav-link">Products <span class="arrow">▾</span></a>
+          <ul class="dropdown-menu">
+            
+            <!-- Fresh Vegetables -->
+            <li class="dropdown-sub">
+              <a href="products.html#fresh-vegetables">Fresh vegetables ▸</a>
+              <ul class="dropdown-submenu">
+                <li><a href="products.html#potatoes">Potatoes</a></li>
+                <li><a href="products.html#carrots">Carrots</a></li>
+                <li><a href="products.html#onions">Onions</a></li>
+              </ul>
+            </li>
+
+            <!-- Citrus -->
+            <li class="dropdown-sub">
+              <a href="products.html#citrus">Citrus ▸</a>
+              <ul class="dropdown-submenu">
+                <li><a href="products.html#oranges">Oranges</a></li>
+                <li><a href="products.html#lemons">Lemons</a></li>
+              </ul>
+            </li>
+
+            <!-- Fresh Fruits -->
+            <li class="dropdown-sub">
+              <a href="products.html#fresh-fruits">Fresh fruits ▸</a>
+              <ul class="dropdown-submenu">
+                <li><a href="products.html#grapes">Grapes</a></li>
+                <li><a href="products.html#pomegranates">Pomegranates</a></li>
+              </ul>
+            </li>
+
+            <!-- Frozen Vegetables -->
+            <li class="dropdown-sub">
+              <a href="products.html#frozen-vegetables">Frozen vegetables ▸</a>
+              <ul class="dropdown-submenu">
+                <li><a href="products.html#peas">Peas</a></li>
+                <li><a href="products.html#greenbeans">Green beans</a></li>
+              </ul>
+            </li>
+
+            <!-- Frozen Fruits -->
+            <li class="dropdown-sub">
+              <a href="products.html#frozen-fruits">Frozen fruits ▸</a>
+              <ul class="dropdown-submenu">
+                <li><a href="products.html#strawberries">Strawberries</a></li>
+                <li><a href="products.html#mango">Mango</a></li>
+              </ul>
+            </li>
+
+          </ul>
+        </li>
+
+        <li><a href="index.html#process">Process</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+        <li><a href="index.html#contact" class="btn"><span>Get a quote</span></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <!-- Hero Section -->
+  <section class="hero hero-contact-banner">
+    <div class="hero-slides">
+      <img src="assets/contact-banner.jpg" alt="Contact Banner" class="active">
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <h1>Contact Us</h1>
+      <!-- <p>We’re here to support your import needs with certified Egyptian agricultural exports.</p> -->
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section contact">
+    <div class="container contact-inner">
+      
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <h2>Get in Touch</h2>
+        <ul class="contact-points">
+          <li>📍 <strong>Address:</strong> ECOLAND Export Company, Alexandria, Egypt</li>
+          <li>📞 <strong>Phone:</strong> +20 100 123 4567</li>
+          <li>✉️ <strong>Email:</strong> info@ecoland-export.com</li>
+          <li>🌐 <strong>Website:</strong> www.ecoland-export.com</li>
+        </ul>
+        <p>
+          We specialize in exporting fresh Egyptian produce including citrus, potatoes, onions, carrots, grapes, and more.
+          Trusted by importers worldwide for quality, consistency, and reliable logistics.
+        </p>
+
+        <!-- Map -->
+        <div class="map-container">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!...خريطة شركتك هنا..."
+            width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form">
+        <h2>Request a Quote</h2>
+        <form>
+          <div class="form-row">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Your name" required>
+          </div>
+          <div class="form-row">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="Your email" required>
+          </div>
+          <div class="form-row">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" placeholder="Your phone number">
+          </div>
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" rows="5" placeholder="Tell us what products you’re interested in..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-col">
+        <h3>About ECOLAND</h3>
+        <p>GlobalG.A.P and ISO-certified Egyptian exporter of citrus, potatoes, carrots, onions, and more.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Navigation</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="certificates.html">Certificates</a></li>
+          <li><a href="process.html">Process</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <ul class="footer-links">
+          <li><a href="contactus.html">Get a quote</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 ECOLAND. All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>
