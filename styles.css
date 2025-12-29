@@ -430,41 +430,6 @@ input:focus,textarea:focus{outline:none;border-color:#9bd4b2;box-shadow:0 0 0 3p
 }
 
 
-/* Responsive */
-@media (max-width: 1024px) {
-  .hero-inner,
-  .about-inner,
-  .contact-inner {
-    display: block; /* بدل grid */
-  }
-}
-
-@media (max-width: 720px) {
-  .story-box,
-  .our-story-box,
-  .contact-inner {
-    flex-direction: column;
-    gap: 16px;
-  }
-
-  .story-image,
-  .our-story-image {
-    text-align: center;
-    margin-top: 16px;
-  }
-
-  .contact-info,
-  .contact-form,
-  .contact-story {
-    width: 100%;
-    margin-bottom: 24px;
-  }
-}
-
-@media (max-width:480px){
-  .card-grid{grid-template-columns:1fr}
-  .metrics-inner{grid-template-columns:1fr}
-}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
 .hero-slider {
   position: relative;
@@ -637,12 +602,6 @@ input:focus,textarea:focus{outline:none;border-color:#9bd4b2;box-shadow:0 0 0 3p
 }
 
 /* الموبايل */
-@media (max-width: 900px) {
-  .contact-inner {
-    grid-template-columns: 1fr;
-    padding: 25px;
-  }
-}
 
 .scroll-offset {
   scroll-margin-top: 100px; /* يبعد السيكشن عن الهيدر */
@@ -725,9 +684,7 @@ input:focus,textarea:focus{outline:none;border-color:#9bd4b2;box-shadow:0 0 0 3p
 }
 
 
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
+
 
 .nav-link {
   display: inline-flex;
@@ -771,10 +728,7 @@ input:focus,textarea:focus{outline:none;border-color:#9bd4b2;box-shadow:0 0 0 3p
   color: var(--brand);
 }
 
-/* إظهار القائمة الفرعية عند المرور */
-.dropdown-sub:hover .dropdown-submenu {
-  display: block;
-}
+
 /* إزالة الخط تحت كل روابط المنيو */
 .dropdown-menu a,
 .dropdown-sub > a,
@@ -875,5 +829,512 @@ input:focus,textarea:focus{outline:none;border-color:#9bd4b2;box-shadow:0 0 0 3p
   background-color: transparent; /* يشيل أي خلفية بيضا من النص نفسه */
 }
 
+/* =========================
+   MOBILE FIXES
+   ========================= */
+
+@media (max-width: 768px) {
+
+  /* ===== General ===== */
+  body {
+    padding-top: 64px; /* عشان الهيدر fixed */
+  }
+
+  h1, h2, h3, p {
+    word-break: break-word;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  /* ===== Header ===== */
+  .header-inner {
+    height: 64px;
+  }
+
+  .logo img {
+    height: 44px;
+  }
+
+  .logo-text {
+    font-size: 16px;
+    transform: none;
+  }
+
+  /* ===== Mobile Nav ===== */
+  .nav-toggle {
+    display: block;
+    z-index: 200;
+  }
+
+  .nav-list {
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    gap: 0;
+    padding: 12px 0;
+    display: none;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+
+  .nav-list.show {
+    display: flex;
+  }
+
+  .nav-list li {
+    width: 100%;
+  }
+
+  .nav-list a {
+    width: 100%;
+    padding: 14px 20px;
+    color: #28431f;
+    border-bottom: 1px solid #eee;
+  }
+
+  /* ===== Dropdown ===== */
+  .dropdown-menu,
+  .dropdown-submenu {
+    position: static;
+    box-shadow: none;
+    border: none;
+    display: none;
+  }
+
+  .dropdown:hover .dropdown-menu,
+  .dropdown-sub:hover .dropdown-submenu {
+    display: block;
+  }
+
+  .dropdown-menu li a {
+    padding-left: 30px;
+  }
+
+  .dropdown-submenu li a {
+    padding-left: 45px;
+  }
+
+  /* ===== Hero Section ===== */
+  .hero-slider {
+    height: auto;
+    padding: 60px 0;
+  }
+
+  .hero-content {
+    padding: 0 10px;
+    text-align: left;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .hero-content p {
+    font-size: 15px;
+  }
+
+  /* ===== Sections ===== */
+  .section {
+    padding: 40px 0;
+  }
+
+  .section h2 {
+    font-size: 22px;
+  }
+
+  /* ===== Grids ===== */
+  .hero-inner,
+  .about-inner,
+  .contact-inner {
+    display: block;
+  }
+
+  .card-grid,
+  .cert-grid,
+  .adv-grid,
+  .process-steps,
+  .metrics-inner {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* ===== Buttons ===== */
+  .btn-primary {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* ===== Footer ===== */
+  .footer-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+}
+/* ===== Mobile Menu Fix ===== */
+@media (max-width: 768px) {
+
+  .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: #fff;
+  }
+
+  .nav-list {
+    z-index: 999;
+  }
+
+  /* خلي المنيو فوق أي حاجة */
+  .nav-list.show {
+    display: flex;
+  }
+
+  /* امنع الهيرو يغطي المنيو */
+  .hero,
+  .hero-slider {
+    position: relative;
+    z-index: 1;
+  }
+}
+@media (max-width: 768px) {
+  .dropdown-menu {
+    display: none;
+  }
+
+  .dropdown-menu.show {
+    display: block;
+  }
+}
+/* ===== Fix mobile dropdown visibility ===== */
+@media (max-width: 768px) {
+
+  .nav-list.show {
+    display: flex !important;
+    position: absolute;
+    top: 64px; 
+    left: 0;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    z-index: 9999;
+  }
+
+  /* Hide by default */
+  .dropdown-menu {
+    display: none;
+    flex-direction: column;
+  }
+
+  /* Show when toggled */
+  .dropdown-menu.show {
+    display: flex;
+  }
+
+  /* Give space for submenu */
+  .dropdown-menu li a {
+    padding-left: 30px;
+  }
+}
+@media (max-width: 768px) {
+
+  /* Main mobile menu */
+  .nav-list {
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    padding: 16px;
+    max-height: calc(100vh - 64px);
+    overflow-y: auto;
+    z-index: 9999;
+  }
+
+  .nav-list li {
+    width: 100%;
+  }
+
+  .nav-list a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 10px;
+    width: 100%;
+  }
+
+  /* ALL dropdowns become normal flow */
+  .dropdown-menu {
+    position: static;
+    display: none;
+    background: transparent;
+    box-shadow: none;
+    padding-left: 16px;
+  }
+
+  .dropdown-menu.show {
+    display: block;
+  }
+
+  /* Sub-sub menus */
+  .dropdown-menu .dropdown-menu {
+    padding-left: 20px;
+  }
+
+  /* arrows */
+  .arrow {
+    font-size: 12px;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===== Product Tabs Mobile Layout ===== */
+@media (max-width: 768px) {
+
+  .product-tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .product-tabs li {
+    width: 100%;
+    text-align: center;
+    padding: 12px 16px;
+    border-radius: 6px;
+  }
+}
+@media (max-width: 768px) {
+
+  .product-tabs li {
+    border: 1px solid #dfe8d9;
+    background: #f6fbf4;
+  }
+
+  .product-tabs li.active {
+    background: #28431f;
+    color: #fff;
+  }
+}
+/* ===== Mobile Dropdown FIX (Stacked) ===== */
+@media (max-width: 768px) {
+
+  /* Products submenu */
+  .dropdown-menu {
+    position: static !important;
+    width: 100%;
+    display: none;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    margin-top: 8px;
+  }
+
+  .dropdown-menu.show {
+    display: block;
+  }
+
+  .dropdown-menu li {
+    width: 100%;
+  }
+
+  .dropdown-menu li a {
+    width: 100%;
+    padding: 12px 20px;
+    padding-left: 36px; /* indent */
+    display: block;
+    font-size: 14px;
+  }
+
+  /* remove side-by-side behavior */
+  .nav-list {
+    flex-direction: column;
+  }
+}
+/* ===== MOBILE: FORCE ALL DROPDOWNS TO STACK ===== */
+@media (max-width: 768px) {
+
+  /* main menu */
+  .nav-list {
+    flex-direction: column !important;
+  }
+
+  /* ALL dropdown levels */
+  .dropdown-menu,
+  .dropdown-submenu {
+    position: static !important;
+    width: 100% !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+    display: none;
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0;
+    margin: 6px 0 0 0;
+  }
+
+  /* show when active */
+  .dropdown-menu.show,
+  .dropdown-submenu.show {
+    display: block;
+  }
+
+  /* dropdown items */
+  .dropdown-menu li,
+  .dropdown-submenu li {
+    width: 100%;
+  }
+
+  /* level 2 */
+  .dropdown-menu li a {
+    padding: 12px 20px 12px 36px;
+    display: block;
+    font-size: 14px;
+  }
+
+  /* level 3 */
+  .dropdown-submenu li a {
+    padding: 12px 20px 12px 56px;
+    font-size: 13px;
+  }
+}
 
 
+
+
+
+
+/* =========================
+   CLEAN MOBILE MENU FIX
+   ========================= */
+@media (max-width: 768px) {
+
+  body {
+    padding-top: 64px;
+  }
+
+  .nav-toggle {
+    display: block;
+    z-index: 200;
+  }
+
+  /* Main mobile menu */
+  .nav-list {
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    display: none;
+    max-height: calc(100vh - 64px);
+    overflow-y: auto;
+    z-index: 9999;
+  }
+
+  .nav-list.show {
+    display: flex;
+  }
+
+  .nav-list li {
+    width: 100%;
+    border-bottom: 1px solid #eee;
+  }
+
+  .nav-list a {
+    width: 100%;
+    padding: 14px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #28431f;
+  }
+
+  /* Dropdowns - stacked */
+  .dropdown-menu,
+  .dropdown-submenu {
+    position: static !important;
+    display: none;
+    background: #f9f9f9;
+    box-shadow: none !important;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .dropdown-menu.show,
+  .dropdown-submenu.show {
+    display: block;
+  }
+
+  .dropdown-menu li a {
+    padding-left: 32px;
+    font-size: 14px;
+  }
+
+  .dropdown-submenu li a {
+    padding-left: 52px;
+    font-size: 13px;
+  }
+
+  .arrow {
+    font-size: 12px;
+  }
+
+  /* Product tabs mobile */
+  .product-tabs {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .product-tabs li {
+    width: 100%;
+    text-align: center;
+    border: 1px solid #dfe8d9;
+    background: #f6fbf4;
+  }
+
+  .product-tabs li.active {
+    background: #28431f;
+    color: #fff;
+  }
+}
+/* ===== ABSOLUTE MOBILE DROPDOWN KILL ===== */
+@media (max-width: 768px) {
+
+  /* امنع أي hover desktop */
+  .dropdown:hover .dropdown-menu,
+  .dropdown-sub:hover .dropdown-submenu {
+    display: none !important;
+  }
+
+  /* خلي كل حاجة stacked */
+  .dropdown-menu,
+  .dropdown-submenu {
+    position: static !important;
+    left: 0 !important;
+    right: 0 !important;
+    transform: none !important;
+    width: 100% !important;
+    display: none;
+  }
+
+  .dropdown-menu.show,
+  .dropdown-submenu.show {
+    display: block !important;
+  }
+}
