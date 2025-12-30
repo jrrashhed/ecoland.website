@@ -41,10 +41,24 @@ setInterval(() => {
   slides[currentSlide].classList.add('active');
 }, 5000);
 
-document.querySelectorAll(".dropdown-toggle").forEach(item => {
-  item.addEventListener("click", e => {
-    e.preventDefault();
-    item.nextElementSibling.classList.toggle("show");
+document.querySelectorAll('.has-dropdown > a').forEach(link => {
+  link.addEventListener('click', function (e) {
+
+    if (window.innerWidth <= 768) {
+      e.preventDefault();
+
+      const parent = this.parentElement;
+
+      // اقفل أي dropdown تاني مفتوح
+      document.querySelectorAll('.has-dropdown.open')
+        .forEach(item => {
+          if (item !== parent) item.classList.remove('open');
+        });
+
+      // افتح / اقفل الحالي
+      parent.classList.toggle('open');
+    }
+
   });
 });
 

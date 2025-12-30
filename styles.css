@@ -690,7 +690,7 @@ input:focus,textarea:focus{outline:none;border-color:#9bd4b2;box-shadow:0 0 0 3p
   left: 0;
    position: fixed; top: 0; left: 0; right: 0; z-index: 50; background: rgba(0, 0, 0, 0.4); /* تغميقة سوداء شفافة */ backdrop-filter: blur(4px); /* بلور خفيف للخلفية */ border-bottom: none; width: 100%;
 }
-
+/* ===== NAVBAR BASE ===== */
 .nav {
   margin-left: auto;
 }
@@ -702,18 +702,62 @@ input:focus,textarea:focus{outline:none;border-color:#9bd4b2;box-shadow:0 0 0 3p
 .nav-list {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 38px;               /* مسافة أكبر بين العناصر */
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
+.nav-list li {
+  display: flex;
+  align-items: center;
+}
+
 .nav-list a {
   color: #28431f;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;        /* بولد أكتر */
+  font-size: 16px;       /* حجم أنضف */
+  letter-spacing: 0.3px;   /* إحساس أشيك */
+  position: relative;
+  padding: 8px 0;
 }
 
+/* ===== ACTIVE / HOVER LINE ===== */
+.nav-list a::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #28431f;
+  transition: width 0.3s ease;
+}
+
+.nav-list a:hover::after,
+.nav-list a.active::after {
+  width: 100%;
+}
+
+/* ===== CTA BUTTON ===== */
+.nav-list .btn span {
+  background: #28431f;
+  color: #fff;
+  padding: 12px 26px;      /* زرار أوضح */
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 14.5px;
+  letter-spacing: 0.4px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.nav-list .btn:hover span {
+  background: #1f3318;
+  transform: translateY(-1px);
+}
+
+/* ===== HAMBURGER BUTTON ===== */
 .nav-toggle {
   display: none;
   background: none;
@@ -725,8 +769,8 @@ input:focus,textarea:focus{outline:none;border-color:#9bd4b2;box-shadow:0 0 0 3p
 
 .nav-toggle-bar {
   display: block;
-  width: 24px;
-  height: 2px;
+  width: 26px;
+  height: 2.5px;           /* خط أتقل */
   background: #28431f;
   position: relative;
 }
@@ -736,22 +780,22 @@ input:focus,textarea:focus{outline:none;border-color:#9bd4b2;box-shadow:0 0 0 3p
   content: "";
   position: absolute;
   left: 0;
-  width: 24px;
-  height: 2px;
+  width: 26px;
+  height: 2.5px;
   background: #28431f;
 }
 
-.nav-toggle-bar::before { top: -7px; }
-.nav-toggle-bar::after { top: 7px; }
+.nav-toggle-bar::before { top: -8px; }
+.nav-toggle-bar::after  { top: 8px; }
 
+/* ===== MOBILE NAV ===== */
 @media (max-width: 768px) {
 
-  /* show hamburger */
   .nav-toggle {
     display: block;
+    z-index: 10000;
   }
 
-  /* hide menu by default */
   .nav-list {
     position: fixed;
     top: 64px;
@@ -760,11 +804,12 @@ input:focus,textarea:focus{outline:none;border-color:#9bd4b2;box-shadow:0 0 0 3p
     background: #fff;
     flex-direction: column;
     display: none;
-    padding: 16px 0;
+    padding: 10px 0;
+    max-height: calc(100vh - 64px);
+    overflow-y: auto;
     z-index: 9999;
   }
 
-  /* when active */
   .nav-list.show {
     display: flex;
   }
@@ -774,11 +819,67 @@ input:focus,textarea:focus{outline:none;border-color:#9bd4b2;box-shadow:0 0 0 3p
   }
 
   .nav-list a {
-    padding: 14px 20px;
-    width: 100%;
+    padding: 18px 22px;    /* مسافة مريحة للمس */
+    font-size: 16px;
+    font-weight: 600;
     border-bottom: 1px solid #eee;
   }
+
+  .nav-list a::after {
+    display: none;
+  }
+
+  .nav-list .btn span {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+  }
 }
+
+@media (max-width: 768px) {
+
+  /* امنع أي dropdown جانبي */
+  .dropdown,
+  .submenu,
+  .mega-menu {
+    position: static !important;
+    width: 100% !important;
+    box-shadow: none !important;
+  }
+
+  /* خلي كل القوائم تحت بعض */
+  .dropdown-menu,
+  .submenu ul,
+  .mega-menu ul {
+    display: none;
+    flex-direction: column;
+    padding-left: 16px;
+  }
+
+  /* لما تبقى مفتوحة */
+  .dropdown.open > .dropdown-menu,
+  .submenu.open > ul {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .nav-list li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-list a {
+    width: 100%;
+  }
+
+  .dropdown-menu a {
+    font-size: 14.5px;
+    padding: 12px 20px;
+  }
+}
+
 
 
 /* watermark مخصوص للصفحات البيضاء */
@@ -1239,7 +1340,7 @@ input:focus,textarea:focus{outline:none;border-color:#9bd4b2;box-shadow:0 0 0 3p
   .dropdown-menu li a {
     padding-left: 30px;
   }
-}
+
 @media (max-width: 768px) {
 
   /* Main mobile menu */
@@ -1560,11 +1661,22 @@ h1, h2, h3 {
    HERO BANNER – FIXED IMAGE
    ========================= */
 
+.potato-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  animation: zoomSlow 20s ease-in-out infinite alternate;
+}
+
 .hero-banner-potato {
-  background-image: url("assets/potato.jpg");
+  /* background-image: url("assets/potato.jpg"); */
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; /* الصورة ثابتة */
+  background-repeat: no-repeat;   /* يمنع التكرار */
+  background-attachment: fixed;   /* الصورة ثابتة على الديسكتوب */
 
   min-height: 100vh; /* تملى الشاشة */
   position: relative;
@@ -1575,25 +1687,27 @@ h1, h2, h3 {
 
   color: #fff;
   text-align: center;
+
+  animation: zoomSlow 20s ease-in-out infinite alternate;
 }
 
-/* Overlay يتحرك مع الاسكرول */
+/* Overlay يغطي الصورة بالكامل */
+.hero-banner-potato::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* top:0; right:0; bottom:0; left:0 */
+  background: rgba(0, 0, 0, 0.55); /* خلفية سوداء شفافة */
+  z-index: 1;
+}
+
+/* المحتوى فوق الـ Overlay */
 .hero-content-hero-potato {
-  position: relative; /* مهم */
-  width: 100%;
-  min-height: 100vh;
-
-  background: rgba(0, 0, 0, 0.55);
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
+  position: relative;
+  z-index: 2; /* يخلي النص فوق الطبقة السوداء */
+  max-width: 800px;
   padding: 40px 20px;
 }
 
-/* Responsive text */
 .hero-content-hero-potato h1 {
   font-size: clamp(26px, 5vw, 42px);
   margin-bottom: 16px;
@@ -1605,27 +1719,7 @@ h1, h2, h3 {
   line-height: 1.6;
 }
 
-/* ===== Mobile fix ===== */
-@media (max-width: 768px) {
-  .hero-banner-potato {
-    background-attachment: scroll; /* fixed بيبوّظ على موبايل */
-    min-height: 70vh;
-  }
-
-  .hero-content-hero-potato {
-    min-height: 70vh;
-    padding: 24px 16px;
-  }
-}
-.hero-banner-potato {
-  animation: zoomSlow 20s ease-in-out infinite alternate;
-}
-
-@keyframes zoomSlow {
-  from { background-size: 100%; }
-  to { background-size: 110%; }
-}
-
+/* زرار */
 .hero-potato-btn {
   margin-top: 24px;
   padding: 14px 32px;
@@ -1641,6 +1735,53 @@ h1, h2, h3 {
   background: #1f3318;
   transform: translateY(-2px);
 }
+
+/* Scroll Indicator */
+.scroll-potato-indicator {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  opacity: 0.8;
+  z-index:3;
+}
+
+/* Animation خلفية */
+@keyframes zoomSlow {
+  from { background-size: 100%; }
+  to { background-size: 110%; }
+}
+
+
+
+/* ===== Mobile fix ===== */
+@media (max-width: 768px) {
+  .hero-banner-potato {
+    background-attachment: scroll; /* fixed بيبوّظ على الموبايل */
+    min-height: 70vh;
+  }
+
+  .hero-content-hero-potato {
+    padding: 24px 16px;
+  }
+
+  .hero-content-hero-potato h1 {
+    font-size: 24px;
+  }
+
+  .hero-content-hero-potato p {
+    font-size: 15px;
+  }
+
+  .hero-potato-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
 
 /* .scroll-potato-indicator {
   position: absolute;
@@ -1869,11 +2010,22 @@ html {
    HERO BANNER – FIXED IMAGE
    ========================= */
 
+.carrots-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  animation: zoomSlow 20s ease-in-out infinite alternate;
+}
+
 .hero-banner-carrots {
-  background-image: url("assets/carrots.jpg");
+  /* background-image: url("assets/potato.jpg"); */
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; /* الصورة ثابتة */
+  background-repeat: no-repeat;   /* يمنع التكرار */
+  background-attachment: fixed;   /* الصورة ثابتة على الديسكتوب */
 
   min-height: 100vh; /* تملى الشاشة */
   position: relative;
@@ -1884,25 +2036,27 @@ html {
 
   color: #fff;
   text-align: center;
+
+  animation: zoomSlow 20s ease-in-out infinite alternate;
 }
 
-/* Overlay يتحرك مع الاسكرول */
+/* Overlay يغطي الصورة بالكامل */
+.hero-banner-carrots::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* top:0; right:0; bottom:0; left:0 */
+  background: rgba(0, 0, 0, 0.55); /* خلفية سوداء شفافة */
+  z-index: 1;
+}
+
+/* المحتوى فوق الـ Overlay */
 .hero-content-hero-carrots {
-  position: relative; /* مهم */
-  width: 100%;
-  min-height: 100vh;
-
-  background: rgba(0, 0, 0, 0.55);
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
+  position: relative;
+  z-index: 2; /* يخلي النص فوق الطبقة السوداء */
+  max-width: 800px;
   padding: 40px 20px;
 }
 
-/* Responsive text */
 .hero-content-hero-carrots h1 {
   font-size: clamp(26px, 5vw, 42px);
   margin-bottom: 16px;
@@ -1914,27 +2068,7 @@ html {
   line-height: 1.6;
 }
 
-/* ===== Mobile fix ===== */
-@media (max-width: 768px) {
-  .hero-banner-carrots {
-    background-attachment: scroll; /* fixed بيبوّظ على موبايل */
-    min-height: 70vh;
-  }
-
-  .hero-content-hero-carrots {
-    min-height: 70vh;
-    padding: 24px 16px;
-  }
-}
-.hero-banner-carrots {
-  animation: zoomSlow 20s ease-in-out infinite alternate;
-}
-
-@keyframes zoomSlow {
-  from { background-size: 100%; }
-  to { background-size: 110%; }
-}
-
+/* زرار */
 .hero-carrots-btn {
   margin-top: 24px;
   padding: 14px 32px;
@@ -1950,6 +2084,53 @@ html {
   background: #1f3318;
   transform: translateY(-2px);
 }
+
+/* Scroll Indicator */
+.scroll-carrots-indicator {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  opacity: 0.8;
+  z-index:3;
+}
+
+/* Animation خلفية */
+@keyframes zoomSlow {
+  from { background-size: 100%; }
+  to { background-size: 110%; }
+}
+
+
+
+/* ===== Mobile fix ===== */
+@media (max-width: 768px) {
+  .hero-banner-carrots {
+    background-attachment: scroll; /* fixed بيبوّظ على الموبايل */
+    min-height: 70vh;
+  }
+
+  .hero-content-hero-carrots {
+    padding: 24px 16px;
+  }
+
+  .hero-content-hero-carrots h1 {
+    font-size: 24px;
+  }
+
+  .hero-content-hero-carrots p {
+    font-size: 15px;
+  }
+
+  .hero-carrots-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
 
 /* .scroll-potato-indicator {
   position: absolute;
@@ -2013,8 +2194,94 @@ html {
   scroll-behavior: smooth;
 }
 
+
+html {
+  scroll-behavior: smooth;
+}
+
 #specs {
   scroll-margin-top: 90px; /* نفس ارتفاع الهيدر أو أكبر شوية */
 }
+
+/* ===============================
+   MOBILE HERO FIX (HOME + PRODUCTS)
+   =============================== */
+@media (max-width: 768px) {
+
+  /* ===== HERO FULL SCREEN ===== */
+  .hero,
+  .hero-slider,
+  .hero-banner-potato,
+  .hero-banner-carrots {
+    min-height: 100vh;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  /* ===== HERO CONTENT CENTER ===== */
+  .hero-content,
+  .hero-content-hero-potato,
+  .hero-content-hero-carrots {
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 18px;
+    max-width: 680px;
+  }
+
+  .hero-content h1,
+  .hero-content-hero-potato h1,
+  .hero-content-hero-carrots h1 {
+    font-size: 30px;
+    line-height: 1.25;
+    margin-bottom: 16px;
+  }
+
+  .hero-content p,
+  .hero-content-hero-potato p,
+  .hero-content-hero-carrots p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+
+  /* ===== HERO BUTTON ===== */
+  .hero .btn,
+  .hero-potato-btn,
+  .hero-carrots-btn {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+  }
+
+  /* ===== SCROLL INDICATOR ===== */
+  .scroll,
+  .scroll-potato-indicator,
+  .scroll-carrots-indicator {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* ===== PREVENT NEXT SECTION SHOWING ===== */
+  .hero + .section,
+  .hero-banner-potato + .section,
+  .hero-banner-carrots + .section {
+    margin-top: 0;
+  }
+
+  /* ===== SECTIONS BELOW HERO ===== */
+  .section {
+    padding-top: 48px;
+  }
+}
+
+
+
+
 
 
