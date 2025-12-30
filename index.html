@@ -40,15 +40,15 @@
 
         <!-- Dropdown Products -->
         <li class="dropdown">
-          <a href="products.html" class="nav-link">Products <span class="arrow">▾</span></a>
+          <a href="products.html" class="dropdown-toggle">Products <span class="arrow">▾</span></a>
           <ul class="dropdown-menu">
             
             <!-- Fresh Vegetables -->
             <li class="dropdown-sub">
               <a href="products.html#fresh-vegetables">Fresh vegetables▸</a>
               <ul class="dropdown-submenu">
-                <li><a href="products.html#potatoes">Potatoes</a></li>
-                <li><a href="products.html#carrots">Carrots</a></li>
+                <li><a href="potatoes.html">Potatoes</a></li>
+                <li><a href="carrots.html">Carrots</a></li>
                 <li><a href="products.html#onions">Onions</a></li>
               </ul>
             </li>
@@ -103,7 +103,12 @@
 
 
   <section class="hero-slider">
-  <div class="hero-overlay"></div>
+  <div class="hero-overlay">
+    <a href="#adva" class="scroll-home-indicator">
+      <span class="scroll-text">Scroll</span>
+      <span class="scroll-line"></span>
+    </a>
+  </div>
   <div class="hero-slides">
     <img src="assets/herophoto.jpg" class="slide active" alt="Background 1" />
     <img src="assets/herophoto2.jpg" class="slide" alt="Background 2" />
@@ -144,7 +149,7 @@
 
 
   <!-- Advantage -->
-  <section class="section advantage-section">
+  <section id="adva"class="section advantage-section">
   <h2>Our advantages</h2>
   <div class="card-grid">
     
@@ -214,41 +219,41 @@
       </div>
     </div>
   </section>
-
+<br>
   <!-- Products -->
   <section id="products" class="section products">
     <div class="container">
-      <h2>Wholesale Egyptian produce portfolio</h2>
+      <h2>Wholesale Egyptian produce portfolio</h2><br><br>
       <ul class="product-tabs">
-        <li class="active" data-tab="fresh-veg">Fresh vegetables</li>
-        <li data-tab="citrus">Citrus</li>
-        <li data-tab="fresh-fruit">Fresh fruits</li>
-        <li data-tab="frozen-veg">Frozen vegetables</li>
-        <li data-tab="frozen-fruit">Frozen fruits</li>
+        <li class="active" id="fresh-vegetables" data-tab="fresh-veg">Fresh vegetables</li>
+        <li data-tab="citrus" id="citrus">Citrus</li>
+        <li data-tab="fresh-fruit" id="fresh-fruits">Fresh fruits</li>
+        <li data-tab="frozen-fruit" id="frozen-fruits">Frozen fruits</li>
+        <li data-tab="dates" id="dates">Dates</li>
       </ul>
-
+<br>
       <div id="fresh-veg" class="tab-panel active">
         <ul class="card-grid">
           <li class="product-card">
-            <img src="assets/prod-potatoes.jpg" alt="Potatoes" />
+            <img src="assets/potato.jpg" alt="Potatoes" />
             <h3>Export-grade potatoes</h3>
             <p>Reliable supply of major varieties. Consistent sizing for retail and processing.</p>
-            <a href="#" class="link">Learn more →</a>
+            <a href="potatoes.html" class="link">Learn more →</a>
           </li>
           <li class="product-card">
-            <img src="assets/prod-carrots.jpg" alt="Carrots" />
+            <img src="assets/carrots.jpg" alt="Carrots" />
             <h3>Premium carrots</h3>
             <p>Vibrant color and crisp texture. Fully certified and traceable.</p>
-            <a href="#" class="link">Learn more →</a>
+            <a href="carrots.html" class="link">Learn more →</a>
           </li>
           <li class="product-card">
-            <img src="assets/prod-onions.jpg" alt="Onions" />
+            <img src="assets/onions.jpg" alt="Onions" />
             <h3>Fresh onions</h3>
             <p>Red, yellow & white onions with long storage life and year-round availability.</p>
             <a href="#" class="link">Learn more →</a>
           </li>
           <li class="product-card">
-            <img src="assets/prod-sweet-potato.jpg" alt="Sweet potatoes" />
+            <img src="assets/sweetpotato.jpg" alt="Sweet potatoes" />
             <h3>Sweet potatoes</h3>
             <p>Superior varieties with excellent taste and internal color.</p>
             <a href="#" class="link">Learn more →</a>
@@ -259,25 +264,25 @@
       <div id="citrus" class="tab-panel">
         <ul class="card-grid">
           <li class="product-card">
-            <img src="assets/prod-oranges.jpg" alt="Oranges" />
+            <img src="assets/orange.jpg" alt="Oranges" />
             <h3>Valencia & Navel oranges</h3>
             <p>High juice content meeting strict export regulations.</p>
             <a href="#" class="link">Learn more →</a>
           </li>
           <li class="product-card">
-            <img src="assets/prod-lemons.jpg" alt="Lemons" />
+            <img src="assets/lemon.jpg" alt="Lemons" />
             <h3>Lemons</h3>
             <p>Consistent supply and competitive FOB/CIF pricing.</p>
             <a href="#" class="link">Learn more →</a>
           </li>
           <li class="product-card">
-            <img src="assets/prod-mandarins.jpg" alt="Mandarins" />
+            <img src="assets/mandarin.jpg" alt="Mandarins" />
             <h3>Mandarins</h3>
             <p>Flavor-forward varieties suitable for global retail.</p>
             <a href="#" class="link">Learn more →</a>
           </li>
           <li class="product-card">
-            <img src="assets/prod-grapefruit.jpg" alt="Grapefruit" />
+            <img src="assets/grapefruit.jpg" alt="Grapefruit" />
             <h3>Grapefruit</h3>
             <p>Export-grade quality for wholesale distribution.</p>
             <a href="#" class="link">Learn more →</a>
@@ -308,30 +313,12 @@
         </ul>
       </div>
 
-      <div id="frozen-veg" class="tab-panel">
+      <div id="dates" class="tab-panel">
         <ul class="card-grid">
           <li class="product-card">
-            <img src="assets/prod-frozen-fries.jpg" alt="Frozen fries" />
-            <h3>Frozen French fries</h3>
+            <img src="assets/dates.jpg" alt="dates" />
+            <h3>High-quality Dates</h3>
             <p>Consistent cut and texture for food service.</p>
-            <a href="#" class="link">Learn more →</a>
-          </li>
-          <li class="product-card">
-            <img src="assets/prod-frozen-broccoli.jpg" alt="Frozen broccoli" />
-            <h3>Frozen broccoli</h3>
-            <p>Maintained color and nutrition with cold chain.</p>
-            <a href="#" class="link">Learn more →</a>
-          </li>
-          <li class="product-card">
-            <img src="assets/prod-frozen-okra.jpg" alt="Frozen okra" />
-            <h3>Frozen okra</h3>
-            <p>Quality cuts suitable for retail or catering.</p>
-            <a href="#" class="link">Learn more →</a>
-          </li>
-          <li class="product-card">
-            <img src="assets/prod-molokhia.jpg" alt="Frozen molokhia" />
-            <h3>Frozen molokhia</h3>
-            <p>Ready-to-cook leaves with preserved freshness.</p>
             <a href="#" class="link">Learn more →</a>
           </li>
         </ul>
@@ -424,7 +411,7 @@
         <h2>An ISO-certified leader in agricultural investment and global export</h2>
         <p>We invest in modern agriculture and deliver premium produce through controlled processes, international quality standards, and end-to-end traceability.</p>
         <p>Proudly supplying international markets with reliability, efficiency, and long-term partnerships</p>
-        <a href="#contact" class="btn btn-primary">Learn more</a>
+        <a href="contactus.html#our_story_section" class="btn btn-primary">Learn more</a>
       </div>
       <div class="about-image">
         <img src="assets/about-farms.jpg" alt="Egyptian farms" />
@@ -491,11 +478,21 @@
         <h2>Ready to import wholesale Egyptian produce?</h2>
         <p>Get competitive FOB/CIF pricing and volume quotes for our products</p>
         <ul class="contact-points">
-          <br></br>
           <li><strong>Sales:</strong> +201000000000</li>
           <li><strong>Email:</strong> sales@ecoland.eg.com</li>
           <li><strong>Office:</strong> Miami, Alexandria, Egypt</li>
         </ul>
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d591.3674873856828!2d30.019593893150205!3d31.251453306622683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f5dbd695bf6e6d%3A0x446d139e9c85f640!2z2LHZitit2KfZhtipINin2YTZitmD2LM!5e1!3m2!1sar!2seg!4v1767058224244!5m2!1sar!2seg"
+            width="100%"
+            height="300"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
       </div>
   
       <form class="contact-form" action="#" method="post" onsubmit="event.preventDefault();alert('Submitted!')" >
@@ -521,50 +518,71 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-col">
-        <a href="#" class="logo">
-          <img src="assets/onlypalm.png" alt="ECOLAND" />
-          <span class="logo-text">ECOLAND</span>
-        </a>
-        <p>Your certified source for premium Egyptian <br>agricultural crops<br>shipped reliably to global markets</p>
-      </div>
-      <div class="footer-col">
-        <h3>Products</h3>
-        <ul class="footer-links">
-          <li><a href="#products">Fresh Vegetables</a></li>
-          <li><a href="#products">Citrus</a></li>
-          <li><a href="#products">Fresh Fruits</a></li>
-          <li><a href="#products">Frozen Vegetables</a></li>
-          <li><a href="#products">Frozen Fruits</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h3>Company</h3>
-        <ul class="footer-links">
-          <li><a href="contactus.html#our_story_section">Our story</a></li>
-          <li><a href="contactus.html#form-row">Contact us</a></li>
-          <li><a href="#contact">Get a quote</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h3>Other</h3>
-        <ul class="footer-links">
-          <li><a href="#">Certificates</a></li>
-          <li><a href="#">Farms</a></li>
-          <li><a href="#">Blogs</a></li>
-          <li><a href="#">Privacy policy</a></li>
-          <li><a href="#">Terms & conditions</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="container footer-bottom">
-      <p>© Copyright 2026 - EcoLand - All Rights Reserved</p>
-    </div>
-  </footer>
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="container footer-inner">
 
-  <script src="script.js"></script>
+    <!-- Logo + About -->
+    <div class="footer-col">
+      <a href="#" class="logo">
+        <img src="assets/onlypalm.png" alt="ECOLAND" />
+        <span class="logo-text">ECOLAND</span>
+      </a>
+      <p>
+        Your certified source for premium Egyptian <br>
+        agricultural crops <br>
+        shipped reliably to global markets
+      </p>
+    </div>
+
+    <!-- Products -->
+    <div class="footer-col">
+      <h3>Products</h3>
+      <ul class="footer-links">
+        <li><a href="index.html#fresh-vegetables">Fresh Vegetables</a></li>
+        <li><a href="index.html#citrus">Citrus</a></li>
+        <li><a href="index.html#fresh-fruits">Fresh Fruits</a></li>
+        <li><a href="#frozen-fruits">Frozen Fruits</a></li>
+        <li><a href="#dates">Dates</a></li>
+      </ul>
+    </div>
+
+    <!-- Company -->
+    <div class="footer-col">
+      <h3>Company</h3>
+      <ul class="footer-links">
+        <li><a href="contactus.html#our_story_section">Our story</a></li>
+        <li><a href="contactus.html#about">Contact us</a></li>
+        <li><a href="#contact">Get a quote</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info (من الفوتر الأزرق) -->
+    <div class="footer-col">
+      <h3>Contact Info</h3>
+      <ul class="footer-links footer-contact">
+        <li>
+          📍 Miami,
+          Alexandria,
+          Egypt
+        </li>
+        <li>
+          📞 <a href="tel:+201112456632">+20 111 245 6632</a>
+        </li>
+        <li>
+          ✉️ <a href="mailto:sales@geoexporting.com">sales@ecolandeg.com</a>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Bottom -->
+  <div class="container footer-bottom">
+    <p>© Copyright 2026 - EcoLand - All Rights Reserved</p>
+  </div>
+</footer>
+
+
+<script src="script.js"></script>
 </body>
 </html>
