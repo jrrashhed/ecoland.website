@@ -19,15 +19,41 @@ body{
 img{max-width:100%;display:block}
 .container{max-width:1100px;margin:0 auto;padding:0 20px}
 
-/* Header */
+/* إخفاء iframe نفسه */
+.goog-te-banner-frame {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* منع النزول من فوق */
+body {
+  position: static !important;
+  top: 0 !important;
+}
+
+/* إخفاء أي عناصر تابعة لجوجل */
+.goog-logo-link,
+.goog-te-gadget,
+.goog-te-balloon-frame {
+  display: none !important;
+}
+
+/* لو جوجل حط style inline */
+html {
+  margin-top: 0 !important;
+}
+
+
+/*
 .site-header {
-  position: fixed; /* يخليه فوق الخلفية */
+  position: fixed; 
   top: 0;
   z-index: 50;
-  background: transparent; /* شفاف بدل الأبيض */
-  border-bottom: none; /* نشيل الخط */
+  background: transparent;
+  border-bottom: none;
   
 }
+*/
 .header-inner{display: flex; align-items: center; justify-content: space-between; height: 64px; padding-left: 20px; padding-right: 20px;}
 
 /* Buttons */
@@ -685,11 +711,13 @@ input:focus,textarea:focus{outline:none;border-color:#9bd4b2;box-shadow:0 0 0 3p
 }
 
 
-.site-header{
+/*.site-header{
   width: 100%;
   left: 0;
-   position: fixed; top: 0; left: 0; right: 0; z-index: 50; background: rgba(0, 0, 0, 0.4); /* تغميقة سوداء شفافة */ backdrop-filter: blur(4px); /* بلور خفيف للخلفية */ border-bottom: none; width: 100%;
+   position: fixed; top: 0; left: 0; right: 0; z-index: 50; background: rgba(0, 0, 0, 0.4); backdrop-filter: blur(4px); border-bottom: none; width: 100%;
 }
+   */
+
 /* ===== NAVBAR BASE ===== */
 .nav {
   margin-left: auto;
@@ -969,11 +997,76 @@ input:focus,textarea:focus{outline:none;border-color:#9bd4b2;box-shadow:0 0 0 3p
 .scroll-offset {
   scroll-margin-top: 100px; /* يبعد السيكشن عن الهيدر */
 }
+
+
+
 .site-header {
-  background: #fff;
-  border-bottom: 1px solid #eee;
+    width: 70%;
+    margin: 20px auto; 
+    border-radius: 50px;
+    background: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+    
 }
 
+
+.lang-menu {
+  position: relative;
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.lang-dropdown {
+  position: absolute;
+  top: 120%;
+  right: 0;
+  background: #fff;
+  list-style: none;
+  padding: 8px 0;
+  margin: 0;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.12);
+  display: none;
+  min-width: 150px;
+  z-index: 1000;
+}
+
+.lang-dropdown.open {
+  display: block;
+}
+
+.lang-dropdown li a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  text-decoration: none;
+  color: #000;
+}
+
+.lang-dropdown li a:hover {
+  background: #f2f2f2;
+}
+
+.lang-dropdown img {
+  width: 20px;
+  height: 14px;
+  border-radius: 2px;
+}
 
 
 .dropdown {
