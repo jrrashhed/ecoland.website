@@ -12,7 +12,6 @@
 </head>
 <body>
 
- <!-- Header -->
 <header class="site-header">
   <div class="container header-inner">
     <div class="logo-with-name">
@@ -28,11 +27,11 @@
         <span class="sr-only">Toggle menu</span>
       </button>
       <ul id="primary-menu" class="nav-list">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
 
         <!-- Dropdown Products -->
         <li class="dropdown">
-          <a href="products.html" class="nav-link, active">Products <span class="arrow">▾</span></a>
+          <a href="products.html" class="dropdown-toggle">Products <span class="arrow">▾</span></a>
           <ul class="dropdown-menu">
             
             <!-- Fresh Vegetables -->
@@ -41,16 +40,19 @@
               <ul class="dropdown-submenu">
                 <li><a href="potatoes.html">Potatoes</a></li>
                 <li><a href="carrots.html">Carrots</a></li>
-                <li><a href="products.html#onions">Onions</a></li>
+                <li><a href="onions.html">Onions</a></li>
+                <li><a href="sweetpotato.html">Sweet potatoes</a></li>
               </ul>
             </li>
-
+            
             <!-- Citrus -->
             <li class="dropdown-sub">
               <a href="products.html#citrus">Citrus▸</a>
               <ul class="dropdown-submenu">
-                <li><a href="products.html#oranges">Oranges</a></li>
-                <li><a href="products.html#lemons">Lemons</a></li>
+                <li><a href="oranges.html">Oranges</a></li>
+                <li><a href="lemons.html">Lemons</a></li>
+                <li><a href="Mandarin.html">Mandarin</a></li>
+                <li><a href="grapefruit.html">Grapefruit</a></li>
               </ul>
             </li>
 
@@ -58,26 +60,27 @@
             <li class="dropdown-sub">
               <a href="products.html#fresh-fruits">Fresh fruits▸</a>
               <ul class="dropdown-submenu">
-                <li><a href="products.html#grapes">Grapes</a></li>
-                <li><a href="products.html#pomegranates">Pomegranates</a></li>
+                <li><a href="grapes.html">Grapes</a></li>
+                <li><a href="Pomegranates.html">Pomegranates</a></li>
+                <li><a href="strawberry.html">Strawberries</a></li>
               </ul>
             </li>
 
-            <!-- Frozen Vegetables -->
-            <li class="dropdown-sub">
-              <a href="products.html#frozen-vegetables">Frozen vegetables▸</a>
-              <ul class="dropdown-submenu">
-                <li><a href="products.html#peas">Peas</a></li>
-                <li><a href="products.html#greenbeans">Green beans</a></li>
-              </ul>
-            </li>
 
             <!-- Frozen Fruits -->
             <li class="dropdown-sub">
               <a href="products.html#frozen-fruits">Frozen fruits▸</a>
               <ul class="dropdown-submenu">
-                <li><a href="products.html#strawberries">Strawberries</a></li>
-                <li><a href="products.html#mango">Mango</a></li>
+                <li><a href="frozen_strawberry.html">Strawberries</a></li>
+              </ul>
+            </li>
+
+            <!-- dates -->
+            <li class="dropdown-sub">
+              <a href="#">Dates▸</a>
+              <ul class="dropdown-submenu">
+                <li><a href="sukkary-dates.html">Sukkari Dates</a></li>
+                <li><a href="medjool-dates.html "> Madjool Dates</a></li>
               </ul>
             </li>
 
@@ -86,8 +89,34 @@
 
         <li><a href="index.html#process">Process</a></li>
         <li><a href="index.html#faq">FAQ</a></li>
-        <li><a href="contactus.html">About Us</a></li>
+        <li><a href="contactus.html"> About Us</a></li>
         <li><a href="index.html#contact" class="btn"><span>Get a quote</span></a></li>
+
+        <!-- <div id="google_translate_element" style="margin-left:15px;"></div> -->
+                  
+<div class="lang-menu">
+          <button class="lang-btn" id="langToggle">
+            🌐 English <span class="arrow">▾</span>
+          </button>
+
+          <ul class="lang-dropdown" id="langDropdown">
+            <li>
+              <a href="index.html">
+                <img src="assets/gb.svg.svg" alt="English"> English
+              </a>
+            </li>
+            <li>
+              <a href="ar_index.html">
+                <img src="assets/sa.svg.svg" alt="العربية"> العربية
+              </a>
+            </li>
+            <li>
+              <a href="ru_index.html">
+                <img src="assets/ru.svg.svg" alt="Русский"> Русский
+              </a>
+            </li>
+          </ul>
+        </div>
       </ul>
     </nav>
   </div>

@@ -2296,6 +2296,360 @@ html {
   scroll-margin-top: 90px; /* نفس ارتفاع الهيدر أو أكبر شوية */
 }
 
+/* بطاطا */
+
+.hero {
+  text-align: center;
+  padding: 40px 0;
+}
+.hero-img {
+  max-width: 100%;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+.hero h1 {
+  font-size: 36px;
+  margin: 0;
+}
+.subtitle {
+  font-size: 18px;
+  color: #666;
+}
+
+/* Intro */
+.intro {
+  text-align: center;
+  margin: 40px 0;
+  font-size: 18px;
+  color: #444;
+}
+
+/* Specifications Table */
+.specs table, .seasonality table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+.specs th, .seasonality th {
+  background: #f1f1f1;
+  padding: 12px;
+  text-align: left;
+}
+.specs td, .seasonality td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+.seasonality td.peak { color: green; font-weight: bold; }
+.seasonality td.limited { color: orange; font-weight: bold; }
+.seasonality td.off { color: red; font-weight: bold; }
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 768px) {
+  .season-table {
+    min-width: 700px;
+    font-size: 14px;
+  }
+
+  .season-table th,
+  .season-table td {
+    padding: 8px;
+    text-align: center;
+    white-space: nowrap;
+  }
+}
+
+
+/* Why Choose Us */
+.why-choose {
+  background: #f9f9f9;
+  padding: 40px 20px;
+  border-radius: 12px;
+  margin: 40px 0;
+}
+.why-choose ul {
+  list-style: none;
+  padding: 0;
+}
+.why-choose li {
+  margin: 12px 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Gallery */
+.gallery {
+  margin: 40px 0;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+}
+.gallery-grid img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* FAQ */
+.faq {
+  margin: 40px 0;
+}
+.faq-item {
+  margin-bottom: 20px;
+}
+.faq-item h3 {
+  cursor: pointer;
+  font-size: 18px;
+  background: #f1f1f1;
+  padding: 12px;
+  border-radius: 6px;
+}
+.faq-item p {
+  margin: 8px 0 0;
+  padding: 0 12px;
+  display: none;
+}
+.faq-item.active p {
+  display: block;
+}
+
+/* CTA */
+.cta {
+  text-align: center;
+  margin: 40px 0;
+}
+.btn-primary {
+  background: #28431f;
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+.btn-primary:hover {
+  background: #1b5e20;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 28px;
+  }
+  .subtitle {
+    font-size: 16px;
+  }
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =========================
+   HERO BANNER – FIXED IMAGE
+   ========================= */
+
+.swpotato-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  animation: zoomSlow 20s ease-in-out infinite alternate;
+}
+
+.hero-banner-swpotato {
+  /* background-image: url("assets/potato.jpg"); */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;   /* يمنع التكرار */
+  background-attachment: fixed;   /* الصورة ثابتة على الديسكتوب */
+
+  min-height: 100vh; /* تملى الشاشة */
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #fff;
+  text-align: center;
+
+  animation: zoomSlow 20s ease-in-out infinite alternate;
+}
+
+/* Overlay يغطي الصورة بالكامل */
+.hero-banner-swpotato::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* top:0; right:0; bottom:0; left:0 */
+  background: rgba(0, 0, 0, 0.55); /* خلفية سوداء شفافة */
+  z-index: 1;
+}
+
+/* المحتوى فوق الـ Overlay */
+.hero-content-hero-swpotato{
+  position: relative;
+  z-index: 2; /* يخلي النص فوق الطبقة السوداء */
+  max-width: 800px;
+  padding: 40px 20px;
+}
+
+.hero-content-hero-swpotato h1 {
+  font-size: clamp(26px, 5vw, 42px);
+  margin-bottom: 16px;
+}
+
+.hero-content-hero-swpotato p {
+  font-size: clamp(15px, 3vw, 20px);
+  max-width: 720px;
+  line-height: 1.6;
+}
+
+/* زرار */
+.hero-swpotato-btn {
+  margin-top: 24px;
+  padding: 14px 32px;
+  background: #28431f;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.hero-swpotato-btn:hover {
+  background: #1f3318;
+  transform: translateY(-2px);
+}
+
+/* Scroll Indicator */
+.scroll-swpotato-indicator {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  opacity: 0.8;
+  z-index:3;
+}
+
+/* Animation خلفية */
+@keyframes zoomSlow {
+  from { background-size: 100%; }
+  to { background-size: 110%; }
+}
+
+
+
+/* ===== Mobile fix ===== */
+@media (max-width: 768px) {
+  .hero-banner-swpotato {
+    background-attachment: scroll; /* fixed بيبوّظ على الموبايل */
+    min-height: 70vh;
+  }
+
+  .hero-content-hero-swpotato {
+    padding: 24px 16px;
+  }
+
+  .hero-content-hero-swpotato h1 {
+    font-size: 24px;
+  }
+
+  .hero-content-hero-swpotato p {
+    font-size: 15px;
+  }
+
+  .hero-swpotato-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+/* .scroll-potato-indicator {
+  position: absolute;
+  bottom: 30px;
+  font-size: 12px;
+  opacity: 0.7;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+} */
+
+.scroll-swpotato-indicator {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  opacity: 0.8;
+}
+
+/* كلمة Scroll */
+.scroll-text {
+  display: block;
+  font-size: 18px;
+  letter-spacing: 2px;
+  margin-bottom: 6px;
+}
+
+/* الخط المتحرك */
+.scroll-line {
+  display: block;
+  width: 2px;
+  height: 24px;
+  background: #fff;
+  margin: 0 auto;
+  animation: scrollLine 1.5s infinite;
+}
+
+@keyframes scrollLine {
+  0% {
+    height: 10px;
+    opacity: 0.3;
+  }
+  50% {
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    height: 10px;
+    opacity: 0.3;
+  }
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+#specs {
+  scroll-margin-top: 90px; /* نفس ارتفاع الهيدر أو أكبر شوية */
+}
+
+
+
 /* ===============================
    MOBILE HERO FIX (HOME + PRODUCTS)
    =============================== */
@@ -2305,7 +2659,8 @@ html {
   .hero,
   .hero-slider,
   .hero-banner-potato,
-  .hero-banner-carrots {
+  .hero-banner-carrots,
+  .hero-banner-swpotato {
     min-height: 100vh;
     height: 100vh;
     display: flex;
@@ -2316,7 +2671,8 @@ html {
   /* ===== HERO CONTENT CENTER ===== */
   .hero-content,
   .hero-content-hero-potato,
-  .hero-content-hero-carrots {
+  .hero-content-hero-carrots,
+  .hero-content-hero-swpotato {
     text-align: center;
     margin: 0 auto;
     padding: 0 18px;
@@ -2325,7 +2681,8 @@ html {
 
   .hero-content h1,
   .hero-content-hero-potato h1,
-  .hero-content-hero-carrots h1 {
+  .hero-content-hero-carrots h1,
+  .hero-content-hero-swpotato h1 {
     font-size: 30px;
     line-height: 1.25;
     margin-bottom: 16px;
@@ -2333,7 +2690,8 @@ html {
 
   .hero-content p,
   .hero-content-hero-potato p,
-  .hero-content-hero-carrots p {
+  .hero-content-hero-carrots p,
+  .hero-content-hero-swpotato p {
     font-size: 15px;
     line-height: 1.6;
     margin-bottom: 24px;
@@ -2342,7 +2700,8 @@ html {
   /* ===== HERO BUTTON ===== */
   .hero .btn,
   .hero-potato-btn,
-  .hero-carrots-btn {
+  .hero-carrots-btn,
+  .hero-swpotato-btn {
     width: 100%;
     max-width: 320px;
     margin: 0 auto;
@@ -2353,7 +2712,8 @@ html {
   /* ===== SCROLL INDICATOR ===== */
   .scroll,
   .scroll-potato-indicator,
-  .scroll-carrots-indicator {
+  .scroll-carrots-indicator,
+  .scroll-swpotato-indicator {
     position: absolute;
     bottom: 24px;
     left: 50%;
@@ -2363,7 +2723,8 @@ html {
   /* ===== PREVENT NEXT SECTION SHOWING ===== */
   .hero + .section,
   .hero-banner-potato + .section,
-  .hero-banner-carrots + .section {
+  .hero-banner-carrots + .section,
+  .hero-banner-swpotato + .section {
     margin-top: 0;
   }
 
@@ -2373,8 +2734,303 @@ html {
   }
 }
 
+/*بصل
 
+/* صورة الخلفية */
+.onion-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  animation: zoomSlow 20s ease-in-out infinite alternate;
+}
 
+/* Hero Section */
+.hero-banner-onions {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 
+  min-height: 100vh;
+  position: relative;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #fff;
+  text-align: center;
+}
+
+/* Overlay */
+.hero-banner-onions::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+
+/* المحتوى */
+.hero-content-hero-onions {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 40px 20px;
+}
+
+.hero-content-hero-onions h1 {
+  font-size: clamp(26px, 5vw, 42px);
+  margin-bottom: 16px;
+}
+
+.hero-content-hero-onions p {
+  font-size: clamp(15px, 3vw, 20px);
+  line-height: 1.6;
+  max-width: 720px;
+}
+
+/* زرار */
+.hero-onions-btn {
+  margin-top: 24px;
+  padding: 14px 32px;
+  background: #28431f;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.hero-onions-btn:hover {
+  background: #1f3318;
+  transform: translateY(-2px);
+}
+
+/* Scroll Indicator */
+.scroll-onions-indicator {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #fff;
+  opacity: 0.8;
+  z-index: 3;
+}
+
+@media (max-width: 768px) {
+  .hero-banner-onions {
+    background-attachment: scroll;
+    min-height: 70vh;
+  }
+
+  .hero-content-hero-onions {
+    padding: 24px 16px;
+  }
+
+  .hero-content-hero-onions h1 {
+    font-size: 24px;
+  }
+
+  .hero-content-hero-onions p {
+    font-size: 15px;
+  }
+
+  .hero-onions-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* =========================
+   EXPORT PROCESS SECTION
+   ========================= */
+
+.export-process {
+  background: #ffffff;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.process-title {
+  font-size: clamp(26px, 4vw, 38px);
+  margin-bottom: 10px;
+  color: #1f2d16;
+}
+
+.process-subtitle {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 50px;
+}
+
+/* Grid */
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+}
+
+/* Item */
+.process-item {
+  padding: 20px;
+}
+
+.process-icon {
+  font-size: 42px;
+  margin-bottom: 16px;
+  color: #4caf50;
+}
+
+.process-item h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #28431f;
+}
+
+.process-item p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #555;
+  max-width: 260px;
+  margin: 0 auto;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .export-process {
+    padding: 60px 20px;
+  }
+
+  .process-subtitle {
+    font-size: 16px;
+  }
+
+  .process-item p {
+    max-width: 100%;
+  }
+}
+
+/* ====== SPECIFICATIONS CARD ====== */
+.specs table {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.specs th {
+  background: #f7f9f6;
+  font-weight: 600;
+  color: #28431f;
+}
+
+.specs td {
+  color: #444;
+}
+
+.specs tr {
+  transition: background 0.3s ease;
+}
+
+.specs tr:hover {
+  background: #fafcf9;
+}
+
+.season-table {
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+}
+
+.season-table th {
+  background: #28431f;
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+}
+
+.season-table td {
+  text-align: center;
+  font-size: 15px;
+}
+
+.season-table tr:nth-child(even) {
+  background: #f9faf9;
+}
+
+.process-item {
+  background: #fff;
+  border-radius: 20px;
+  padding: 32px 24px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.07);
+  transition: all 0.35s ease;
+}
+
+.process-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+}
+
+.process-icon {
+  width: 64px;
+  height: 64px;
+  background: #f1f5ef;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  margin: 0 auto 18px;
+}
+.gallery-grid img {
+  border-radius: 18px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.faq-item h3 {
+  background: #f7f9f6;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.faq-item.active h3 {
+  background: #28431f;
+  color: #fff;
+}
+
+.faq-item p {
+  padding: 16px 18px;
+  background: #fff;
+  border-radius: 0 0 12px 12px;
+  box-shadow: inset 0 6px 12px rgba(0,0,0,0.04);
+}
+
+.section:not(:last-child)::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  margin: 80px auto 0;
+  background: linear-gradient(
+    to right,
+    transparent,
+    #28431f,
+    transparent
+  );
+  opacity: 0.25;
+}
+.section:nth-child(even) {
+  background: #fafcf9;
+}
 
