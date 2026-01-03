@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="ar" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>إيكولاند | مُصدر مصري للمحاصيل الزراعية</title>
+  <meta name="description" content="إيكولاند — شركة مصرية رائدة في استصلاح الأراضي الزراعية، استيراد وتصدير المنتجات الزراعية المتميزة." />
+  <link rel="icon" href="assets/onlypalm.png" type="image/png" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="style-rtl.css">
+  
+  <style>
+    /* تعديلات سريعة للغة العربية */
+    body { font-family: 'Cairo', sans-serif; }
+    .logo-text { transform: translateX(25px); } /* عكس الإزاحة في العربية */
+    .nav-list { gap: 25px; }
+    .hero-content h1 { line-height: 1.4; }
+  </style>
+</head>
+
+<body class="white-bg-page">
+    <div class="white-bg-watermark"></div>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="logo-with-name">
+      <a href="ar_index.html" class="logo">
+        <img src="assets/onlypalm.png" alt="ECOLAND" />
+      </a>
+      <span class="logo-text">إيكولاند</span>
+    </div>
+
+    <nav class="nav" aria-label="Primary">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="sr-only">فتح القائمة</span>
+      </button>
+
+      <ul id="primary-menu" class="nav-list">
+        <li><a href="ar_index.html" class="active">الرئيسية</a></li>
+
+        <li class="dropdown">
+          <a href="products.html" class="dropdown-toggle">
+            المنتجات <span class="arrow">▾</span>
+          </a>
+
+          <ul class="dropdown-menu">
+            <li class="dropdown-sub">
+              <a href="products.html#fresh-vegetables">خضروات طازجة ▸</a>
+              <ul class="dropdown-submenu">
+                <li><a href="potatoes.html">بطاطس</a></li>
+                <li><a href="carrots.html">جزر</a></li>
+                <li><a href="products.html#onions">بصل</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown-sub">
+              <a href="products.html#citrus">الموالح ▸</a>
+              <ul class="dropdown-submenu">
+                <li><a href="products.html#oranges">برتقال</a></li>
+                <li><a href="products.html#lemons">ليمون</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown-sub">
+              <a href="products.html#fresh-fruits">فواكه طازجة ▸</a>
+              <ul class="dropdown-submenu">
+                <li><a href="products.html#grapes">عنب</a></li>
+                <li><a href="products.html#pomegranates">رمان</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown-sub">
+              <a href="products.html#frozen-vegetables">خضروات مجمدة ▸</a>
+              <ul class="dropdown-submenu">
+                <li><a href="products.html#peas">بازلاء</a></li>
+                <li><a href="products.html#greenbeans">فاصوليا خضراء</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown-sub">
+              <a href="products.html#frozen-fruits">فواكه مجمدة ▸</a>
+              <ul class="dropdown-submenu">
+                <li><a href="products.html#strawberries">فراولة</a></li>
+                <li><a href="products.html#mango">مانجو</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li><a href="#process">مراحل العمل</a></li>
+        <li><a href="#faq">الأسئلة الشائعة</a></li>
+        <li><a href="ar-contactus.html">من نحن</a></li>
+        <li><a href="#contact" class="btn"><span>اطلب عرض سعر</span></a></li>
+
+          <div class="lang-menu">
+            <button class="lang-btn" id="langToggle" aria-expanded="false">
+              🌐 العربية<span class="arrow">▾</span>
+            </button>
+
+            <ul class="lang-dropdown" id="langDropdown">
+              <li>
+                <a href="index.html">
+                  <img src="assets/gb.svg.svg" alt="English">
+                  English
+                </a>
+              </li>
+              <li>
+                <a href="ar_index.html">
+                  <img src="assets/sa.svg.svg" alt="العربية">
+                  العربية
+                </a>
+              </li>
+              <li>
+                <a href="ru_index.html">
+                  <img src="assets/ru.svg.svg" alt="Русский">
+                  Русский
+                </a>
+              </li>
+            </ul>
+          </div>
+      </ul>
+    </nav>
+  </div>
+</header>
+       
+<section class="hero-slider">
+  <div class="hero-overlay">
+    <a href="#adva" class="scroll-home-indicator">
+      <span class="scroll-text">اسحب لأسفل</span>
+      <span class="scroll-line"></span>
+    </a>
+  </div>
+  <div class="hero-slides">
+    <img src="assets/herophoto.jpg" class="slide active" alt="خلفية 1" />
+    <img src="assets/herophoto2.jpg" class="slide" alt="خلفية 2" />
+  </div>
+  <div class="container hero-content">
+    <h1>شركة مصرية للاستثمار الزراعي والتصدير</h1>
+    <p>إيكولاند هي شركة مصرية متخصصة في استصلاح الأراضي الزراعية وتصدير أجود المحاصيل الحاصلة على شهادات الأيزو العالمية، نضمن لك وصول منتجاتنا من مزارعنا إلى الأسواق العالمية بأعلى معايير الجودة.</p>
+    <div class="hero-actions">
+      <a href="#products" class="btn btn-primary">تصفح منتجاتنا</a>
+    </div>
+    <p class="tagline">من أرضنا.. إلى صادراتنا</p>
+  </div>
+</section>
+
+<section id="adva" class="section advantage-section">
+  <h2>لماذا تختار إيكولاند؟</h2>
+  <div class="card-grid">
+    <div class="adv-card">
+      <img src="assets/priceicon.png" alt="أسعار تنافسية" />
+      <h3>أسعار تنافسية وإمداد عالمي</h3>
+      <p>نوفر كميات تصديرية ضخمة بمرونة في الجدولة وشراكات موثوقة عالمياً.</p>
+    </div>
+    <div class="adv-card">
+      <img src="assets/qualityicon.png" alt="جودة مضمونة" />
+      <h3>ضمان استمرارية الجودة</h3>
+      <p>نتبع نظام تصنيف صارم يتوافق مع العينات المتفق عليها والمعايير الدولية.</p>
+    </div>
+    <div class="adv-card">
+      <img src="assets/logiicon.png" alt="لوجستيات" />
+      <h3>عمليات لوجستية متطورة</h3>
+      <p>شحن عالمي سريع وتجهيز كامل للمستندات المطلوبة حسب متطلبات كل دولة.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section metrics">
+  <div class="container metrics-inner">
+    <div class="metric">
+      <div class="metric-value">+5000</div>
+      <div class="metric-label">هكتار من الأراضي</div>
+    </div>
+    <div class="metric">
+      <div class="metric-value">+60</div>
+      <div class="metric-label">دولة حول العالم</div>
+    </div>
+    <div class="metric">
+      <div class="metric-value">+30,000</div>
+      <div class="metric-label">طن صادرات سنوياً</div>
+    </div>
+    <div class="metric">
+      <div class="metric-value">+14</div>
+      <div class="metric-label">عام من الخبرة</div>
+    </div>
+  </div>
+</section>
+
+<section id="certs" class="section certifications">
+  <div class="container">
+    <h2 class="section-title">شهادات الجودة وسلامة الغذاء</h2>
+
+    <ul class="cert-grid">
+      <li class="cert-card">
+        <img src="assets/cert-iso.svg" alt="ISO Certification" />
+        <h3>ISO 9001:2015</h3>
+        <p>
+          نظام إدارة الجودة لضمان ثبات مستوى المنتجات
+          وموثوقية عمليات التصدير.
+        </p>
+      </li>
+
+      <li class="cert-card">
+        <img src="assets/cert-globalgap.svg" alt="GlobalGAP Certification" />
+        <h3>GlobalG.A.P</h3>
+        <p>
+          أفضل الممارسات الزراعية مع نظام تتبع كامل
+          من المزرعة وحتى التصدير.
+        </p>
+      </li>
+
+      <li class="cert-card">
+        <img src="assets/cert-eu.svg" alt="EU Food Safety" />
+        <h3>معايير سلامة الغذاء الأوروبية</h3>
+        <p>
+          التزام كامل بلوائح الصحة النباتية
+          ومتطلبات الاستيراد للأسواق الأوروبية.
+        </p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- Products -->
+<section id="products" class="section products">
+  <div class="container">
+    <h2>محفظة المنتجات الزراعية المصرية للتصدير بالجملة</h2><br><br>
+
+    <ul class="product-tabs">
+      <li class="active" id="fresh-vegetables" data-tab="fresh-veg">خضروات طازجة</li>
+      <li data-tab="citrus" id="citrus">موالح</li>
+      <li data-tab="fresh-fruit" id="fresh-fruits">فواكه طازجة</li>
+      <li data-tab="frozen-fruit" id="frozen-fruits">فواكه مجمدة</li>
+      <li data-tab="dates" id="dates">تمور</li>
+    </ul>
+
+    <br>
+
+    <div id="fresh-veg" class="tab-panel active">
+      <ul class="card-grid">
+        <li class="product-card">
+          <img src="assets/potato.jpg" alt="بطاطس" />
+          <h3>بطاطس مخصصة للتصدير</h3>
+          <p>توريد موثوق لأهم الأصناف مع أحجام متناسقة تناسب التجزئة والتصنيع.</p>
+          <a href="potatoes.html" class="link">اعرف المزيد →</a>
+        </li>
+
+        <li class="product-card">
+          <img src="assets/carrots.jpg" alt="جزر" />
+          <h3>جزر عالي الجودة</h3>
+          <p>لون زاهي وقوام مقرمش مع شهادات جودة وتتبع كاملة.</p>
+          <a href="carrots.html" class="link">اعرف المزيد →</a>
+        </li>
+
+        <li class="product-card">
+          <img src="assets/onions.jpg" alt="بصل" />
+          <h3>بصل طازج</h3>
+          <p>بصل أحمر وأصفر وأبيض بعمر تخزيني طويل وتوفر على مدار العام.</p>
+          <a href="#" class="link">اعرف المزيد →</a>
+        </li>
+
+        <li class="product-card">
+          <img src="assets/sweetpotato.jpg" alt="بطاطا حلوة" />
+          <h3>بطاطا حلوة</h3>
+          <p>أصناف متميزة بمذاق رائع ولون داخلي ممتاز.</p>
+          <a href="#" class="link">اعرف المزيد →</a>
+        </li>
+      </ul>
+    </div>
+
+    <div id="citrus" class="tab-panel">
+      <ul class="card-grid">
+        <li class="product-card">
+          <img src="assets/orange.jpg" alt="برتقال" />
+          <h3>برتقال فالنسيا ونافل</h3>
+          <p>نسبة عصير مرتفعة تلبي اشتراطات التصدير الصارمة.</p>
+          <a href="#" class="link">اعرف المزيد →</a>
+        </li>
+
+        <li class="product-card">
+          <img src="assets/lemon.jpg" alt="ليمون" />
+          <h3>ليمون</h3>
+          <p>إمداد ثابت وأسعار تنافسية بنظام FOB / CIF.</p>
+          <a href="#" class="link">اعرف المزيد →</a>
+        </li>
+
+        <li class="product-card">
+          <img src="assets/mandarin.jpg" alt="يوسفي" />
+          <h3>يوسفي</h3>
+          <p>أصناف مميزة بطعم قوي مناسبة للأسواق العالمية.</p>
+          <a href="#" class="link">اعرف المزيد →</a>
+        </li>
+
+        <li class="product-card">
+          <img src="assets/grapefruit.jpg" alt="جريب فروت" />
+          <h3>جريب فروت</h3>
+          <p>جودة تصديرية مخصصة للتوزيع بالجملة.</p>
+          <a href="#" class="link">اعرف المزيد →</a>
+        </li>
+      </ul>
+    </div>
+
+    <div id="fresh-fruit" class="tab-panel">
+      <ul class="card-grid">
+        <li class="product-card">
+          <img src="assets/prod-strawberries.jpg" alt="فراولة" />
+          <h3>فراولة طازجة</h3>
+          <p>محصودة يدويًا للحفاظ على الطعم وثبات الجودة.</p>
+          <a href="#" class="link">اعرف المزيد →</a>
+        </li>
+
+        <li class="product-card">
+          <img src="assets/prod-grapes.jpg" alt="عنب" />
+          <h3>عنب</h3>
+          <p>برايم، سوبيريور، فليم، كريمسون، ريد جلوب، طومسون، أوتمن.</p>
+          <a href="#" class="link">اعرف المزيد →</a>
+        </li>
+
+        <li class="product-card">
+          <img src="assets/prod-pomegranates.jpg" alt="رمان" />
+          <h3>رمان</h3>
+          <p>طعم غني ولوجستيات قوية مخصصة لأسواق التصدير.</p>
+          <a href="#" class="link">اعرف المزيد →</a>
+        </li>
+      </ul>
+    </div>
+
+    <div id="dates" class="tab-panel">
+      <ul class="card-grid">
+        <li class="product-card">
+          <img src="assets/dates.jpg" alt="تمور" />
+          <h3>تمور عالية الجودة</h3>
+          <p>قوام متناسق وجودة ثابتة تناسب خدمات الأغذية.</p>
+          <a href="#" class="link">اعرف المزيد →</a>
+        </li>
+      </ul>
+    </div>
+
+    <div id="frozen-fruit" class="tab-panel">
+      <ul class="card-grid">
+        <li class="product-card">
+          <img src="assets/prod-frozen-strawberry.jpg" alt="فراولة مجمدة" />
+          <h3>فراولة مجمدة</h3>
+          <p>مثالية للأسواق سريعة الطلب مع الحفاظ الكامل على سلسلة التبريد.</p>
+          <a href="#" class="link">اعرف المزيد →</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<script>
+  const tabs = document.querySelectorAll(".product-tabs li");
+  const panels = document.querySelectorAll(".tab-panel");
+
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      const targetId = tab.getAttribute("data-tab");
+
+      tabs.forEach(t => t.classList.remove("active"));
+      tab.classList.add("active");
+
+      panels.forEach(panel => {
+        panel.classList.remove("active");
+        if (panel.id === targetId) {
+          panel.classList.add("active");
+        }
+      });
+    });
+  });
+</script>
+
+<!-- Process -->
+<section id="process" class="section process scroll-offset">
+  <div class="container">
+    <h2>مراحل العمل من المزرعة إلى الميناء</h2>
+
+    <ol class="process-steps">
+      <li>
+        <div class="step-icon">1</div>
+        <h3>الحصاد</h3>
+        <p>اختيار المحاصيل بعناية في أفضل مراحل النضج لضمان الجودة.</p>
+      </li>
+
+      <li>
+        <div class="step-icon">2</div>
+        <h3>فحص وضبط الجودة</h3>
+        <p>فرز دقيق وفحص صارم لمطابقة المواصفات التصديرية المتفق عليها.</p>
+      </li>
+
+      <li>
+        <div class="step-icon">3</div>
+        <h3>التعبئة</h3>
+        <p>تغليف بمعايير عالمية مع ملصقات وبيانات مطابقة لمتطلبات كل سوق.</p>
+      </li>
+
+      <li>
+        <div class="step-icon">4</div>
+        <h3>الشحن المبرد</h3>
+        <p>الحفاظ على سلسلة التبريد من المزرعة وحتى الميناء.</p>
+      </li>
+
+      <li>
+        <div class="step-icon">5</div>
+        <h3>التسليم</h3>
+        <p>وصول الشحنات في المواعيد المحددة للأسواق العالمية.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="section faq scroll-offset">
+  <div class="container">
+    <h2>الأسئلة الشائعة حول التصدير</h2>
+
+    <div class="faq-list">
+      <details>
+        <summary>ما هي الشهادات التي تلتزم بها إيكولاند؟</summary>
+        <div class="faq-content">
+          <p>
+            نلتزم بمعايير GlobalG.A.P و ISO، مع الامتثال الكامل
+            لاشتراطات الاتحاد الأوروبي ولوائح سلامة الغذاء الدولية.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>كيف يتم الحفاظ على سلسلة التبريد؟</summary>
+        <div class="faq-content">
+          <p>
+            نستخدم أنظمة شحن مبردة من المزرعة وحتى الميناء
+            مع مراقبة مستمرة لدرجات الحرارة.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>هل يمكن فحص الشحنات قبل التصدير؟</summary>
+        <div class="faq-content">
+          <p>
+            نعم، نرحب بالفحص من خلال شركات تفتيش دولية مستقلة
+            قبل الشحن لضمان الشفافية الكاملة.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>ما الضمانات الخاصة بالمنشأ والوثائق؟</summary>
+        <div class="faq-content">
+          <p>
+            نوفر شهادات منشأ رسمية وكامل المستندات التصديرية
+            مع نظام تتبع لكل شحنة.
+          </p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+
+<!-- Contact -->
+<section id="contact" class="section contact scroll-offset">
+  <div class="container contact-inner">
+
+    <div class="contact-copy">
+      <h2>جاهز لاستيراد المحاصيل الزراعية المصرية؟</h2>
+      <p>احصل على أسعار تنافسية وعروض مخصصة لطلبات الجملة.</p>
+
+      <ul class="contact-points">
+        <li><strong>المبيعات:</strong> +20 111 245 6632</li>
+        <li><strong>البريد الإلكتروني:</strong> sales@ecolandeg.com</li>
+        <li><strong>العنوان:</strong> ميامي، الإسكندرية، مصر</li>
+      </ul>
+
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d591.3674873856828!2d30.019593893150205!3d31.251453306622683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f5dbd695bf6e6d%3A0x446d139e9c85f640!2z2LHZitit2KfZhtipINin2YTZitmD2LM!5e1!3m2!1sar!2seg!4v1767058224244!5m2!1sar!2seg"
+          width="100%"
+          height="300"
+          style="border:0;"
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+
+    <form class="contact-form" onsubmit="event.preventDefault(); alert('تم إرسال طلبك بنجاح');">
+      <div class="form-row">
+        <label>الاسم بالكامل</label>
+        <input type="text" placeholder="اكتب اسمك" required />
+      </div>
+
+      <div class="form-row">
+        <label>البريد الإلكتروني</label>
+        <input type="email" placeholder="example@mail.com" required />
+      </div>
+
+      <div class="form-row">
+        <label>اسم الشركة</label>
+        <input type="text" placeholder="اسم الشركة (اختياري)" />
+      </div>
+
+      <div class="form-row">
+        <label>الرسالة</label>
+        <textarea rows="4" placeholder="اكتب تفاصيل المنتج والكميات المطلوبة"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary">
+        طلب عرض سعر
+      </button>
+    </form>
+
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+
+    <div class="footer-col">
+      <a href="#" class="logo">
+        <img src="assets/onlypalm.png" alt="ECOLAND" />
+        <span class="logo-text">إيكولاند</span>
+      </a>
+      <p>
+        مصدرك الموثوق للمحاصيل الزراعية المصرية عالية الجودة
+        والمعدة للتصدير للأسواق العالمية.
+      </p>
+    </div>
+
+    <div class="footer-col">
+      <h3>المنتجات</h3>
+      <ul class="footer-links">
+        <li><a href="#products">خضروات طازجة</a></li>
+        <li><a href="#products">موالح</a></li>
+        <li><a href="#products">فواكه طازجة</a></li>
+        <li><a href="#products">فواكه مجمدة</a></li>
+        <li><a href="#products">تمور</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>بيانات التواصل</h3>
+      <ul class="footer-links">
+        <li>📍 ميامي، الإسكندرية – مصر</li>
+        <li>📞 +20 111 245 6632</li>
+        <li>✉️ sales@ecolandeg.com</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="container footer-bottom">
+    <p>© جميع الحقوق محفوظة 2026 – إيكولاند</p>
+  </div>
+</footer>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const langToggle = document.getElementById("langToggle");
+  const langDropdown = document.getElementById("langDropdown");
+
+  langToggle.addEventListener("click", function (e) {
+    e.stopPropagation();
+    langDropdown.classList.toggle("open");
+  });
+
+  document.addEventListener("click", function () {
+    langDropdown.classList.remove("open");
+  });
+});
+</script>
+<script>
+function translatePage(lang) {
+  const url = window.location.href;
+  const translateUrl =
+    `https://translate.google.com/translate?sl=en&tl=${lang}&u=${encodeURIComponent(url)}`;
+
+  window.location.href = translateUrl;
+}
+</script>
+
+</body>
+</html>

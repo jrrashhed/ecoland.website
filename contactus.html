@@ -32,7 +32,7 @@
 
         <!-- Dropdown Products -->
         <li class="dropdown">
-          <a href="products.html" class="nav-link">Products <span class="arrow">▾</span></a>
+          <a href="products.html" class="dropdown-toggle">Products <span class="arrow">▾</span></a>
           <ul class="dropdown-menu">
             
             <!-- Fresh Vegetables -->
@@ -44,7 +44,7 @@
                 <li><a href="products.html#onions">Onions</a></li>
               </ul>
             </li>
-
+            
             <!-- Citrus -->
             <li class="dropdown-sub">
               <a href="products.html#citrus">Citrus▸</a>
@@ -86,12 +86,48 @@
 
         <li><a href="index.html#process">Process</a></li>
         <li><a href="index.html#faq">FAQ</a></li>
-        <li><a href="contactus.html">About Us</a></li>
+        <li><a href="contactus.html"> About Us</a></li>
         <li><a href="index.html#contact" class="btn"><span>Get a quote</span></a></li>
+
+        <!-- <div id="google_translate_element" style="margin-left:15px;"></div> -->
+                  
+<div class="lang-menu">
+          <button class="lang-btn" id="langToggle">
+            🌐 English <span class="arrow">▾</span>
+          </button>
+
+          <ul class="lang-dropdown" id="langDropdown">
+            <li>
+              <a href="index.html">
+                <img src="assets/gb.svg.svg" alt="English"> English
+              </a>
+            </li>
+            <li>
+              <a href="ar_index.html">
+                <img src="assets/sa.svg.svg" alt="العربية"> العربية
+              </a>
+            </li>
+            <li>
+              <a href="ru_index.html">
+                <img src="assets/ru.svg.svg" alt="Русский"> Русский
+              </a>
+            </li>
+          </ul>
+        </div>
+
+<!-- عنصر جوجل (مخفي)
+<div id="google_translate_element" style="display:none;"></div> -->
+
+
+
+
+
+
       </ul>
     </nav>
   </div>
 </header>
+
 
 <section class="about-hero">
   <div class="about-overlay">
@@ -299,20 +335,7 @@
   </div>
 </footer>
   
-  <script>
-  const currentPage = window.location.pathname.split("/").pop();
-  document.querySelectorAll(".nav-list a").forEach(link => {
-    const href = link.getAttribute("href");
-    if (href === currentPage || href.includes(currentPage)) {
-      link.classList.add("active");
-    } else {
-      link.classList.remove("active");
-    }
-  });
-</script>
-
-<script src="script.js"></script>
-<script src="script.js"></script>
+  script src="script.js"></script>
 <script>
 const toggle = document.querySelector('.nav-toggle');
 const navList = document.querySelector('.nav-list');
@@ -320,6 +343,31 @@ const navList = document.querySelector('.nav-list');
 toggle.addEventListener('click', () => {
   navList.classList.toggle('show');
 });
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const langToggle = document.getElementById("langToggle");
+  const langDropdown = document.getElementById("langDropdown");
+
+  langToggle.addEventListener("click", function (e) {
+    e.stopPropagation();
+    langDropdown.classList.toggle("open");
+  });
+
+  document.addEventListener("click", function () {
+    langDropdown.classList.remove("open");
+  });
+});
+</script>
+<script>
+function translatePage(lang) {
+  const url = window.location.href;
+  const translateUrl =
+    `https://translate.google.com/translate?sl=en&tl=${lang}&u=${encodeURIComponent(url)}`;
+
+  window.location.href = translateUrl;
+}
 </script>
 
 </body>

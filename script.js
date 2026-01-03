@@ -1,68 +1,95 @@
-// Mobile nav toggle
-const toggle = document.querySelector('.nav-toggle');
-const navList = document.querySelector('.nav-list');
+document.addEventListener('DOMContentLoaded', function () {
 
-toggle.addEventListener('click', () => {
-  navList.classList.toggle('show');
-});
+  // Mobile nav toggle
+  const toggle = document.querySelector('.nav-toggle');
+  const navList = document.querySelector('.nav-list');
 
-// Smooth scroll
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', e => {
-    const id = a.getAttribute('href').slice(1);
-    const el = document.getElementById(id);
-    if (el) {
-      e.preventDefault();
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      navList?.classList.remove('show');
-      toggle?.setAttribute('aria-expanded', 'false');
+  if (!toggle || !navList) return;
+
+  toggle.addEventListener('click', function () {
+    navList.classList.toggle('show');
+    toggle.setAttribute(
+      'aria-expanded',
+      navList.classList.contains('show')
+    );
+  });
+
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href').slice(1);
+      const el = document.getElementById(id);
+
+      if (el) {
+        e.preventDefault();
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        navList.classList.remove('show');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+
+  // Product tabs
+  const tabs = document.querySelectorAll('.product-tabs li');
+  const panels = document.querySelectorAll('.tab-panel');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const id = tab.dataset.tab;
+      panels.forEach(p =>
+        p.classList.toggle('active', p.id === id)
+      );
+    });
+  });
+
+  // Hero background slider
+  const slides = document.querySelectorAll('.hero-slides .slide');
+  let currentSlide = 0;
+
+  if (slides.length) {
+    setInterval(() => {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }, 5000);
+  }
+
+  // Mobile dropdowns
+  document.querySelectorAll('.has-dropdown > a').forEach(link => {
+    link.addEventListener('click', function (e) {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        const parent = this.parentElement;
+
+        document.querySelectorAll('.has-dropdown.open')
+          .forEach(item => {
+            if (item !== parent) item.classList.remove('open');
+          });
+
+        parent.classList.toggle('open');
+      }
+    });
+  });
+
+  // ✅ Close menu when clicking outside
+  document.addEventListener('click', function (e) {
+    const menuOpen = navList.classList.contains('show');
+    const clickedToggle = toggle.contains(e.target);
+    const clickedMenu = navList.contains(e.target);
+
+    if (menuOpen && !clickedToggle && !clickedMenu) {
+      navList.classList.remove('show');
+      toggle.setAttribute('aria-expanded', 'false');
     }
   });
-});
 
-// Product tabs
-const tabs = document.querySelectorAll('.product-tabs li');
-const panels = document.querySelectorAll('.tab-panel');
-tabs.forEach(tab => {
-  tab.addEventListener('click', () => {
-    tabs.forEach(t => t.classList.remove('active'));
-    tab.classList.add('active');
-    const id = tab.dataset.tab;
-    panels.forEach(p => p.classList.toggle('active', p.id === id));
+});
+document.querySelectorAll('.nav-toggle').forEach((toggle, i) => {
+  const navList = document.querySelectorAll('.nav-list')[i];
+
+  toggle.addEventListener('click', () => {
+    navList.classList.toggle('show');
   });
 });
-// Hero background slider
-const slides = document.querySelectorAll('.hero-slides .slide');
-let currentSlide = 0;
-
-setInterval(() => {
-  slides[currentSlide].classList.remove('active');
-  currentSlide = (currentSlide + 1) % slides.length;
-  slides[currentSlide].classList.add('active');
-}, 5000);
-
-document.querySelectorAll('.has-dropdown > a').forEach(link => {
-  link.addEventListener('click', function (e) {
-
-    if (window.innerWidth <= 768) {
-      e.preventDefault();
-
-      const parent = this.parentElement;
-
-      // اقفل أي dropdown تاني مفتوح
-      document.querySelectorAll('.has-dropdown.open')
-        .forEach(item => {
-          if (item !== parent) item.classList.remove('open');
-        });
-
-      // افتح / اقفل الحالي
-      parent.classList.toggle('open');
-    }
-
-  });
-});
-
-
-
-
-

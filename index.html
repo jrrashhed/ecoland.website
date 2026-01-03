@@ -102,19 +102,31 @@
         <!-- <div id="google_translate_element" style="margin-left:15px;"></div> -->
                   
 <div class="lang-menu">
-  <button class="lang-btn" id="langToggle" type="button">
-    🌐 English <span class="arrow">▾</span>
-  </button>
+          <button class="lang-btn" id="langToggle">
+            🌐 English <span class="arrow">▾</span>
+          </button>
 
-  <ul class="lang-dropdown" id="langDropdown">
-    <li><a href="#">English</a></li>
-    <li><a href="#">العربية</a></li>
-    <li><a href="#">Русский</a></li>
-  </ul>
-</div>
+          <ul class="lang-dropdown" id="langDropdown">
+            <li>
+              <a href="index.html">
+                <img src="assets/gb.svg.svg" alt="English"> English
+              </a>
+            </li>
+            <li>
+              <a href="ar_index.html">
+                <img src="assets/sa.svg.svg" alt="العربية"> العربية
+              </a>
+            </li>
+            <li>
+              <a href="ru_index.html">
+                <img src="assets/ru.svg.svg" alt="Русский"> Русский
+              </a>
+            </li>
+          </ul>
+        </div>
 
-<!-- عنصر جوجل (مخفي) -->
-<div id="google_translate_element" style="display:none;"></div>
+<!-- عنصر جوجل (مخفي)
+<div id="google_translate_element" style="display:none;"></div> -->
 
 
 
@@ -617,69 +629,22 @@ toggle.addEventListener('click', () => {
   navList.classList.toggle('show');
 });
 </script>
-<script>
-// ================= GOOGLE TRANSLATE =================
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({
-    pageLanguage: 'en',
-    includedLanguages: 'en,ar,ru',
-    autoDisplay: false
-  }, 'google_translate_element');
-}
-</script>
-
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 <script>
-// ================= LANG MENU TOGGLE =================
-const langToggle = document.getElementById("langToggle");
-const langDropdown = document.getElementById("langDropdown");
+document.addEventListener("DOMContentLoaded", function () {
+  const langToggle = document.getElementById("langToggle");
+  const langDropdown = document.getElementById("langDropdown");
 
-langToggle.addEventListener("click", (e) => {
-  e.stopPropagation();
-  langDropdown.classList.toggle("open");
-});
+  langToggle.addEventListener("click", function (e) {
+    e.stopPropagation();
+    langDropdown.classList.toggle("open");
+  });
 
-document.addEventListener("click", () => {
-  langDropdown.classList.remove("open");
-});
-
-// ================= WAIT FOR GOOGLE =================
-function waitForTranslateSelect(callback) {
-  const interval = setInterval(() => {
-    const select = document.querySelector('select.goog-te-combo');
-    if (select) {
-      clearInterval(interval);
-      callback(select);
-    }
-  }, 100);
-}
-
-// ================= CHANGE LANGUAGE =================
-document.querySelectorAll('.lang-dropdown a').forEach(link => {
-  link.addEventListener('click', function (e) {
-    e.preventDefault();
-
-    const lang = this.dataset.lang;
-
-    waitForTranslateSelect((select) => {
-      select.value = lang;
-      select.dispatchEvent(new Event('change'));
-
-      // تغيير اسم اللغة في الزر
-      langToggle.innerHTML =
-        '🌐 ' + this.textContent.trim() + ' <span class="arrow">▾</span>';
-
-      // اتجاه الصفحة
-      document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
-
-      // قفل القائمة
-      langDropdown.classList.remove("open");
-    });
+  document.addEventListener("click", function () {
+    langDropdown.classList.remove("open");
   });
 });
 </script>
-
 <script>
 function translatePage(lang) {
   const url = window.location.href;
@@ -689,6 +654,7 @@ function translatePage(lang) {
   window.location.href = translateUrl;
 }
 </script>
+
 
 
 </body>

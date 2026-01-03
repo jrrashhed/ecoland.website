@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>إيكولاند | من نحن</title>
+  <meta name="description" content="تواصل مع إيكولاند لتصدير المنتجات الزراعية المصرية المعتمدة." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="style-rtl.css">
+
+    <style>
+    /* تعديلات سريعة للغة العربية */
+    body { font-family: 'Cairo', sans-serif; }
+    .logo-text { transform: translateX(25px); } /* عكس الإزاحة في العربية */
+    .nav-list { gap: 25px; }
+    .hero-content h1 { line-height: 1.4; }
+  </style>
+
+</head>
+<body>
+
+<!-- Header -->
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="logo-with-name">
+      <a href="ar_index.html" class="logo">
+        <img src="assets/onlypalm.png" alt="ECOLAND" />
+      </a>
+      <span class="logo-text">إيكولاند</span>
+    </div>
+
+    <nav class="nav" aria-label="Primary">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="sr-only">فتح القائمة</span>
+      </button>
+
+      <ul id="primary-menu" class="nav-list">
+        <li><a href="ar_index.html" class="active">الرئيسية</a></li>
+
+        <li class="dropdown">
+          <a href="products.html" class="dropdown-toggle">
+            المنتجات <span class="arrow">▾</span>
+          </a>
+
+          <ul class="dropdown-menu">
+            <li class="dropdown-sub">
+              <a href="products.html#fresh-vegetables">خضروات طازجة ▸</a>
+              <ul class="dropdown-submenu">
+                <li><a href="potatoes.html">بطاطس</a></li>
+                <li><a href="carrots.html">جزر</a></li>
+                <li><a href="products.html#onions">بصل</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown-sub">
+              <a href="products.html#citrus">الموالح ▸</a>
+              <ul class="dropdown-submenu">
+                <li><a href="products.html#oranges">برتقال</a></li>
+                <li><a href="products.html#lemons">ليمون</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown-sub">
+              <a href="products.html#fresh-fruits">فواكه طازجة ▸</a>
+              <ul class="dropdown-submenu">
+                <li><a href="products.html#grapes">عنب</a></li>
+                <li><a href="products.html#pomegranates">رمان</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown-sub">
+              <a href="products.html#frozen-vegetables">خضروات مجمدة ▸</a>
+              <ul class="dropdown-submenu">
+                <li><a href="products.html#peas">بازلاء</a></li>
+                <li><a href="products.html#greenbeans">فاصوليا خضراء</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown-sub">
+              <a href="products.html#frozen-fruits">فواكه مجمدة ▸</a>
+              <ul class="dropdown-submenu">
+                <li><a href="products.html#strawberries">فراولة</a></li>
+                <li><a href="products.html#mango">مانجو</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li><a href="ar_index.html#process">مراحل العمل</a></li>
+        <li><a href="ar_index.html#faq">الأسئلة الشائعة</a></li>
+        <li><a href="ar-contactus.html">من نحن</a></li>
+        <li><a href="ar_index.html#contact" class="btn"><span>اطلب عرض سعر</span></a></li>
+
+          <div class="lang-menu">
+            <button class="lang-btn" id="langToggle" aria-expanded="false">
+              🌐 العربية<span class="arrow">▾</span>
+            </button>
+
+            <ul class="lang-dropdown" id="langDropdown">
+              <li>
+                <a href="index.html">
+                  <img src="assets/gb.svg.svg" alt="English">
+                  English
+                </a>
+              </li>
+              <li>
+                <a href="ar_index.html">
+                  <img src="assets/sa.svg.svg" alt="العربية">
+                  العربية
+                </a>
+              </li>
+              <li>
+                <a href="ru_index.html">
+                  <img src="assets/ru.svg.svg" alt="Русский">
+                  Русский
+                </a>
+              </li>
+            </ul>
+          </div>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="about-hero">
+  <div class="about-overlay">
+    <h1>عن إيكولاند</h1>
+    <p>من أرضنا إلى صادراتكم — جودة يمكنك الوثوق بها.</p>
+  </div>
+</section>
+
+<section class="our-story-section">
+  <div class="container">
+    <h2 class="our-story-title">قصتنا</h2>
+
+    <div class="story-grid">
+      <div class="story-point">
+        <div class="icon">🌱</div>
+        <h3>زراعة مستدامة</h3>
+        <p>نزرع محاصيلنا باستخدام أساليب صديقة للبيئة تحافظ على التربة وتزيد الإنتاج.</p>
+      </div>
+
+      <div class="story-point">
+        <div class="icon">📦</div>
+        <h3>معايير تصدير معتمدة</h3>
+        <p>نلتزم بمعايير ISO و GLOBALG.A.P لضمان الجودة وإمكانية التتبع.</p>
+      </div>
+
+      <div class="story-point">
+        <div class="icon">🌍</div>
+        <h3>انتشار عالمي</h3>
+        <p>نصدر المنتجات الزراعية المصرية للأسواق الدولية بشراكات طويلة الأمد.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Supply Chain Section -->
+<section class="supply-chain section">
+  <div class="container">
+    <h2>سلسلة توريد منتجاتنا من المزرعة إلى الميناء</h2>
+    <p class="subtitle">التعامل الاحترافي يضمن وصول منتجاتنا طازجة وبأفضل جودة.</p>
+
+    <div class="chain-grid">
+      <div class="chain-step">
+        <div class="icon">🌱</div>
+        <h3>الزراعة والاستصلاح</h3>
+        <p>تتم الزراعة في أفضل الأراضي الزراعية المصرية مع إدارة دقيقة للري لضمان حجم وجودة متناسقة.</p>
+      </div>
+      <div class="chain-step">
+        <div class="icon">🤲</div>
+        <h3>الحصاد والتجميع</h3>
+        <p>يتم الحصاد بعناية لتقليل أي تلف، ثم نقل المحاصيل فورًا إلى مراكز التجميع المظللة.</p>
+      </div>
+      <div class="chain-step">
+        <div class="icon">🔍</div>
+        <h3>الفرز وضبط الجودة</h3>
+        <p>تمر المنتجات بعمليات فرز دقيقة ومعايرة صارمة لإزالة أي عيوب وضمان مطابقة مواصفات التصدير.</p>
+      </div>
+      <div class="chain-step">
+        <div class="icon">🏭</div>
+        <h3>التعبئة والشحن</h3>
+        <p>التعبئة حسب طلب العميل في عبوات PP أو جوت أو جامبو، ثم الشحن في حاويات مبردة مجهزة.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="contact-header" id="about">
+  <h1>تواصل معنا</h1>
+</div>
+
+<!-- Contact Section -->
+<section class="section contact" id="aboutcard">
+  <div class="container contact-inner">
+
+    <!-- Contact Info -->
+    <div class="contact-info">
+      <h2>ابقَ على تواصل</h2>
+      <ul class="contact-points">
+        <li>📍 <strong>العنوان:</strong> ميامي، الإسكندرية، مصر</li>
+        <li>📞 <strong>الهاتف:</strong> +20 100 123 4567</li>
+        <li>✉️ <strong>البريد الإلكتروني:</strong> info@ecolandeg.com</li>
+        <li>🌐 <strong>الموقع:</strong> www.ecolandeg.com</li>
+      </ul>
+
+      <p>
+        نحن متخصصون في تصدير المحاصيل الزراعية المصرية الطازجة مثل الموالح،
+        البطاطس، البصل، الجزر، العنب وغيرها.
+        نثق بنا شركات الاستيراد حول العالم لجودة منتجاتنا والتزامنا.
+      </p>
+
+<!-- Map -->
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d591.3674873856828!2d30.019593893150205!3d31.251453306622683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f5dbd695bf6e6d%3A0x446d139e9c85f640!2z2LHZitit2KfZhtipINin2YTZitmD2LM!5e1!3m2!1sar!2seg!4v1767058224244!5m2!1sar!2seg"
+            width="100%"
+            height="300"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+   
+
+    <!-- Contact Form -->
+    <div class="contact-form">
+      <h2>طلب عرض سعر</h2>
+      <form>
+        <div class="form-row">
+          <label for="name">الاسم بالكامل</label>
+          <input type="text" id="name" placeholder="اسمك الكامل" required>
+        </div>
+        <div class="form-row">
+          <label for="email">البريد الإلكتروني</label>
+          <input type="email" id="email" placeholder="بريدك الإلكتروني" required>
+        </div>
+        <div class="form-row">
+          <label for="phone">رقم الهاتف</label>
+          <input type="tel" id="phone" placeholder="رقم الهاتف">
+        </div>
+        <div class="form-row">
+          <label for="message">الرسالة</label>
+          <textarea id="message" rows="5" placeholder="أخبرنا عن المنتجات والكميات المطلوبة" required></textarea>
+        </div>
+        <button type="submit" class="btn-primary">إرسال الطلب</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+
+    <div class="footer-col">
+      <a href="#" class="logo">
+        <img src="assets/onlypalm.png" alt="ECOLAND" />
+        <span class="logo-text">إيكولاند</span>
+      </a>
+      <p>
+        مصدرك المعتمد للمحاصيل الزراعية المصرية<br>
+        بجودة عالية وشحن موثوق للأسواق العالمية
+      </p>
+    </div>
+
+    <div class="footer-col">
+      <h3>المنتجات</h3>
+      <ul class="footer-links">
+        <li><a href="index_ar.html#fresh-vegetables">خضروات طازجة</a></li>
+        <li><a href="index_ar.html#citrus">موالح</a></li>
+        <li><a href="index_ar.html#fresh-fruits">فواكه طازجة</a></li>
+        <li><a href="#frozen-fruits">فواكه مجمدة</a></li>
+        <li><a href="#dates">تمور</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>الشركة</h3>
+      <ul class="footer-links">
+        <li><a href="contactus_ar.html#our_story_section">قصتنا</a></li>
+        <li><a href="contactus_ar.html#about">تواصل معنا</a></li>
+        <li><a href="#contact">اطلب عرض سعر</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>بيانات التواصل</h3>
+      <ul class="footer-links footer-contact">
+        <li>📍 ميامي، الإسكندرية، مصر</li>
+        <li>📞 <a href="tel:+201112456632">+20 111 245 6632</a></li>
+        <li>✉️ <a href="mailto:sales@ecolandeg.com">sales@ecolandeg.com</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="container footer-bottom">
+    <p>© جميع الحقوق محفوظة 2026 - إيكولاند</p>
+  </div>
+</footer>
+
+<script>
+const currentPage = window.location.pathname.split("/").pop();
+document.querySelectorAll(".nav-list a").forEach(link => {
+  const href = link.getAttribute("href");
+  if (href === currentPage || href.includes(currentPage)) {
+    link.classList.add("active");
+  } else {
+    link.classList.remove("active");
+  }
+});
+</script>
+
+<script src="script.js"></script>
+<script>
+const toggle = document.querySelector('.nav-toggle');
+const navList = document.querySelector('.nav-list');
+toggle.addEventListener('click', () => {
+  navList.classList.toggle('show');
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const langToggle = document.getElementById("langToggle");
+  const langDropdown = document.getElementById("langDropdown");
+
+  langToggle.addEventListener("click", function (e) {
+    e.stopPropagation();
+    langDropdown.classList.toggle("open");
+  });
+
+  document.addEventListener("click", function () {
+    langDropdown.classList.remove("open");
+  });
+});
+</script>
+<script>
+function translatePage(lang) {
+  const url = window.location.href;
+  const translateUrl =
+    `https://translate.google.com/translate?sl=en&tl=${lang}&u=${encodeURIComponent(url)}`;
+
+  window.location.href = translateUrl;
+}
+</script>
+
+</body>
+</html>
+
