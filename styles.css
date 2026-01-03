@@ -3034,3 +3034,46 @@ html {
   background: #fafcf9;
 }
 
+@media (max-width: 768px) {
+
+  .nav-list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    background: #ffffff;
+    padding: 20px 0;
+    z-index: 9999;
+  }
+
+  .nav-list.active {
+    display: block;
+  }
+
+  .nav-list li {
+    text-align: center;
+    padding: 12px 0;
+  }
+}
+@media (max-width: 768px) {
+
+  html[lang="ar"] .logo-with-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -35px;
+  }
+
+  html[lang="ar"] .logo-text {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1;
+    white-space: nowrap;  /* يمنع الكلمة تكسر */
+  }
+
+  html[lang="ar"] .logo img {
+    width: 80px;          /* تصغير اللوجو شوية للموبايل */
+    height: auto;
+  }
+}

@@ -562,6 +562,39 @@
   </div>
 </footer>
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const menuBtn = document.querySelector(".nav-toggle");
+  const navList = document.querySelector(".nav-list");
+
+  if (!menuBtn || !navList) return;
+
+  menuBtn.addEventListener("click", function (e) {
+    e.stopPropagation();
+
+    navList.classList.toggle("active");
+
+    const expanded = menuBtn.getAttribute("aria-expanded") === "true";
+    menuBtn.setAttribute("aria-expanded", !expanded);
+  });
+
+  // قفل المنيو لما تدوس بره
+  document.addEventListener("click", function () {
+    navList.classList.remove("active");
+    menuBtn.setAttribute("aria-expanded", "false");
+  });
+});
+</script>
+
+<script>
+function translatePage(lang) {
+  const url = window.location.href;
+  const translateUrl =
+    `https://translate.google.com/translate?sl=en&tl=${lang}&u=${encodeURIComponent(url)}`;
+
+  window.location.href = translateUrl;
+}
+</script>
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
@@ -577,15 +610,6 @@ document.addEventListener("DOMContentLoaded", function () {
     langDropdown.classList.remove("open");
   });
 });
-</script>
-<script>
-function translatePage(lang) {
-  const url = window.location.href;
-  const translateUrl =
-    `https://translate.google.com/translate?sl=en&tl=${lang}&u=${encodeURIComponent(url)}`;
-
-  window.location.href = translateUrl;
-}
 </script>
 
 </body>
