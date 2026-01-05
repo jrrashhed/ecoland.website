@@ -24,11 +24,11 @@
         <span class="sr-only">Toggle menu</span>
       </button>
       <ul id="primary-menu" class="nav-list">
-        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="index.html">Home</a></li>
 
         <!-- Dropdown Products -->
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle">Products <span class="arrow">▾</span></a>
+          <a href="#" class="dropdown-toggle, active">Products <span class="arrow">▾</span></a>
           <ul class="dropdown-menu">
             
             <!-- Fresh Vegetables -->
@@ -215,13 +215,27 @@ Harvested at peak maturity and rapidly hydro-cooled, Ecoland carrots are enginee
     <!-- End Table Wrapper -->
 
     <div class="legend">
-      <p>
-        <span class="legend-icon peak">✅</span> Peak Season &nbsp;&nbsp;&nbsp;&nbsp;
-        <span class="legend-icon limited">🟡</span> Limited Supply <BR>
-        <span class="legend-icon off">❌</span> Off Season  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <span class="legend-icon start">🔵</span> Season Start 
-      </p>
-    </div>
+        <div class="legend-item">
+          <span class="legend-icon peak">✅</span>
+          <span class="legend-text">Peak Season</span>
+        </div>
+
+        <div class="legend-item">
+          <span class="legend-icon limited">🟡</span>
+          <span class="legend-text">Limited Supply</span>
+        </div>
+
+        <div class="legend-item">
+          <span class="legend-icon off">❌</span>
+          <span class="legend-text">Off Season</span>
+        </div>
+
+        <div class="legend-item">
+          <span class="legend-icon start">🔵</span>
+          <span class="legend-text">Season Start </span>
+        </div>
+      </div>
+
   </div>
 </section>
 
@@ -330,7 +344,7 @@ Harvested at peak maturity and rapidly hydro-cooled, Ecoland carrots are enginee
   <!-- CTA Section -->
   <section class="cta section">
     <div class="container">
-      <a href="contactus.html" class="btn-primary">Get Your Official Quote Now</a>
+      <a href="contactus.html" class="btn-primary">Get Your Quote Now</a>
     </div>
   </section>
 

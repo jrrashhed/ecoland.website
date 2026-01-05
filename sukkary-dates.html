@@ -24,11 +24,11 @@
         <span class="sr-only">Toggle menu</span>
       </button>
       <ul id="primary-menu" class="nav-list">
-        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="index.html">Home</a></li>
 
         <!-- Dropdown Products -->
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle">Products <span class="arrow">▾</span></a>
+          <a href="#" class="dropdown-toggle, active">Products <span class="arrow">▾</span></a>
           <ul class="dropdown-menu">
             
             <!-- Fresh Vegetables -->
@@ -193,13 +193,27 @@
       </table>
     </div>
     <div class="legend">
-      <p>
-        <span class="legend-icon peak">✅</span> Peak Season  &nbsp;&nbsp;&nbsp;&nbsp;
-        <span class="legend-icon limited">🟡</span> Limited Supply <BR>
-        <span class="legend-icon off">❌</span> Off Season  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <span class="legend-icon start">🔵</span> Season Start 
-      </p>
-    </div>
+        <div class="legend-item">
+          <span class="legend-icon peak">✅</span>
+          <span class="legend-text">Peak Season</span>
+        </div>
+
+        <div class="legend-item">
+          <span class="legend-icon limited">🟡</span>
+          <span class="legend-text">Limited Supply</span>
+        </div>
+
+        <div class="legend-item">
+          <span class="legend-icon off">❌</span>
+          <span class="legend-text">Off Season</span>
+        </div>
+
+        <div class="legend-item">
+          <span class="legend-icon start">🔵</span>
+          <span class="legend-text">Season Start </span>
+        </div>
+      </div>
+
   </div>
 </section>
 
@@ -285,23 +299,118 @@
 <section class="cta section">
   <div class="container">
     <a href="contactus.html" class="btn-primary">
-      Get Your Official Quote Now
+      Get Your Quote Now
     </a>
   </div>
 </section>
 
-<!-- ================= SCRIPTS ================= -->
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+
+    <!-- Logo + About -->
+    <div class="footer-col">
+      <a href="#" class="logo">
+        <img src="assets/onlypalm.png" alt="ECOLAND" />
+        <span class="logo-text">ECOLAND</span>
+      </a>
+      <p>
+        Your certified source for premium Egyptian <br>
+        agricultural crops <br>
+        shipped reliably to global markets
+      </p>
+    </div>
+
+    <!-- Products -->
+    <div class="footer-col">
+      <h3>Products</h3>
+      <ul class="footer-links">
+        <li><a href="index.html#fresh-vegetables">Fresh Vegetables</a></li>
+        <li><a href="index.html#citrus">Citrus</a></li>
+        <li><a href="index.html#fresh-fruits">Fresh Fruits</a></li>
+        <li><a href="#frozen-fruits">Frozen Fruits</a></li>
+        <li><a href="#dates">Dates</a></li>
+      </ul>
+    </div>
+
+    <!-- Company -->
+    <div class="footer-col">
+      <h3>Company</h3>
+      <ul class="footer-links">
+        <li><a href="contactus.html#our_story_section">Our story</a></li>
+        <li><a href="contactus.html#about">Contact us</a></li>
+        <li><a href="#contact">Get a quote</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info (من الفوتر الأزرق) -->
+    <div class="footer-col">
+      <h3>Contact Info</h3>
+      <ul class="footer-links footer-contact">
+        <li>
+          📍 Miami,
+          Alexandria,
+          Egypt
+        </li>
+        <li>
+          📞 <a href="tel:+201112456632">+20 111 245 6632</a>
+        </li>
+        <li>
+          ✉️ <a href="mailto:sales@geoexporting.com">sales@ecolandeg.com</a>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Bottom -->
+  <div class="container footer-bottom">
+    <p>© Copyright 2026 - EcoLand - All Rights Reserved</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="script.js"></script>
 <script>
-  document.querySelectorAll('.faq-item h3').forEach(item => {
-    item.addEventListener('click', () => {
-      item.parentElement.classList.toggle('active');
-    });
+const toggle = document.querySelector('.nav-toggle');
+const navList = document.querySelector('.nav-list');
+
+toggle.addEventListener('click', () => {
+  navList.classList.toggle('show');
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const langToggle = document.getElementById("langToggle");
+  const langDropdown = document.getElementById("langDropdown");
+
+  langToggle.addEventListener("click", function (e) {
+    e.stopPropagation();
+    langDropdown.classList.toggle("open");
   });
 
-  const toggle = document.querySelector('.nav-toggle');
-  const navList = document.querySelector('.nav-list');
-  toggle.addEventListener('click', () => {
-    navList.classList.toggle('show');
+  document.addEventListener("click", function () {
+    langDropdown.classList.remove("open");
+  });
+});
+</script>
+<script>
+function translatePage(lang) {
+  const url = window.location.href;
+  const translateUrl =
+    `https://translate.google.com/translate?sl=en&tl=${lang}&u=${encodeURIComponent(url)}`;
+
+  window.location.href = translateUrl;
+}
+</script>
+<script>
+  const faqItems = document.querySelectorAll('.faq-item h3');
+
+  faqItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const parent = item.parentElement;
+      parent.classList.toggle('active');
+    });
   });
 </script>
 

@@ -3147,32 +3147,16 @@ html {
 
 
 
-@media (max-width:768px){
+/* ================= Legend ================= */
 
-  /* تقليل المسافة بين عناصر المنيو */
-  .nav-list li{
-    margin:0 !important;
-  }
-
-  .nav-list a{
-    padding:10px 20px !important;   /* كانت أكبر */
-    line-height:1.2 !important;
-  }
-
-  /* لو في gap على ul */
-  .nav-list{
-    gap:0 !important;
-  }
-
-}
-
+/* افتراضي: روسي / إنجليزي */
 .legend {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px 32px;
-  margin-top: 20px;
   justify-content: center;
-  direction: rtl;
+  gap: 24px;
+  margin-top: 24px;
+  direction: ltr;
 }
 
 .legend-item {
@@ -3185,52 +3169,32 @@ html {
 }
 
 .legend-icon {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1;
 }
 
+/* ================= RTL للعربي ================= */
 
-/* ===== Disable hover on mobile ===== */
-@media (max-width: 768px) {
-
-  /* امنع أي hover يفتح منيو */
-  .dropdown:hover .dropdown-menu,
-  .dropdown-sub:hover .dropdown-submenu {
-    display: none !important;
-    opacity: 0 !important;
-    visibility: hidden !important;
-  }
-
-  /* الفتح يكون بالكلاس show فقط */
-  .dropdown-menu.show,
-  .dropdown-submenu.show {
-    display: block !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-  }
+html[lang="ar"] .legend {
+  direction: rtl;
 }
-/* ===============================
-   FORCE CLICK ONLY ON MOBILE
-================================ */
-@media (max-width: 768px) {
 
-  /* امنع أي hover أو focus */
-  .dropdown:hover .dropdown-menu,
-  .dropdown:focus-within .dropdown-menu,
-  .dropdown-sub:hover .dropdown-submenu,
-  .dropdown-sub:focus-within .dropdown-submenu {
-    opacity: 0 !important;
-    visibility: hidden !important;
-    transform: none !important;
-    display: none !important;
+html[lang="ar"] .legend-item {
+  flex-direction: row-reverse;
+}
+
+/* ================= Mobile ================= */
+
+@media (max-width: 768px) {
+  .legend {
+    gap: 14px 20px;
   }
 
-  /* الفتح يكون بالكليك فقط */
-  .dropdown-menu.show,
-  .dropdown-submenu.show {
-    display: block !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    transform: none !important;
+  .legend-item {
+    font-size: 14px;
+  }
+
+  .legend-icon {
+    font-size: 15px;
   }
 }

@@ -651,65 +651,36 @@
 
 
 <script src="script.js"></script>
+<script>
+const toggle = document.querySelector('.nav-toggle');
+const navList = document.querySelector('.nav-list');
+
+toggle.addEventListener('click', () => {
+  navList.classList.toggle('show');
+});
+</script>
 
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-
-  /* ===== Mobile main menu ===== */
-  const toggle = document.querySelector(".nav-toggle");
-  const navList = document.querySelector(".nav-list");
-
-  toggle.addEventListener("click", () => {
-    navList.classList.toggle("show");
-  });
-
-  /* ===== Language dropdown ===== */
+document.addEventListener("DOMContentLoaded", function () {
   const langToggle = document.getElementById("langToggle");
   const langDropdown = document.getElementById("langDropdown");
 
-  if (langToggle && langDropdown) {
-    langToggle.addEventListener("click", e => {
-      e.stopPropagation();
-      langDropdown.classList.toggle("open");
-    });
-
-    document.addEventListener("click", () => {
-      langDropdown.classList.remove("open");
-    });
-  }
-
-  /* ===== Disable hover & enable click on mobile ===== */
-
-  // Products dropdown
-  document.querySelectorAll(".dropdown > a").forEach(link => {
-    link.addEventListener("click", e => {
-      if (window.innerWidth <= 768) {
-        e.preventDefault();
-        link.parentElement
-          .querySelector(".dropdown-menu")
-          .classList.toggle("show");
-      }
-    });
+  langToggle.addEventListener("click", function (e) {
+    e.stopPropagation();
+    langDropdown.classList.toggle("open");
   });
 
-  // Sub dropdowns
-  document.querySelectorAll(".dropdown-sub > a").forEach(link => {
-    link.addEventListener("click", e => {
-      if (window.innerWidth <= 768) {
-        e.preventDefault();
-        link.nextElementSibling.classList.toggle("show");
-      }
-    });
+  document.addEventListener("click", function () {
+    langDropdown.classList.remove("open");
   });
-
 });
-
-/* ===== Google translate ===== */
+</script>
+<script>
 function translatePage(lang) {
   const url = window.location.href;
-  window.location.href =
+  const translateUrl =
     `https://translate.google.com/translate?sl=en&tl=${lang}&u=${encodeURIComponent(url)}`;
+
+  window.location.href = translateUrl;
 }
 </script>
-
-
