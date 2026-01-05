@@ -3188,3 +3188,49 @@ html {
   font-size: 18px;
   line-height: 1;
 }
+
+
+/* ===== Disable hover on mobile ===== */
+@media (max-width: 768px) {
+
+  /* امنع أي hover يفتح منيو */
+  .dropdown:hover .dropdown-menu,
+  .dropdown-sub:hover .dropdown-submenu {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
+
+  /* الفتح يكون بالكلاس show فقط */
+  .dropdown-menu.show,
+  .dropdown-submenu.show {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+}
+/* ===============================
+   FORCE CLICK ONLY ON MOBILE
+================================ */
+@media (max-width: 768px) {
+
+  /* امنع أي hover أو focus */
+  .dropdown:hover .dropdown-menu,
+  .dropdown:focus-within .dropdown-menu,
+  .dropdown-sub:hover .dropdown-submenu,
+  .dropdown-sub:focus-within .dropdown-submenu {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transform: none !important;
+    display: none !important;
+  }
+
+  /* الفتح يكون بالكليك فقط */
+  .dropdown-menu.show,
+  .dropdown-submenu.show {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+  }
+}
