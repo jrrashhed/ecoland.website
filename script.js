@@ -93,3 +93,4 @@ document.querySelectorAll('.nav-toggle').forEach((toggle, i) => {
     navList.classList.toggle('show');
   });
 });
+

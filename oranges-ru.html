@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ECOLAND | О компании</title>
-  <meta name="description" content="Свяжитесь с ECOLAND для экспорта сертифицированной египетской сельскохозяйственной продукции." />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Апельсины | Ecoland</title>
 
   <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .hero-content h1 { line-height: 1.35; }
+  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-<!-- Header -->
 <header class="site-header">
   <div class="container header-inner">
     <div class="logo-with-name">
@@ -132,127 +136,156 @@
   </div>
 </header>
 
+<!-- ================= HERO ================= -->
+<section class="hero-banner-swpotato">
+  <div class="swpotato-bg-wrapper">
+    <img src="assets/orange.jpg" class="swpotato-bg" alt="Египетские апельсины">
+  </div>
 
-<section class="about-hero">
-  <div class="about-overlay">
-    <h1>О компании ECOLAND</h1>
-    <p>От нашей земли до вашего рынка — качество и доверие.</p>
+  <div class="hero-content-hero-swpotato">
+    <h1>Свежие египетские апельсины на экспорт</h1>
+    <p>
+      Ecoland — надежный египетский производитель и экспортер
+      свежих апельсинов высокого качества.
+      Апельсины выращиваются в благоприятных климатических условиях Египта,
+      обладают насыщенным вкусом, высоким содержанием сока
+      и отличной транспортабельностью,
+      что делает их идеальными для международных рынков.
+    </p>
+    <br>
+    <a href="ru-contactus.html" class="hero-swpotato-btn">Запросить цену</a>
+  </div>
+
+  <a href="#specs" class="scroll-swpotato-indicator">
+    <span class="scroll-text">Прокрутить вниз</span>
+    <span class="scroll-line"></span>
+  </a>
+</section>
+
+<!-- ================= SPECIFICATIONS ================= -->
+<section id="specs" class="specs section">
+  <div class="container">
+    <h2>Характеристики апельсинов</h2>
+    <table>
+      <tr><th>Сорта</th><td>Valencia – Navel – Baladi</td></tr>
+      <tr><th>Размер</th><td>Средний – крупный</td></tr>
+      <tr><th>Цвет</th><td>Ярко-оранжевый</td></tr>
+      <tr><th>Вкус</th><td>Сладкий с лёгкой кислинкой</td></tr>
+      <tr><th>Содержание сока</th><td>Высокое</td></tr>
+      <tr><th>Упаковка</th><td>10 кг – 15 кг – 20 кг (коробки)</td></tr>
+      <tr><th>Срок хранения</th><td>До 3 месяцев (охлаждение)</td></tr>
+      <tr><th>Сертификация</th><td>GLOBALG.A.P – ISO 22000</td></tr>
+    </table>
   </div>
 </section>
 
-<section class="our-story-section" id="our-story-section">
+<!-- ================= SEASONALITY ================= -->
+<section class="seasonality section">
   <div class="container">
-    <h2 class="our-story-title">Наша история</h2>
+    <h2>Сезон египетских апельсинов</h2>
+    <p class="subtitle">
+      Один из самых длинных сезонов в мире.
+    </p>
 
-    <div class="story-grid">
-      <div class="story-point">
-        <div class="icon">🌱</div>
-        <h3>Устойчивое сельское хозяйство</h3>
-        <p>Мы выращиваем продукцию с применением экологически чистых методов, сохраняя здоровье почвы.</p>
-      </div>
-
-      <div class="story-point">
-        <div class="icon">📦</div>
-        <h3>Сертифицированные стандарты экспорта</h3>
-        <p>Работаем в соответствии со стандартами ISO и GLOBALG.A.P для гарантии качества.</p>
-      </div>
-
-      <div class="story-point">
-        <div class="icon">🌍</div>
-        <h3>Глобальное присутствие</h3>
-        <p>Поставляем свежую египетскую продукцию на международные рынки.</p>
-      </div>
+    <div class="table-wrapper">
+      <table class="season-table">
+        <tr>
+          <th>Продукт</th>
+          <th>Янв</th><th>Фев</th><th>Мар</th><th>Апр</th><th>Май</th><th>Июн</th>
+          <th>Июл</th><th>Авг</th><th>Сен</th><th>Окт</th><th>Ноя</th><th>Дек</th>
+        </tr>
+        <tr>
+          <td>Апельсины</td>
+          <td class="peak">✅</td>
+          <td class="peak">✅</td>
+          <td class="peak">✅</td>
+          <td class="peak">✅</td>
+          <td class="peak">✅</td>
+          <td class="limited">🟡</td>
+          <td class="off">❌</td>
+          <td class="off">❌</td>
+          <td class="start">🔵</td>
+          <td class="peak">✅</td>
+          <td class="peak">✅</td>
+          <td class="peak">✅</td>
+        </tr>
+      </table>
     </div>
+    <div class="legend">
+            <p>
+                <span class="legend-icon peak">✅</span> Лучшее время сезона &nbsp;&nbsp;
+                <span class="legend-icon limited">🟡</span> Ограниченные объемы<br>
+                <span class="legend-icon off">❌</span> Вне сезона &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span class="legend-icon start">🔵</span> Начало сезона
+            </p>
+        </div>
   </div>
 </section>
 
-<!-- Supply Chain Section -->
-<section class="supply-chain section">
+<!-- ================= EXPORT PROCESS ================= -->
+<section class="export-process section" id="process">
   <div class="container">
-    <h2>Цепочка поставок от фермы до порта</h2>
-    <p class="subtitle">Профессиональный подход гарантирует свежесть продукции.</p>
+    <h2 class="process-title">От сада до экспорта</h2>
+    <p class="process-subtitle">
+      Свежесть и контроль качества.
+    </p>
 
-    <div class="chain-grid">
-      <div class="chain-step">
-        <div class="icon">🌱</div>
+    <div class="process-grid">
+      <div class="process-item">
+        <div class="process-icon">🌳</div>
         <h3>Выращивание</h3>
-        <p>Производство в оптимальных климатических условиях Египта с контролируемым орошением.</p>
+        <p>Современные методы и идеальный климат.</p>
       </div>
-      <div class="chain-step">
-        <div class="icon">🤲</div>
+
+      <div class="process-item">
+        <div class="process-icon">✋</div>
         <h3>Сбор урожая</h3>
-        <p>Аккуратный сбор для минимизации повреждений и быстрая доставка в центры сортировки.</p>
+        <p>Ручной сбор для сохранения качества плодов.</p>
       </div>
-      <div class="chain-step">
-        <div class="icon">🔍</div>
-        <h3>Контроль качества</h3>
-        <p>Тщательная сортировка и калибровка для соответствия экспортным стандартам.</p>
+
+      <div class="process-item">
+        <div class="process-icon">🔍</div>
+        <h3>Сортировка</h3>
+        <p>Калибровка и строгий контроль качества.</p>
       </div>
-      <div class="chain-step">
-        <div class="icon">🏭</div>
-        <h3>Упаковка и отгрузка</h3>
-        <p>Упаковка по требованиям клиента и транспортировка в рефрижераторных контейнерах.</p>
+
+      <div class="process-item">
+        <div class="process-icon">🚢</div>
+        <h3>Упаковка и доставка</h3>
+        <p>Экспортная упаковка и охлаждённая логистика.</p>
       </div>
     </div>
   </div>
 </section>
 
-<div class="contact-header" id="about">
-  <h1>Свяжитесь с нами</h1>
-</div>
+<!-- ================= FAQ ================= -->
+<section class="faq section" id="faq">
+  <div class="container">
+    <h2>Часто задаваемые вопросы</h2>
 
-<section class="section contact" id="aboutcard">
-  <div class="container contact-inner">
-
-    <div class="contact-info">
-      <h2>Контактная информация</h2>
-      <ul class="contact-points">
-        <li>📍 <strong>Адрес:</strong> Майами, Александрия, Египет</li>
-        <li>📞 <strong>Телефон:</strong> +20 100 123 4567</li>
-        <li>✉️ <strong>Email:</strong> info@ecolandeg.com</li>
-        <li>🌐 <strong>Сайт:</strong> www.ecolandeg.com</li>
-      </ul>
-
-      <p>
-        Мы специализируемся на экспорте свежей египетской сельскохозяйственной продукции:
-        цитрусовых, картофеля, лука, моркови, винограда и др.
-      </p>
-
-        <div class="map-container">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d591.3674873856828!2d30.019593893150205!3d31.251453306622683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f5dbd695bf6e6d%3A0x446d139e9c85f640!2z2LHZitit2KfZhtipINin2YTZitmD2LM!5e1!3m2!1sar!2seg!4v1767058224244!5m2!1sar!2seg"
-            width="100%"
-            height="300"
-            style="border:0;"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        </div>
+    <div class="faq-item">
+      <h3>Подходят ли апельсины для длительной транспортировки?</h3>
+      <p>Да, апельсины отлично переносят дальние перевозки.</p>
     </div>
 
-    <div class="contact-form" id="contact">
-      <h2>Запросить предложение</h2>
-      <form>
-        <div class="form-row">
-          <label for="name">Полное имя</label>
-          <input type="text" id="name" placeholder="Ваше имя" required>
-        </div>
-        <div class="form-row">
-          <label for="email">Email</label>
-          <input type="email" id="email" placeholder="Ваш email" required>
-        </div>
-        <div class="form-row">
-          <label for="phone">Телефон</label>
-          <input type="tel" id="phone" placeholder="Ваш номер">
-        </div>
-        <div class="form-row">
-          <label for="message">Сообщение</label>
-          <textarea id="message" rows="5" placeholder="Интересующие продукты и объёмы" required></textarea>
-        </div>
-        <button type="submit" class="btn-primary">Отправить</button>
-      </form>
+    <div class="faq-item">
+      <h3>Минимальный объем заказа?</h3>
+      <p>Минимальный заказ — один полный контейнер.</p>
     </div>
+
+    <div class="faq-item">
+      <h3>Основные рынки экспорта?</h3>
+      <p>Россия, Европа, Ближний Восток и Азия.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="cta section" id="contact">
+  <div class="container">
+    <a href="ru-contactus.html" class="btn-primary">
+      Получить коммерческое предложение
+    </a>
   </div>
 </section>
 
@@ -321,22 +354,12 @@
   </div>
 </footer>
 
-<script>
-const currentPage = window.location.pathname.split("/").pop();
-document.querySelectorAll(".nav-list a").forEach(link => {
-  const href = link.getAttribute("href");
-  if (href === currentPage || href.includes(currentPage)) {
-    link.classList.add("active");
-  } else {
-    link.classList.remove("active");
-  }
-});
-</script>
-
+<script src="script.js"></script>
 <script src="script.js"></script>
 <script>
 const toggle = document.querySelector('.nav-toggle');
 const navList = document.querySelector('.nav-list');
+
 toggle.addEventListener('click', () => {
   navList.classList.toggle('show');
 });
@@ -365,6 +388,16 @@ function translatePage(lang) {
 
   window.location.href = translateUrl;
 }
+</script>
+<script>
+  const faqItems = document.querySelectorAll('.faq-item h3');
+
+  faqItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const parent = item.parentElement;
+      parent.classList.toggle('active');
+    });
+  });
 </script>
 
 </body>

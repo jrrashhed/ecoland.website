@@ -3062,7 +3062,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: -35px;
+    margin-left: -30px;
   }
 
   html[lang="ar"] .logo-text {
@@ -3076,4 +3076,115 @@ html {
     width: 80px;          /* تصغير اللوجو شوية للموبايل */
     height: auto;
   }
+}
+
+@media (max-width:768px){
+
+  /* RESET */
+  .nav-list,
+  .nav-list *{
+    opacity:1!important;
+    filter:none!important;
+  }
+
+  /* MENU CONTAINER */
+  .nav-list{
+    right:0!important;
+    left:auto!important;
+    width:90%!important;
+    background:#ffffff!important;
+    padding:20px 0 16px!important;
+    box-shadow:-14px 0 45px rgba(0,0,0,.45)!important;
+    border-radius:0 0 0 22px!important;
+  }
+
+  /* ITEMS */
+  .nav-list li{
+    border:none!important;
+  }
+
+  .nav-list a{
+    color:#28431f!important;
+    font-size:15px!important;
+    font-weight:500!important;
+    padding:12px 22px!important;
+    border:none!important;
+  }
+
+  .nav-list a + a{
+    margin-top:4px;
+  }
+
+  /* PRODUCTS */
+  .dropdown-menu{
+    background:rgba(255,255,255,.08)!important;
+    margin:6px 16px 10px!important;
+    border-radius:12px!important;
+  }
+
+  /* CTA */
+  .nav-list .cta{
+    margin:14px 16px 8px!important;
+    background:#2f5e2f!important;
+    border-radius:14px!important;
+  }
+
+  .nav-list .cta a{
+    font-weight:600!important;
+    text-align:center;
+  }
+
+  /* LANGUAGE */
+  .lang-switch{
+    margin-top:10px!important;
+    padding:10px 22px!important;
+    font-size:14px!important;
+    opacity:.85!important;
+  }
+
+}
+
+
+
+
+@media (max-width:768px){
+
+  /* تقليل المسافة بين عناصر المنيو */
+  .nav-list li{
+    margin:0 !important;
+  }
+
+  .nav-list a{
+    padding:10px 20px !important;   /* كانت أكبر */
+    line-height:1.2 !important;
+  }
+
+  /* لو في gap على ul */
+  .nav-list{
+    gap:0 !important;
+  }
+
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 32px;
+  margin-top: 20px;
+  justify-content: center;
+  direction: rtl;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  color: #333;
+  white-space: nowrap;
+}
+
+.legend-icon {
+  font-size: 18px;
+  line-height: 1;
 }

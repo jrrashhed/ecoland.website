@@ -15,6 +15,124 @@
 
   <link rel="stylesheet" href="styles.css">
 </head>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="logo-with-name">
+      <a href="ru_index.html" class="logo">
+        <img src="assets/onlypalm.png" alt="ECOLAND" />
+      </a>
+      <span class="logo-text">ECOLAND</span>
+    </div>
+
+    <nav class="nav" aria-label="Primary">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="sr-only">Открыть меню</span>
+      </button>
+
+      <ul id="primary-menu" class="nav-list">
+        <li><a href="ru_index.html" class="active">Главная</a></li>
+
+        <!-- Dropdown Products -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">
+            Продукты <span class="arrow">▾</span>
+          </a>
+
+          <ul class="dropdown-menu">
+            
+            <!-- Fresh Vegetables -->
+            <li class="dropdown-sub">
+              <a href="#">Свежие овощи ▸</a>
+              <ul class="dropdown-submenu">
+                <li><a href="potatoes-ru.html">Картофель</a></li>
+                <li><a href="carrots-ru.html">Морковь</a></li>
+                <li><a href="onions-ru.html">Лук</a></li>
+                <li><a href="sweetpotato-ru.html">Батат</a></li>
+              </ul>
+            </li>
+            
+            <!-- Citrus -->
+            <li class="dropdown-sub">
+              <a href="#">Цитрусовые ▸</a>
+              <ul class="dropdown-submenu">
+                <li><a href="oranges-ru.html">Апельсины</a></li>
+                <li><a href="lemons-ru.html">Лимоны</a></li>
+                <li><a href="mandarin-ru.html">Мандарины</a></li>
+                <li><a href="grapefruit-ru.html">Грейпфрут</a></li>
+              </ul>
+            </li>
+
+            <!-- Fresh Fruits -->
+            <li class="dropdown-sub">
+              <a href="#">Свежие фрукты ▸</a>
+              <ul class="dropdown-submenu">
+                <li><a href="grapes-ru.html">Виноград</a></li>
+                <li><a href="pomegranate-ru.html">Гранаты</a></li>
+                <li><a href="strawberry-ru.html">Клубника</a></li>
+              </ul>
+            </li>
+
+            <!-- Frozen Fruits -->
+            <li class="dropdown-sub">
+              <a href="#">Замороженные фрукты ▸</a>
+              <ul class="dropdown-submenu">
+                <li><a href="frozen-strawberry-ru.html">Клубника</a></li>
+              </ul>
+            </li>
+
+            <!-- Dates -->
+            <li class="dropdown-sub">
+              <a href="#">Финики ▸</a>
+              <ul class="dropdown-submenu">
+                <li><a href="sukkary-dates-ru.html">Финики Суккари</a></li>
+                <li><a href="medjool-dates-ru.html">Финики Меджул</a></li>
+              </ul>
+            </li>
+
+          </ul>
+        </li>
+
+        <li><a href="ru_index.html#process">Процесс</a></li>
+        <li><a href="ru_index.html#faq">Вопросы и ответы</a></li>
+        <li><a href="ru-contactus.html">О нас</a></li>
+        <li>
+          <a href="ru_index.html#contact" class="btn">
+            <span>Запросить цену</span>
+          </a>
+        </li>
+
+        <!-- Language Switcher -->
+        <div class="lang-menu">
+          <button class="lang-btn" id="langToggle">
+            🌐 Русский <span class="arrow">▾</span>
+          </button>
+
+          <ul class="lang-dropdown" id="langDropdown">
+            <li>
+              <a href="index.html">
+                <img src="assets/gb.svg.svg" alt="English"> English
+              </a>
+            </li>
+            <li>
+              <a href="ar_index.html">
+                <img src="assets/sa.svg.svg" alt="العربية"> العربية
+              </a>
+            </li>
+            <li>
+              <a href="ru_index.html">
+                <img src="assets/ru.svg.svg" alt="Русский"> Русский
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </ul>
+    </nav>
+  </div>
+</header>
+
 <section class="hero-slider">
   <div class="hero-overlay">
     <a href="#adva" class="scroll-home-indicator">
@@ -48,110 +166,6 @@
 
 <body class="white-bg-page">
 <div class="white-bg-watermark"></div>
-
-<header class="site-header">
-  <div class="container header-inner">
-
-    <div class="logo-with-name">
-      <a href="ru_index.html" class="logo">
-        <img src="assets/onlypalm.png" alt="ECOLAND" />
-      </a>
-      <span class="logo-text">ECOLAND</span>
-    </div>
-
-    <nav class="nav" aria-label="Primary">
-      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu">
-        <span class="nav-toggle-bar"></span>
-        <span class="sr-only">Toggle menu</span>
-      </button>
-
-      <ul id="primary-menu" class="nav-list">
-
-        <li><a href="ru_index.html" class="active">Главная</a></li>
-
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle">
-            Продукция <span class="arrow">▾</span>
-          </a>
-
-          <ul class="dropdown-menu">
-
-            <li class="dropdown-sub">
-              <a href="#">Свежие овощи ◂</a>
-              <ul class="dropdown-submenu">
-                <li><a href="potatoes.html">Картофель</a></li>
-                <li><a href="carrots.html">Морковь</a></li>
-                <li><a href="#">Лук</a></li>
-              </ul>
-            </li>
-
-            <li class="dropdown-sub">
-              <a href="#">Цитрусовые ◂</a>
-              <ul class="dropdown-submenu">
-                <li><a href="#">Апельсины</a></li>
-                <li><a href="#">Лимоны</a></li>
-              </ul>
-            </li>
-
-            <li class="dropdown-sub">
-              <a href="#">Свежие фрукты ◂</a>
-              <ul class="dropdown-submenu">
-                <li><a href="#">Виноград</a></li>
-                <li><a href="#">Гранаты</a></li>
-              </ul>
-            </li>
-
-            <li class="dropdown-sub">
-              <a href="#">Замороженные фрукты ◂</a>
-              <ul class="dropdown-submenu">
-                <li><a href="#">Клубника</a></li>
-              </ul>
-            </li>
-
-            <li class="dropdown-sub">
-              <a href="#">Финики ◂</a>
-              <ul class="dropdown-submenu">
-                <li><a href="#">Финики</a></li>
-              </ul>
-            </li>
-
-          </ul>
-        </li>
-
-        <li><a href="#process">Процесс</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="ru-contactus.html">О компании</a></li>
-        <li><a href="#contact" class="btn"><span>Запросить цену</span></a></li>
-
-        <!-- Language Switch -->
-        <div class="lang-menu">
-          <button class="lang-btn" id="langToggle">
-            🌐 Русский <span class="arrow">▾</span>
-          </button>
-
-          <ul class="lang-dropdown" id="langDropdown">
-            <li>
-              <a href="index.html">
-                <img src="assets/gb.svg.svg" alt="English"> English
-              </a>
-            </li>
-            <li>
-              <a href="ar_index.html">
-                <img src="assets/sa.svg.svg" alt="العربية"> العربية
-              </a>
-            </li>
-            <li>
-              <a href="ru_index.html">
-                <img src="assets/ru.svg.svg" alt="Русский"> Русский
-              </a>
-            </li>
-          </ul>
-        </div>
-
-      </ul>
-    </nav>
-  </div>
-</header>
 
 <section id="adva" class="section advantage-section">
   <h2>Почему выбирают ECOLAND</h2>
@@ -268,28 +282,28 @@
           <img src="assets/potato.jpg" alt="Картофель" />
           <h3>Картофель экспортного качества</h3>
           <p>Стабильные поставки основных сортов с равномерным размером для розницы и переработки.</p>
-          <a href="potatoes.html" class="link">Подробнее →</a>
+          <a href="potatoes-ru.html" class="link">Подробнее →</a>
         </li>
 
         <li class="product-card">
           <img src="assets/carrots.jpg" alt="Морковь" />
           <h3>Премиальная морковь</h3>
           <p>Яркий цвет, хрустящая текстура и полная сертификация.</p>
-          <a href="carrots.html" class="link">Подробнее →</a>
+          <a href="carrots-ru.html" class="link">Подробнее →</a>
         </li>
 
         <li class="product-card">
           <img src="assets/onions.jpg" alt="Лук" />
           <h3>Свежий лук</h3>
           <p>Красный, желтый и белый лук с длительным сроком хранения.</p>
-          <a href="#" class="link">Подробнее →</a>
+          <a href="onions-ru.html" class="link">Подробнее →</a>
         </li>
 
         <li class="product-card">
-          <img src="assets/sweetpotato.jpg" alt="Батат" />
+          <img src="assets/sweetpotato.avif" alt="Батат" />
           <h3>Батат</h3>
           <p>Отборные сорта с отличным вкусом и внутренним цветом.</p>
-          <a href="#" class="link">Подробнее →</a>
+          <a href="sweetpotato-ru.html" class="link">Подробнее →</a>
         </li>
       </ul>
     </div>
@@ -300,28 +314,28 @@
           <img src="assets/orange.jpg" alt="Апельсины" />
           <h3>Апельсины Valencia и Navel</h3>
           <p>Высокое содержание сока, соответствие строгим экспортным требованиям.</p>
-          <a href="#" class="link">Подробнее →</a>
+          <a href="oranges-ru.html" class="link">Подробнее →</a>
         </li>
 
         <li class="product-card">
           <img src="assets/lemon.jpg" alt="Лимоны" />
           <h3>Лимоны</h3>
           <p>Постоянные объемы и конкурентные условия FOB / CIF.</p>
-          <a href="#" class="link">Подробнее →</a>
+          <a href="lemons-ru.html" class="link">Подробнее →</a>
         </li>
 
         <li class="product-card">
           <img src="assets/mandarin.jpg" alt="Мандарины" />
           <h3>Мандарины</h3>
           <p>Ароматные сорта, подходящие для международной розницы.</p>
-          <a href="#" class="link">Подробнее →</a>
+          <a href="mandarin-ru.html" class="link">Подробнее →</a>
         </li>
 
         <li class="product-card">
           <img src="assets/grapefruit.jpg" alt="Грейпфрут" />
           <h3>Грейпфрут</h3>
           <p>Экспортное качество для оптовых рынков.</p>
-          <a href="#" class="link">Подробнее →</a>
+          <a href="grapefruit-ru.html" class="link">Подробнее →</a>
         </li>
       </ul>
     </div>
@@ -329,24 +343,24 @@
     <div id="fresh-fruit" class="tab-panel">
       <ul class="card-grid">
         <li class="product-card">
-          <img src="assets/prod-strawberries.jpg" alt="Клубника" />
+          <img src="assets/strawberry.jpg" alt="Клубника" />
           <h3>Свежая клубника</h3>
           <p>Ручной сбор для сохранения вкуса и свежести.</p>
-          <a href="#" class="link">Подробнее →</a>
+          <a href="strawberry-ru.html" class="link">Подробнее →</a>
         </li>
 
         <li class="product-card">
-          <img src="assets/prod-grapes.jpg" alt="Виноград" />
+          <img src="assets/grapes.avif" alt="Виноград" />
           <h3>Виноград</h3>
           <p>Prime, Superior, Flame, Crimson, Red Globe, Thompson, Autumn.</p>
-          <a href="#" class="link">Подробнее →</a>
+          <a href="grapes-ru.html" class="link">Подробнее →</a>
         </li>
 
         <li class="product-card">
-          <img src="assets/prod-pomegranates.jpg" alt="Гранаты" />
+          <img src="assets/pomegranates.jpg" alt="Гранаты" />
           <h3>Гранаты</h3>
           <p>Насыщенный вкус и надежная логистика для экспорта.</p>
-          <a href="#" class="link">Подробнее →</a>
+          <a href="pomegranate-ru.html" class="link">Подробнее →</a>
         </li>
       </ul>
     </div>
@@ -354,10 +368,17 @@
     <div id="dates" class="tab-panel">
       <ul class="card-grid">
         <li class="product-card">
-          <img src="assets/dates.jpg" alt="Финики" />
-          <h3>Финики высокого качества</h3>
-          <p>Однородная текстура и стабильное качество для HoReCa.</p>
-          <a href="#" class="link">Подробнее →</a>
+          <img src="assets/sukkary-dates.jpg" alt="Финики" />
+          <h3>Финики Суккари</h3>
+          <p>Сладость премиального качества и мягкая текстура, идеально подходящие для розничной продажи и подарков.</p>
+          <a href="sukkary-dates-ru.html" class="link">Подробнее →</a>
+        </li>
+
+        <li class="product-card">
+          <img src="assets/medjool-dates.jpg" alt="Финики" />
+          <h3>Финики Меджул</h3>
+          <p>Крупный размер с насыщенным вкусом и мягкой, жевательной текстурой.</p>
+          <a href="medjool-dates-ru.html" class="link">Подробнее →</a>
         </li>
       </ul>
     </div>
@@ -365,10 +386,10 @@
     <div id="frozen-fruit" class="tab-panel">
       <ul class="card-grid">
         <li class="product-card">
-          <img src="assets/prod-frozen-strawberry.jpg" alt="Замороженная клубника" />
+          <img src="assets/frozen-strawberry.avif" alt="Замороженная клубника" />
           <h3>Замороженная клубника</h3>
           <p>Идеально подходит для рынков с жесткой холодовой цепью.</p>
-          <a href="#" class="link">Подробнее →</a>
+          <a href="frozen-strawberry-ru.html" class="link">Подробнее →</a>
         </li>
       </ul>
     </div>
@@ -428,6 +449,37 @@
     </ol>
   </div>
 </section>
+
+<!-- About -->
+<section id="about" class="section about">
+  <div class="container about-inner">
+    
+    <div class="about-copy">
+      <h2>Сертифицированный лидер в сфере сельскохозяйственных инвестиций и международного экспорта</h2>
+      
+      <p>
+        Мы инвестируем в современное сельское хозяйство и поставляем
+        продукцию премиального качества через контролируемые процессы,
+        международные стандарты качества и полную прослеживаемость.
+      </p>
+
+      <p>
+        С гордостью снабжаем международные рынки,
+        обеспечивая надежность, эффективность и долгосрочное партнерство.
+      </p>
+
+      <a href="ru-contactus.html#our_story_section" class="btn btn-primary">
+        Узнать больше
+      </a>
+    </div>
+
+    <div class="about-image">
+      <img src="assets/about-farms.jpg" alt="Египетские фермы" />
+    </div>
+
+  </div>
+</section>
+
 <!-- FAQ -->
 <section id="faq" class="section faq scroll-offset">
   <div class="container">
@@ -536,43 +588,67 @@
 <footer class="site-footer">
   <div class="container footer-inner">
 
+    <!-- Logo + About -->
     <div class="footer-col">
-      <a href="index_ru.html" class="logo">
+      <a href="#" class="logo">
         <img src="assets/onlypalm.png" alt="ECOLAND" />
         <span class="logo-text">ECOLAND</span>
       </a>
       <p>
-        Надежный поставщик высококачественной египетской
-        сельскохозяйственной продукции для мировых рынков.
+        Ваш сертифицированный источник премиальных египетских <br>
+        сельскохозяйственных культур, <br>
+        надежно поставляемых на мировые рынки
       </p>
     </div>
 
+    <!-- Products -->
     <div class="footer-col">
       <h3>Продукция</h3>
       <ul class="footer-links">
-        <li><a href="#products">Свежие овощи</a></li>
-        <li><a href="#products">Цитрусовые</a></li>
-        <li><a href="#products">Свежие фрукты</a></li>
-        <li><a href="#products">Замороженные фрукты</a></li>
-        <li><a href="#products">Финики</a></li>
+        <li><a href="ru_index.html#products">Свежие овощи</a></li>
+        <li><a href="ru_index.html#products">Цитрусовые</a></li>
+        <li><a href="ru_index.html#products">Свежие фрукты</a></li>
+        <li><a href="ru_index.html#products">Замороженные фрукты</a></li>
+        <li><a href="ru_index.html#products">Финики</a></li>
       </ul>
     </div>
 
+    <!-- Company -->
     <div class="footer-col">
-      <h3>Контакты</h3>
+      <h3>Компания</h3>
       <ul class="footer-links">
-        <li>📍 Майами, Александрия, Египет</li>
-        <li>📞 +20 111 245 6632</li>
-        <li>✉️ sales@ecolandeg.com</li>
+        <li><a href="ru-contactus.html#our-story-section">Наша история</a></li>
+        <li><a href="ru-contactus.html#about">Связаться с нами</a></li>
+        <li><a href="ru-contactus.html#contact">Запросить цену</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-col">
+      <h3>Контактная информация</h3>
+      <ul class="footer-links footer-contact">
+        <li>
+          📍 Майами, <br>
+          Александрия, <br>
+          Египет
+        </li>
+        <li>
+          📞 <a href="tel:+201112456632">+20 111 245 6632</a>
+        </li>
+        <li>
+          ✉️ <a href="mailto:sales@ecolandeg.com">sales@ecolandeg.com</a>
+        </li>
       </ul>
     </div>
 
   </div>
 
+  <!-- Bottom -->
   <div class="container footer-bottom">
-    <p>© 2026 ECOLAND. Все права защищены.</p>
+    <p>© 2026 EcoLand — Все права защищены</p>
   </div>
 </footer>
+
 
 <script src="script.js"></script>
 <script>

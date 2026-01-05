@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>الماندرين | إيكولاند</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    body { font-family: 'Cairo', sans-serif; }
+    .logo-text { transform: translateX(25px); }
+    .nav-list { gap: 25px; }
+    .hero-content h1 { line-height: 1.4; }
+  </style>
+</head>
+
+<body>
+
+<!-- ================= الهيدر ================= -->
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="logo-with-name">
+      <a href="ar_index.html" class="logo">
+        <img src="assets/onlypalm.png" alt="ECOLAND" />
+      </a>
+      <span class="logo-text">إيكولاند</span>
+    </div>
+
+    <nav class="nav" aria-label="Primary">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="sr-only">فتح القائمة</span>
+      </button>
+
+      <ul id="primary-menu" class="nav-list">
+        <li><a href="ar_index.html" class="active">الرئيسية</a></li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">
+            المنتجات <span class="arrow">▾</span>
+          </a>
+
+          <ul class="dropdown-menu">
+            <li class="dropdown-sub">
+              <a href="#">خضروات طازجة ▸</a>
+              <ul class="dropdown-submenu">
+                <li><a href="potatoes-ar.html">بطاطس</a></li>
+                <li><a href="carrots-ar.html">جزر</a></li>
+                <li><a href="onions-ar.html">بصل</a></li>
+                <li><a href="sweetpotato-ar.html">بطاطا</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown-sub">
+              <a href="#">الموالح ▸</a>
+              <ul class="dropdown-submenu">
+                <li><a href="oranges-ar.html">برتقال</a></li>
+                <li><a href="lemons-ar.html">ليمون</a></li>
+                <li><a href="mandarin-ar.html">ماندرين</a></li>
+                <li><a href="grapefruit-ar.html">جريب فروت</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown-sub">
+              <a href="#">فواكه طازجة ▸</a>
+              <ul class="dropdown-submenu">
+                <li><a href="grapes-ar.html">عنب</a></li>
+                <li><a href="pomegranate-ar.html">رمان</a></li>
+                <li><a href="strawberry-ar.html">فراولة</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown-sub">
+              <a href="#">فواكه مجمدة ▸</a>
+              <ul class="dropdown-submenu">
+                <li><a href="frozen-strawberry-ar.html">فراولة</a></li>
+              </ul>
+            </li>
+
+                        <!-- dates -->
+            <li class="dropdown-sub">
+              <a href="#">تمور ▸</a>
+              <ul class="dropdown-submenu">
+                <li><a href="sukkary-dates-ar.html">تمر سكري</a></li>
+                <li><a href="medjool-dates-ar.html"> تمر مجدول</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li><a href="ar_index.html#process">مراحل العمل</a></li>
+        <li><a href="ar_index.html#faq">الأسئلة الشائعة</a></li>
+        <li><a href="ar-contactus.html">من نحن</a></li>
+        <li><a href="ar_index.html#contact" class="btn"><span>اطلب عرض سعر</span></a></li>
+
+          <div class="lang-menu">
+            <button class="lang-btn" id="langToggle" aria-expanded="false">
+              🌐 العربية<span class="arrow">▾</span>
+            </button>
+
+            <ul class="lang-dropdown" id="langDropdown">
+              <li>
+                <a href="index.html">
+                  <img src="assets/gb.svg.svg" alt="English">
+                  English
+                </a>
+              </li>
+              <li>
+                <a href="ar_index.html">
+                  <img src="assets/sa.svg.svg" alt="العربية">
+                  العربية
+                </a>
+              </li>
+              <li>
+                <a href="ru_index.html">
+                  <img src="assets/ru.svg.svg" alt="Русский">
+                  Русский
+                </a>
+              </li>
+            </ul>
+          </div>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero-banner-swpotato">
+  <div class="swpotato-bg-wrapper">
+    <img src="assets/mandarin.jpg" class="swpotato-bg" alt="الماندرين المصري">
+  </div>
+
+  <div class="hero-content-hero-swpotato">
+    <h1>الماندرين المصري الطازج للتصدير</h1>
+    <p>
+      إيكولاند شركة مصرية متخصصة في زراعة وتصدير الماندرين المصري عالي الجودة،
+      المعروف بطعمه الحلو، سهولة التقشير، ولونه الجذاب. يتم إنتاج الماندرين
+      وفق أعلى معايير الجودة ليصل إلى الأسواق العالمية بأفضل حالة.
+    </p>
+    <br>
+    <a href="contactus.html" class="hero-swpotato-btn">اطلب عرض سعر</a>
+  </div>
+
+  <a href="#specs" class="scroll-swpotato-indicator">
+    <span class="scroll-text">مرر لأسفل</span>
+    <span class="scroll-line"></span>
+  </a>
+</section>
+
+<!-- ================= المواصفات ================= -->
+<section id="specs" class="specs section">
+  <div class="container">
+    <h2>مواصفات الماندرين</h2>
+    <table>
+      <tr><th>الأصناف</th><td>موركوت – فريمونت – كلمنتينا</td></tr>
+      <tr><th>القطر</th><td>5 – 7 سم</td></tr>
+      <tr><th>اللون</th><td>برتقالي زاهي</td></tr>
+      <tr><th>الطعم</th><td>حلو متوازن</td></tr>
+      <tr><th>البذور</th><td>قليلة أو بدون بذور</td></tr>
+      <tr><th>التعبئة</th><td>8 كجم – 10 كجم – 15 كجم (كراتين)</td></tr>
+      <tr><th>مدة الصلاحية</th><td>حتى 4 – 6 أسابيع (تبريد)</td></tr>
+      <tr><th>الشهادات</th><td>GLOBALG.A.P – ISO 22000</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- ================= الموسمية ================= -->
+<section class="seasonality section">
+  <div class="container">
+    <h2>موسم الماندرين المصري</h2>
+    <p class="subtitle">
+      موسم قوي يحقق ميزة تنافسية في الأسواق العالمية.
+    </p>
+
+    <div class="table-wrapper">
+      <table class="season-table">
+        <tr>
+          <th>المنتج</th>
+          <th>يناير</th><th>فبراير</th><th>مارس</th><th>أبريل</th><th>مايو</th><th>يونيو</th>
+          <th>يوليو</th><th>أغسطس</th><th>سبتمبر</th><th>أكتوبر</th><th>نوفمبر</th><th>ديسمبر</th>
+        </tr>
+        <tr>
+          <td>الماندرين</td>
+          <td class="peak">✅</td>
+          <td class="peak">✅</td>
+          <td class="limited">🟡</td>
+          <td class="off">❌</td>
+          <td class="off">❌</td>
+          <td class="off">❌</td>
+          <td class="off">❌</td>
+          <td class="off">❌</td>
+          <td class="start">🔵</td>
+          <td class="peak">✅</td>
+          <td class="peak">✅</td>
+          <td class="peak">✅</td>
+        </tr>
+      </table>
+    </div>
+
+<div class="legend">
+  <div class="legend-item">
+    <span class="legend-icon peak">✅</span>
+    <span class="legend-text">أفضل وقت في الموسم</span>
+  </div>
+
+  <div class="legend-item">
+    <span class="legend-icon limited">🟡</span>
+    <span class="legend-text">مخزون محدود</span>
+  </div>
+
+  <div class="legend-item">
+    <span class="legend-icon off">❌</span>
+    <span class="legend-text">خارج الموسم</span>
+  </div>
+
+  <div class="legend-item">
+    <span class="legend-icon start">🔵</span>
+    <span class="legend-text">بداية الموسم</span>
+  </div>
+</div>
+  </div>
+</section>
+
+<!-- ================= مراحل التصدير ================= -->
+<section class="export-process section" id="process">
+  <div class="container">
+    <h2 class="process-title">من المزرعة إلى الميناء</h2>
+    <p class="process-subtitle">
+      عناية فائقة لضمان وصول الماندرين بأفضل جودة.
+    </p>
+
+    <div class="process-grid">
+      <div class="process-item">
+        <div class="process-icon">🌱</div>
+        <h3>الزراعة</h3>
+        <p>زراعة الماندرين في أفضل مزارع الموالح المصرية.</p>
+      </div>
+
+      <div class="process-item">
+        <div class="process-icon">✋</div>
+        <h3>القطف</h3>
+        <p>قطف يدوي للحفاظ على الشكل والطعم.</p>
+      </div>
+
+      <div class="process-item">
+        <div class="process-icon">🔍</div>
+        <h3>الفرز</h3>
+        <p>فرز دقيق حسب الحجم واللون.</p>
+      </div>
+
+      <div class="process-item">
+        <div class="process-icon">🚢</div>
+        <h3>التعبئة والشحن</h3>
+        <p>تعبئة تصديرية وشحن مبرد للحفاظ على النضارة.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= معرض الصور ================= -->
+<section class="gallery section">
+  <div class="container">
+    <h2>معرض صور الماندرين</h2>
+    <div class="gallery-grid">
+      <img src="assets/mandarin-field.jpg" alt="مزارع الماندرين">
+      <img src="assets/mandarin-harvest.jpg" alt="حصاد الماندرين">
+      <img src="assets/mandarin-pack.jpg" alt="تعبئة الماندرين">
+    </div>
+  </div>
+</section>
+
+<!-- ================= الأسئلة الشائعة ================= -->
+<section class="faq section" id="faq">
+  <div class="container">
+    <h2>الأسئلة الشائعة</h2>
+
+    <div class="faq-item">
+      <h3>هل الماندرين مناسب للتصدير لمسافات طويلة؟</h3>
+      <p>نعم، عند الشحن المبرد يحافظ على جودته ونكهته.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>هل الماندرين يحتوي على بذور؟</h3>
+      <p>معظم الأصناف المصدرة قليلة أو بدون بذور.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>ما هي أهم الأسواق المستوردة؟</h3>
+      <p>أوروبا، روسيا، دول الخليج، وشرق آسيا.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="cta section" id="contact">
+  <div class="container">
+    <a href="contactus.html" class="btn-primary">
+      احصل على عرض السعر الآن
+    </a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+
+    <div class="footer-col">
+      <a href="#" class="logo">
+        <img src="assets/onlypalm.png" alt="ECOLAND" />
+        <span class="logo-text">إيكولاند</span>
+      </a>
+      <p>
+        مصدرك الموثوق للمحاصيل الزراعية المصرية عالية الجودة
+        والمعدة للتصدير للأسواق العالمية.
+      </p>
+    </div>
+
+    <div class="footer-col">
+      <h3>المنتجات</h3>
+      <ul class="footer-links">
+        <li><a href="#products">خضروات طازجة</a></li>
+        <li><a href="#products">موالح</a></li>
+        <li><a href="#products">فواكه طازجة</a></li>
+        <li><a href="#products">فواكه مجمدة</a></li>
+        <li><a href="#products">تمور</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>بيانات التواصل</h3>
+      <ul class="footer-links">
+        <li>📍 ميامي، الإسكندرية – مصر</li>
+        <li>📞 +20 111 245 6632</li>
+        <li>✉️ sales@ecolandeg.com</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="container footer-bottom">
+    <p>© جميع الحقوق محفوظة 2026 – إيكولاند</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="script.js"></script>
+<script>
+const toggle = document.querySelector('.nav-toggle');
+const navList = document.querySelector('.nav-list');
+
+toggle.addEventListener('click', () => {
+  navList.classList.toggle('show');
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const langToggle = document.getElementById("langToggle");
+  const langDropdown = document.getElementById("langDropdown");
+
+  langToggle.addEventListener("click", function (e) {
+    e.stopPropagation();
+    langDropdown.classList.toggle("open");
+  });
+
+  document.addEventListener("click", function () {
+    langDropdown.classList.remove("open");
+  });
+});
+</script>
+<script>
+function translatePage(lang) {
+  const url = window.location.href;
+  const translateUrl =
+    `https://translate.google.com/translate?sl=en&tl=${lang}&u=${encodeURIComponent(url)}`;
+
+  window.location.href = translateUrl;
+}
+</script>
+<script>
+  const faqItems = document.querySelectorAll('.faq-item h3');
+
+  faqItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const parent = item.parentElement;
+      parent.classList.toggle('active');
+    });
+  });
+</script>
+</body>
+</html>

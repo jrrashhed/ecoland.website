@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>تمر مجدول | إيكولاند</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    body { font-family: 'Cairo', sans-serif; }
+    .logo-text { transform: translateX(25px); }
+    .nav-list { gap: 25px; }
+    .hero-content h1 { line-height: 1.4; }
+  </style>
+</head>
+
+<body>
+
+<!-- ================= الهيدر ================= -->
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="logo-with-name">
+      <a href="ar_index.html" class="logo">
+        <img src="assets/onlypalm.png" alt="ECOLAND" />
+      </a>
+      <span class="logo-text">إيكولاند</span>
+    </div>
+
+    <nav class="nav" aria-label="Primary">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="sr-only">فتح القائمة</span>
+      </button>
+
+      <ul id="primary-menu" class="nav-list">
+        <li><a href="ar_index.html" class="active">الرئيسية</a></li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">
+            المنتجات <span class="arrow">▾</span>
+          </a>
+
+          <ul class="dropdown-menu">
+            <li class="dropdown-sub">
+              <a href="#">خضروات طازجة ▸</a>
+              <ul class="dropdown-submenu">
+                <li><a href="potatoes-ar.html">بطاطس</a></li>
+                <li><a href="carrots-ar.html">جزر</a></li>
+                <li><a href="onions-ar.html">بصل</a></li>
+                <li><a href="sweetpotato-ar.html">بطاطا</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown-sub">
+              <a href="#">الموالح ▸</a>
+              <ul class="dropdown-submenu">
+                <li><a href="oranges-ar.html">برتقال</a></li>
+                <li><a href="lemons-ar.html">ليمون</a></li>
+                <li><a href="mandarin-ar.html">ماندرين</a></li>
+                <li><a href="grapefruit-ar.html">جريب فروت</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown-sub">
+              <a href="#">فواكه طازجة ▸</a>
+              <ul class="dropdown-submenu">
+                <li><a href="grapes-ar.html">عنب</a></li>
+                <li><a href="pomegranate-ar.html">رمان</a></li>
+                <li><a href="strawberry-ar.html">فراولة</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown-sub">
+              <a href="#">فواكه مجمدة ▸</a>
+              <ul class="dropdown-submenu">
+                <li><a href="frozen-strawberry-ar.html">فراولة</a></li>
+              </ul>
+            </li>
+
+                        <!-- dates -->
+            <li class="dropdown-sub">
+              <a href="#">تمور ▸</a>
+              <ul class="dropdown-submenu">
+                <li><a href="sukkary-dates-ar.html">تمر سكري</a></li>
+                <li><a href="medjool-dates-ar.html"> تمر مجدول</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li><a href="ar_index.html#process">مراحل العمل</a></li>
+        <li><a href="ar_index.html#faq">الأسئلة الشائعة</a></li>
+        <li><a href="ar-contactus.html">من نحن</a></li>
+        <li><a href="ar_index.html#contact" class="btn"><span>اطلب عرض سعر</span></a></li>
+
+          <div class="lang-menu">
+            <button class="lang-btn" id="langToggle" aria-expanded="false">
+              🌐 العربية<span class="arrow">▾</span>
+            </button>
+
+            <ul class="lang-dropdown" id="langDropdown">
+              <li>
+                <a href="index.html">
+                  <img src="assets/gb.svg.svg" alt="English">
+                  English
+                </a>
+              </li>
+              <li>
+                <a href="ar_index.html">
+                  <img src="assets/sa.svg.svg" alt="العربية">
+                  العربية
+                </a>
+              </li>
+              <li>
+                <a href="ru_index.html">
+                  <img src="assets/ru.svg.svg" alt="Русский">
+                  Русский
+                </a>
+              </li>
+            </ul>
+          </div>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero-banner-swpotato">
+  <div class="swpotato-bg-wrapper">
+    <img src="assets/medjool-dates.jpg" class="swpotato-bg" alt="تمر مجدول">
+  </div>
+
+  <div class="hero-content-hero-swpotato">
+    <h1>تمر المجدول الفاخر للتصدير</h1>
+    <p>
+      تمر المجدول يُعرف بـ “ملك التمور” بفضل حجمه الكبير،
+      قوامه الطري، وطعمه الغني. تقدم إيكولاند تمر مجدول
+      عالي الجودة مختار بعناية لتلبية متطلبات أسواق
+      التجزئة الراقية حول العالم.
+    </p>
+    <br>
+    <a href="contactus.html" class="hero-swpotato-btn">اطلب عرض سعر</a>
+  </div>
+
+  <a href="#specs" class="scroll-swpotato-indicator">
+    <span class="scroll-text">مرر لأسفل</span>
+    <span class="scroll-line"></span>
+  </a>
+</section>
+
+<!-- ================= المواصفات ================= -->
+<section id="specs" class="specs section">
+  <div class="container">
+    <h2>مواصفات تمر المجدول</h2>
+    <table>
+      <tr><th>النوع</th><td>تمر مجدول</td></tr>
+      <tr><th>الحجم</th><td>كبير جدًا</td></tr>
+      <tr><th>اللون</th><td>بني غامق مائل للعنبر</td></tr>
+      <tr><th>الطعم</th><td>غني – كراميلي</td></tr>
+      <tr><th>القوام</th><td>طري ولحمي</td></tr>
+      <tr><th>الرطوبة</th><td>متوسطة</td></tr>
+      <tr><th>التعبئة</th><td>1 كجم – 3 كجم – 5 كجم (كراتين فاخرة)</td></tr>
+      <tr><th>مدة الصلاحية</th><td>حتى 18 شهرًا</td></tr>
+      <tr><th>الشهادات</th><td>GLOBALG.A.P – ISO 22000 – HACCP</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- ================= لماذا تمر المجدول ================= -->
+<section class="why-choose section">
+  <div class="container">
+    <h2>لماذا تمر المجدول؟</h2>
+    <ul>
+      <li>✔️ أكبر وأفخم أنواع التمور</li>
+      <li>✔️ طلب مرتفع في الأسواق العالمية</li>
+      <li>✔️ مثالي لقطاع التجزئة الفاخر</li>
+      <li>✔️ مناسب للتصدير لمسافات طويلة</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= الموسمية ================= -->
+<section class="seasonality section">
+  <div class="container">
+    <h2>موسم تمر المجدول</h2>
+    <p class="subtitle">
+      متوفر على مدار العام مع ذروة الحصاد.
+    </p>
+
+    <div class="table-wrapper">
+      <table class="season-table">
+        <tr>
+          <th>المنتج</th>
+          <th>يناير</th><th>فبراير</th><th>مارس</th><th>أبريل</th><th>مايو</th><th>يونيو</th>
+          <th>يوليو</th><th>أغسطس</th><th>سبتمبر</th><th>أكتوبر</th><th>نوفمبر</th><th>ديسمبر</th>
+        </tr>
+        <tr>
+          <td>تمر مجدول</td>
+          <td class="peak">✅</td>
+          <td class="peak">✅</td>
+          <td class="peak">✅</td>
+          <td class="peak">✅</td>
+          <td class="peak">✅</td>
+          <td class="limited">🟡</td>
+          <td class="start">🔵</td>
+          <td class="peak">✅</td>
+          <td class="peak">✅</td>
+          <td class="peak">✅</td>
+          <td class="limited">🟡</td>
+          <td class="peak">✅</td>
+        </tr>
+      </table>
+    </div>
+
+<div class="legend">
+  <div class="legend-item">
+    <span class="legend-icon peak">✅</span>
+    <span class="legend-text">أفضل وقت في الموسم</span>
+  </div>
+
+  <div class="legend-item">
+    <span class="legend-icon limited">🟡</span>
+    <span class="legend-text">مخزون محدود</span>
+  </div>
+
+  <div class="legend-item">
+    <span class="legend-icon off">❌</span>
+    <span class="legend-text">خارج الموسم</span>
+  </div>
+
+  <div class="legend-item">
+    <span class="legend-icon start">🔵</span>
+    <span class="legend-text">بداية الموسم</span>
+  </div>
+</div>
+  </div>
+</section>
+
+<!-- ================= مراحل التصدير ================= -->
+<section class="export-process section" id="process">
+  <div class="container">
+    <h2 class="process-title">من النخيل إلى التصدير</h2>
+    <p class="process-subtitle">
+      فخامة وجودة في كل خطوة.
+    </p>
+
+    <div class="process-grid">
+      <div class="process-item">
+        <div class="process-icon">🌴</div>
+        <h3>الحصاد</h3>
+        <p>جمع التمور يدويًا للحفاظ على الجودة.</p>
+      </div>
+
+      <div class="process-item">
+        <div class="process-icon">🔍</div>
+        <h3>الفرز</h3>
+        <p>اختيار أفضل الأحجام والجودة.</p>
+      </div>
+
+      <div class="process-item">
+        <div class="process-icon">📦</div>
+        <h3>التعبئة</h3>
+        <p>تعبئة فاخرة تناسب الأسواق الراقية.</p>
+      </div>
+
+      <div class="process-item">
+        <div class="process-icon">🚢</div>
+        <h3>الشحن</h3>
+        <p>شحن مبرد أو جاف حسب متطلبات السوق.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= الأسئلة الشائعة ================= -->
+<section class="faq section" id="faq">
+  <div class="container">
+    <h2>الأسئلة الشائعة</h2>
+
+    <div class="faq-item">
+      <h3>هل تمر المجدول مناسب للتجزئة الفاخرة؟</h3>
+      <p>نعم، يعتبر من أفخم أنواع التمور عالميًا.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>هل يمكن تخصيص التغليف؟</h3>
+      <p>نوفر Private Label وتغليف حسب الطلب.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>ما أهم الأسواق المستهدفة؟</h3>
+      <p>أوروبا، الخليج، أمريكا الشمالية، وشرق آسيا.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="cta section" id="contact">
+  <div class="container">
+    <a href="contactus.html" class="btn-primary">
+      احصل على عرض السعر الآن
+    </a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+
+    <div class="footer-col">
+      <a href="#" class="logo">
+        <img src="assets/onlypalm.png" alt="ECOLAND" />
+        <span class="logo-text">إيكولاند</span>
+      </a>
+      <p>
+        مصدرك الموثوق للمحاصيل الزراعية المصرية عالية الجودة
+        والمعدة للتصدير للأسواق العالمية.
+      </p>
+    </div>
+
+    <div class="footer-col">
+      <h3>المنتجات</h3>
+      <ul class="footer-links">
+        <li><a href="#products">خضروات طازجة</a></li>
+        <li><a href="#products">موالح</a></li>
+        <li><a href="#products">فواكه طازجة</a></li>
+        <li><a href="#products">فواكه مجمدة</a></li>
+        <li><a href="#products">تمور</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>بيانات التواصل</h3>
+      <ul class="footer-links">
+        <li>📍 ميامي، الإسكندرية – مصر</li>
+        <li>📞 +20 111 245 6632</li>
+        <li>✉️ sales@ecolandeg.com</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="container footer-bottom">
+    <p>© جميع الحقوق محفوظة 2026 – إيكولاند</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="script.js"></script>
+<script>
+const toggle = document.querySelector('.nav-toggle');
+const navList = document.querySelector('.nav-list');
+
+toggle.addEventListener('click', () => {
+  navList.classList.toggle('show');
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const langToggle = document.getElementById("langToggle");
+  const langDropdown = document.getElementById("langDropdown");
+
+  langToggle.addEventListener("click", function (e) {
+    e.stopPropagation();
+    langDropdown.classList.toggle("open");
+  });
+
+  document.addEventListener("click", function () {
+    langDropdown.classList.remove("open");
+  });
+});
+</script>
+<script>
+function translatePage(lang) {
+  const url = window.location.href;
+  const translateUrl =
+    `https://translate.google.com/translate?sl=en&tl=${lang}&u=${encodeURIComponent(url)}`;
+
+  window.location.href = translateUrl;
+}
+</script>
+<script>
+  const faqItems = document.querySelectorAll('.faq-item h3');
+
+  faqItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const parent = item.parentElement;
+      parent.classList.toggle('active');
+    });
+  });
+</script>
+
+</body>
+</html>
