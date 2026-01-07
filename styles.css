@@ -3006,3 +3006,494 @@ html[lang="ar"] .legend-item {
     gap: 18px;
   }
 }
+/* ===== RESPONSIVE - MEDIUM SCREENS (835px - 900px) ===== */
+@media (min-width: 835px) and (max-width: 900px) {
+  .container {
+    padding: 0 24px;
+  }
+
+  .site-header {
+    width: 94%;
+    margin: 10px auto;
+  }
+
+  .header-inner {
+    padding: 0 16px;
+  }
+
+  .logo img {
+    height: 52px;
+  }
+
+  .logo-text {
+    font-size: 17px;
+  }
+
+  .nav-list {
+    gap: 12px;
+  }
+
+  .nav-list a {
+    font-size: 13px;
+    padding: 8px 4px;
+  }
+
+  .nav-list .btn span {
+    padding: 9px 16px;
+    font-size: 12px;
+  }
+
+  .dropdown-menu {
+    min-width: 160px;
+  }
+
+  .hero,
+  .hero-slider {
+    min-height: 75vh;
+  }
+
+  .hero-content h1,
+  .hero-content-hero-potato h1,
+  .hero-content-hero-carrots h1,
+  .hero-content-hero-swpotato h1,
+  .hero-content-hero-onions h1 {
+    font-size: 32px;
+  }
+
+  .hero-content p,
+  .hero-content-hero-potato p,
+  .hero-content-hero-carrots p,
+  .hero-content-hero-swpotato p,
+  .hero-content-hero-onions p {
+    font-size: 16px;
+  }
+
+  .hero-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-copy h2 {
+    text-align: center;
+  }
+
+  .contact-inner {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .cert-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .process-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .metrics-inner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .advantage-section .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-inner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ===== RESPONSIVE - MOBILE LANDSCAPE (ROTATE) ===== */
+@media (max-height: 500px) and (orientation: landscape) {
+  .site-header {
+    width: 96%;
+    margin: 8px auto;
+    border-radius: 25px;
+  }
+
+  .header-inner {
+    height: 50px;
+    padding: 0 12px;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+
+  .logo-text {
+    font-size: 14px;
+  }
+
+  .nav-toggle {
+    width: 30px;
+    height: 30px;
+  }
+
+  .nav-toggle-bar {
+    width: 22px;
+    height: 2px;
+  }
+
+  .nav-toggle-bar::before { top: -6px; }
+  .nav-toggle-bar::after { top: 6px; }
+
+  .nav-list {
+    top: 50px;
+    max-height: calc(100vh - 50px);
+    padding: 12px;
+  }
+
+  .nav-list a {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+
+  .hero,
+  .hero-slider,
+  .hero-banner-potato,
+  .hero-banner-carrots,
+  .hero-banner-swpotato,
+  .hero-banner-onions {
+    min-height: 100vh;
+    height: auto;
+    padding: 70px 20px 40px;
+  }
+
+  .hero-content,
+  .hero-content-hero-potato,
+  .hero-content-hero-carrots,
+  .hero-content-hero-swpotato,
+  .hero-content-hero-onions {
+    padding: 20px 16px;
+    max-width: 90%;
+  }
+
+  .hero-content h1,
+  .hero-content-hero-potato h1,
+  .hero-content-hero-carrots h1,
+  .hero-content-hero-swpotato h1,
+  .hero-content-hero-onions h1 {
+    font-size: 24px;
+    margin-bottom: 12px;
+    line-height: 1.3;
+  }
+
+  .hero-content p,
+  .hero-content-hero-potato p,
+  .hero-content-hero-carrots p,
+  .hero-content-hero-swpotato p,
+  .hero-content-hero-onions p {
+    font-size: 13px;
+    margin-bottom: 16px;
+    line-height: 1.5;
+  }
+
+  .btn-primary,
+  .hero-potato-btn,
+  .hero-carrots-btn,
+  .hero-swpotato-btn,
+  .hero-onions-btn {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+
+  .hero-actions {
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  .scroll-home-indicator,
+  .scroll-potato-indicator,
+  .scroll-carrots-indicator,
+  .scroll-swpotato-indicator,
+  .scroll-onions-indicator {
+    bottom: 15px;
+  }
+
+  .scroll-text {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+
+  .scroll-line {
+    height: 18px;
+  }
+
+  .section {
+    padding: 40px 0;
+  }
+
+  .section h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .card-grid,
+  .cert-grid,
+  .process-steps,
+  .metrics-inner {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .product-card,
+  .cert-card,
+  .process-steps li,
+  .adv-card {
+    padding: 16px;
+  }
+
+  .product-card h3,
+  .cert-card h3,
+  .adv-card h3 {
+    font-size: 16px;
+  }
+
+  .product-card p,
+  .cert-card p,
+  .adv-card p {
+    font-size: 13px;
+  }
+
+  .metric {
+    padding: 16px;
+  }
+
+  .metric-value {
+    font-size: 28px;
+  }
+
+  .metric-label {
+    font-size: 13px;
+  }
+
+  .about-hero {
+    min-height: 300px;
+    padding-top: 70px;
+  }
+
+  .about-overlay h1 {
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+
+  .about-overlay p {
+    font-size: 14px;
+  }
+
+  .contact-inner {
+    padding: 30px 20px;
+  }
+
+  .form-row {
+    margin-bottom: 12px;
+  }
+
+  input,
+  textarea {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .footer-inner {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 30px 0;
+  }
+
+  .footer-col h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .footer-links li {
+    margin-bottom: 8px;
+    font-size: 13px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .gallery-grid img {
+    height: 140px;
+  }
+
+  .our-story-box {
+    padding: 24px;
+    gap: 20px;
+  }
+
+  .our-story-text {
+    padding: 20px;
+  }
+
+  .our-story-text h1 {
+    font-size: 26px;
+  }
+
+  .our-story-text p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .process-grid,
+  .chain-grid,
+  .story-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .process-item,
+  .chain-step,
+  .story-point {
+    padding: 20px 16px;
+  }
+
+  .process-icon,
+  .chain-step .icon,
+  .story-point .icon {
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+
+  .faq-list details {
+    padding: 12px;
+    margin-bottom: 10px;
+  }
+
+  .faq-list summary {
+    font-size: 15px;
+    padding-left: 25px;
+  }
+
+  .faq-content {
+    font-size: 13px;
+    margin-top: 10px;
+  }
+
+  .advantage-section .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ===== LANDSCAPE SPECIFIC FOR SMALL PHONES (max-height: 420px) ===== */
+@media (max-height: 420px) and (orientation: landscape) {
+  .site-header {
+    border-radius: 20px;
+  }
+
+  .header-inner {
+    height: 45px;
+  }
+
+  .logo img {
+    height: 36px;
+  }
+
+  .hero,
+  .hero-slider,
+  .hero-banner-potato,
+  .hero-banner-carrots,
+  .hero-banner-swpotato,
+  .hero-banner-onions {
+    padding: 60px 20px 30px;
+  }
+
+  .hero-content h1,
+  .hero-content-hero-potato h1,
+  .hero-content-hero-carrots h1,
+  .hero-content-hero-swpotato h1,
+  .hero-content-hero-onions h1 {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .hero-content p,
+  .hero-content-hero-potato p,
+  .hero-content-hero-carrots p,
+  .hero-content-hero-swpotato p,
+  .hero-content-hero-onions p {
+    font-size: 12px;
+    margin-bottom: 12px;
+  }
+
+  .btn-primary,
+  .hero-potato-btn,
+  .hero-carrots-btn,
+  .hero-swpotato-btn,
+  .hero-onions-btn {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+
+  .section {
+    padding: 30px 0;
+  }
+
+  .section h2 {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+
+  .card-grid,
+  .cert-grid,
+  .process-steps,
+  .metrics-inner {
+    gap: 10px;
+  }
+
+  .scroll-home-indicator,
+  .scroll-potato-indicator,
+  .scroll-carrots-indicator,
+  .scroll-swpotato-indicator,
+  .scroll-onions-indicator {
+    bottom: 10px;
+  }
+}
+
+/* ===== LANDSCAPE - TABLETS IN LANDSCAPE ===== */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .hero,
+  .hero-slider,
+  .hero-banner-potato,
+  .hero-banner-carrots,
+  .hero-banner-swpotato,
+  .hero-banner-onions {
+    min-height: 85vh;
+  }
+
+  .hero-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    align-items: center;
+  }
+
+  .about-inner {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .metrics-inner {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .footer-inner {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
