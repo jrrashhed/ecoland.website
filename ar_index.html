@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="style-rtl.css">
+  <!-- <link rel="stylesheet" href="style-rtl.css"> -->
   
   <style>
     /* تعديلات سريعة للغة العربية */
@@ -401,14 +401,14 @@
 
       <li>
         <div class="step-icon">2</div>
-        <h3>فحص وضبط الجودة</h3>
-        <p>فرز دقيق وفحص صارم لمطابقة المواصفات التصديرية المتفق عليها.</p>
+        <h3>فحص الجودة</h3>
+        <p> فحص دقيق لمطابقة المواصفات التصديرية المتفق عليها.</p>
       </li>
 
       <li>
         <div class="step-icon">3</div>
         <h3>التعبئة</h3>
-        <p>تغليف بمعايير عالمية مع ملصقات وبيانات مطابقة لمتطلبات كل سوق.</p>
+        <p>تغليف بمعايير عالمية و ملصقات وبيانات مطابقة لمتطلبات الأسواق .</p>
       </li>
 
       <li>
@@ -626,38 +626,14 @@
   </div>
 </footer>
 
+<script src="script.js"></script>
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const menuBtn = document.querySelector(".nav-toggle");
-  const navList = document.querySelector(".nav-list");
+const toggle = document.querySelector('.nav-toggle');
+const navList = document.querySelector('.nav-list');
 
-  if (!menuBtn || !navList) return;
-
-  menuBtn.addEventListener("click", function (e) {
-    e.stopPropagation();
-
-    navList.classList.toggle("active");
-
-    const expanded = menuBtn.getAttribute("aria-expanded") === "true";
-    menuBtn.setAttribute("aria-expanded", !expanded);
-  });
-
-  // قفل المنيو لما تدوس بره
-  document.addEventListener("click", function () {
-    navList.classList.remove("active");
-    menuBtn.setAttribute("aria-expanded", "false");
-  });
+toggle.addEventListener('click', () => {
+  navList.classList.toggle('show');
 });
-</script>
-
-<script>
-function translatePage(lang) {
-  const url = window.location.href;
-  const translateUrl =
-    `https://translate.google.com/translate?sl=en&tl=${lang}&u=${encodeURIComponent(url)}`;
-
-  window.location.href = translateUrl;
-}
 </script>
 
 <script>
@@ -674,6 +650,15 @@ document.addEventListener("DOMContentLoaded", function () {
     langDropdown.classList.remove("open");
   });
 });
+</script>
+<script>
+function translatePage(lang) {
+  const url = window.location.href;
+  const translateUrl =
+    `https://translate.google.com/translate?sl=en&tl=${lang}&u=${encodeURIComponent(url)}`;
+
+  window.location.href = translateUrl;
+}
 </script>
 
 </body>

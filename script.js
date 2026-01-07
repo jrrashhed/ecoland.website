@@ -94,3 +94,80 @@ document.querySelectorAll('.nav-toggle').forEach((toggle, i) => {
   });
 });
 
+// Dropdown يفتح بالكليك على الموبايل واللابتوب التاتش
+document.addEventListener('DOMContentLoaded', function() {
+  
+  // كل الـ dropdowns
+  const dropdowns = document.querySelectorAll('.dropdown > a');
+  
+  dropdowns.forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      e.preventDefault(); // يمنع الرابط يشتغل
+      
+      const parent = this.parentElement;
+      const menu = parent.querySelector('.dropdown-menu');
+      
+      // يفتح/يقفل القائمة
+      if (menu) {
+        // يقفل أي dropdown تاني مفتوح
+        document.querySelectorAll('.dropdown').forEach(function(otherDropdown) {
+          if (otherDropdown !== parent) {
+            otherDropdown.classList.remove('open');
+            const otherMenu = otherDropdown.querySelector('.dropdown-menu');
+            if (otherMenu) otherMenu.classList.remove('show');
+          }
+        });
+        
+        // يفتح/يقفل الحالي
+        menu.classList.toggle('show');
+        parent.classList.toggle('open');
+      }
+    });
+  });
+  
+  // الـ sub-dropdowns
+  const subDropdowns = document.querySelectorAll('.dropdown-sub > a');
+  
+  subDropdowns.forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      const parent = this.parentElement;
+      const menu = parent.querySelector('.dropdown-submenu');
+      
+      if (menu) {
+        // يقفل أي submenu تاني مفتوح
+        parent.parentElement.querySelectorAll('.dropdown-sub').forEach(function(otherSub) {
+          if (otherSub !== parent) {
+            otherSub.classList.remove('open');
+            const otherMenu = otherSub.querySelector('.dropdown-submenu');
+            if (otherMenu) otherMenu.classList.remove('show');
+          }
+        });
+        
+        // يفتح/يقفل الحالي
+        menu.classList.toggle('show');
+        parent.classList.toggle('open');
+      }
+    });
+  });
+  
+  // يقفل القوائم لما تدوس برة
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.dropdown') && !e.target.closest('.dropdown-sub')) {
+      document.querySelectorAll('.dropdown-menu.show').forEach(function(menu) {
+        menu.classList.remove('show');
+      });
+      document.querySelectorAll('.dropdown.open').forEach(function(dropdown) {
+        dropdown.classList.remove('open');
+      });
+      document.querySelectorAll('.dropdown-submenu.show').forEach(function(submenu) {
+        submenu.classList.remove('show');
+      });
+      document.querySelectorAll('.dropdown-sub.open').forEach(function(sub) {
+        sub.classList.remove('open');
+      });
+    }
+  });
+});
+

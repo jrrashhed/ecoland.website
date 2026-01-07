@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="assets/onlypalm.png" type="image/png" />
   <title>إيكولاند | من نحن</title>
   <meta name="description" content="تواصل مع إيكولاند لتصدير المنتجات الزراعية المصرية المعتمدة." />
 
@@ -11,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="style-rtl.css">
+  <!-- <link rel="stylesheet" href="style-rtl.css"> -->
 
     <style>
     /* تعديلات سريعة للغة العربية */
@@ -41,7 +42,7 @@
       </button>
 
       <ul id="primary-menu" class="nav-list">
-        <li><a href="ar_index.html" class="active">الرئيسية</a></li>
+        <li><a href="ar_index.html">الرئيسية</a></li>
 
         <li class="dropdown">
           <a href="#" class="dropdown-toggle">
@@ -98,7 +99,7 @@
 
         <li><a href="ar_index.html#process">مراحل العمل</a></li>
         <li><a href="ar_index.html#faq">الأسئلة الشائعة</a></li>
-        <li><a href="ar-contactus.html">من نحن</a></li>
+        <li><a href="ar-contactus.html", class="active">من نحن</a></li>
         <li><a href="ar_index.html#contact" class="btn"><span>اطلب عرض سعر</span></a></li>
 
           <div class="lang-menu">
@@ -202,7 +203,7 @@
 
 <!-- Contact Section -->
 <section class="section contact" id="aboutcard">
-  <div class="container contact-inner">
+  <div class="container contact-inner" , id="arcontact">
 
     <!-- Contact Info -->
     <div class="contact-info">
@@ -312,22 +313,11 @@
   </div>
 </footer>
 
-<script>
-const currentPage = window.location.pathname.split("/").pop();
-document.querySelectorAll(".nav-list a").forEach(link => {
-  const href = link.getAttribute("href");
-  if (href === currentPage || href.includes(currentPage)) {
-    link.classList.add("active");
-  } else {
-    link.classList.remove("active");
-  }
-});
-</script>
-
 <script src="script.js"></script>
 <script>
 const toggle = document.querySelector('.nav-toggle');
 const navList = document.querySelector('.nav-list');
+
 toggle.addEventListener('click', () => {
   navList.classList.toggle('show');
 });

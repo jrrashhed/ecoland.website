@@ -4,6 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ECOLAND | О компании</title>
+    <link rel="icon" href="assets/onlypalm.png" type="image/png" />
+
   <meta name="description" content="Свяжитесь с ECOLAND для экспорта сертифицированной египетской сельскохозяйственной продукции." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,7 +33,7 @@
       </button>
 
       <ul id="primary-menu" class="nav-list">
-        <li><a href="ru_index.html" class="active">Главная</a></li>
+        <li><a href="ru_index.html">Главная</a></li>
 
         <!-- Dropdown Products -->
         <li class="dropdown">
@@ -95,7 +97,7 @@
 
         <li><a href="ru_index.html#process">Процесс</a></li>
         <li><a href="ru_index.html#faq">Вопросы и ответы</a></li>
-        <li><a href="ru-contactus.html">О нас</a></li>
+        <li><a href="ru-contactus.html", class="active">О нас</a></li>
         <li>
           <a href="ru_index.html#contact" class="btn">
             <span>Запросить цену</span>
@@ -321,22 +323,11 @@
   </div>
 </footer>
 
-<script>
-const currentPage = window.location.pathname.split("/").pop();
-document.querySelectorAll(".nav-list a").forEach(link => {
-  const href = link.getAttribute("href");
-  if (href === currentPage || href.includes(currentPage)) {
-    link.classList.add("active");
-  } else {
-    link.classList.remove("active");
-  }
-});
-</script>
-
 <script src="script.js"></script>
 <script>
 const toggle = document.querySelector('.nav-toggle');
 const navList = document.querySelector('.nav-list');
+
 toggle.addEventListener('click', () => {
   navList.classList.toggle('show');
 });
@@ -366,6 +357,15 @@ function translatePage(lang) {
   window.location.href = translateUrl;
 }
 </script>
+<script>
+  const faqItems = document.querySelectorAll('.faq-item h3');
 
+  faqItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const parent = item.parentElement;
+      parent.classList.toggle('active');
+    });
+  });
+</script>
 </body>
 </html>
