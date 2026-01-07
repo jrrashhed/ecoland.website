@@ -2725,3 +2725,284 @@ html[lang="ar"] .legend-item {
     padding-top: 80px;
   }
 }
+
+/* ===== RESPONSIVE - LARGE LAPTOPS (1441px - 1920px) ===== */
+@media (min-width: 1441px) and (max-width: 1920px) {
+  .container {
+    max-width: 1300px;
+  }
+
+  .site-header {
+    width: 75%;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .section h2 {
+    font-size: 36px;
+  }
+}
+
+/* ===== RESPONSIVE - STANDARD LAPTOPS (1281px - 1440px) ===== */
+@media (min-width: 1281px) and (max-width: 1440px) {
+  .container {
+    max-width: 1200px;
+  }
+
+  .site-header {
+    width: 80%;
+  }
+
+  .nav-list {
+    gap: 28px;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ===== RESPONSIVE - SMALL LAPTOPS & LARGE TABLETS (1025px - 1280px) ===== */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .container {
+    max-width: 1000px;
+    padding: 0 30px;
+  }
+
+  .site-header {
+    width: 85%;
+    margin: 12px auto;
+  }
+
+  .header-inner {
+    padding: 0 24px;
+  }
+
+  .nav-list {
+    gap: 22px;
+  }
+
+  .nav-list a {
+    font-size: 14px;
+  }
+
+  .nav-list .btn span {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+
+  .hero-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .section h2 {
+    font-size: 28px;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .cert-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .process-steps {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .metrics-inner {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .footer-inner {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+/* ===== RESPONSIVE - iPAD PRO & LARGE TABLETS (835px - 1024px) ===== */
+@media (min-width: 835px) and (max-width: 1024px) {
+  .container {
+    max-width: 100%;
+    padding: 0 40px;
+  }
+
+  .site-header {
+    width: 90%;
+    margin: 12px auto;
+  }
+
+  .header-inner {
+    padding: 0 20px;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav-list {
+    gap: 18px;
+  }
+
+  .nav-list a {
+    font-size: 14px;
+    padding: 8px 2px;
+  }
+
+  .nav-list .btn span {
+    padding: 10px 18px;
+    font-size: 13px;
+  }
+
+  .dropdown-menu {
+    min-width: 180px;
+  }
+
+  .hero,
+  .hero-slider {
+    min-height: 70vh;
+  }
+
+  .hero-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .about-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .contact-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 40px;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+
+  .cert-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .process-steps {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .metrics-inner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-inner {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .advantage-section .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ===== RESPONSIVE - iPAD STANDARD & MEDIUM TABLETS (769px - 834px) ===== */
+@media (min-width: 769px) and (max-width: 834px) {
+  .container {
+    padding: 0 32px;
+  }
+
+  .site-header {
+    width: 92%;
+  }
+
+  .nav-list {
+    gap: 16px;
+  }
+
+  .nav-list a {
+    font-size: 13px;
+  }
+
+  .hero-inner,
+  .about-inner {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .about-copy h2 {
+    text-align: center;
+  }
+
+  .contact-inner {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cert-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .process-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .metrics-inner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .advantage-section .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ===== RESPONSIVE - APPLE MACBOOK SPECIFIC ===== */
+@media (min-width: 1280px) and (max-width: 1440px) and (-webkit-min-device-pixel-ratio: 2) {
+  .site-header {
+    width: 78%;
+  }
+
+  .container {
+    max-width: 1150px;
+  }
+
+  .nav-list {
+    gap: 24px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+  }
+}
