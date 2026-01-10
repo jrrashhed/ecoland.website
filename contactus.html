@@ -211,68 +211,72 @@
   </div>
 </section>
 
-<div class="contact-header" id="about">
- <h1>Contact us</h1>
- </div>
-  <!-- Contact Section -->
-  <section class="section contact" id="aboutcard">
-    <div class="container contact-inner">
-      
-      <!-- Contact Info -->
-      <div class="contact-info">
-        <h2>Get in Touch</h2>
-        <ul class="contact-points">
-          <li>📍 <strong>Address:</strong> Miami, Alexandria, Egypt</li>
-          <li>📞 <strong>Phone:</strong>+2035956246</li>
-          <li>📞 <strong>Phone:</strong>+201020250704</li>
-          <li>📞 <strong>Phone:</strong>+971506731663</li>
-          <li>✉️ <strong>Email:</strong> ceo@ecolandegypt.com</li>
-          <li>🌐 <strong>Website:</strong> www.ecolandegypt.com</li>
-        </ul>
-        <p>
-          We specialize in exporting fresh Egyptian produce including citrus, potatoes, onions, carrots, grapes, and more.
-          Trusted by importers worldwide for quality, consistency, and reliable logistics.
-        </p>
+<section class="section contact" id="aboutcard">
+  <div class="container contact-inner">
+    
+    <!-- Contact Info -->
+    <div class="contact-info">
+      <h2>Get in Touch</h2>
+      <ul class="contact-points">
+        <li>📍 <strong>Address:</strong> Miami, Alexandria, Egypt</li>
+        <li>📞 <strong>Phone:</strong> <a href="tel:+2035956246">+2035956246</a></li>
+        <li>📞 <strong>Phone:</strong> <a href="tel:+201020250704">+201020250704</a></li>
+        <li>📞 <strong>Phone:</strong> <a href="tel:+971506731663">+971506731663</a></li>
+        <li>✉️ <strong>Email:</strong> <a href="mailto:ecolandegypt@outlook.com">ecolandegypt@outlook.com</a></li>
+        <li>🌐 <strong>Website:</strong> www.ecolandegypt.com</li>
+      </ul>
+      <p>
+        We specialize in exporting fresh Egyptian produce including citrus, potatoes, onions, carrots, grapes, and more.
+        Trusted by importers worldwide for quality, consistency, and reliable logistics.
+      </p>
 
-        <!-- Map -->
-        <div class="map-container">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d591.3674873856828!2d30.019593893150205!3d31.251453306622683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f5dbd695bf6e6d%3A0x446d139e9c85f640!2z2LHZitit2KfZhtipINin2YTZitmD2LM!5e1!3m2!1sar!2seg!4v1767058224244!5m2!1sar!2seg"
-            width="100%"
-            height="300"
-            style="border:0;"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        </div>
-      </div>
-
-      <!-- Contact Form -->
-      <div class="contact-form">
-        <h2>Request a Quote</h2>
-        <form>
-          <div class="form-row">
-            <label for="name">Full Name</label>
-            <input type="text" id="name" placeholder="Your name" required>
-          </div>
-          <div class="form-row">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" placeholder="Your email" required>
-          </div>
-          <div class="form-row">
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" placeholder="Your phone number">
-          </div>
-          <div class="form-row">
-            <label for="message">Message</label>
-            <textarea id="message" rows="5" placeholder="Tell us what products you’re interested in..." required></textarea>
-          </div>
-          <button type="submit" class="btn-primary">Send Message</button>
-        </form>
+      <!-- Map -->
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d591.3674873856828!2d30.019593893150205!3d31.251453306622683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f5dbd695bf6e6d%3A0x446d139e9c85f640!2z2LHZitit2KfZhtipINin2YTZitmD2LM!5e1!3m2!1sar!2seg!4v1767058224244!5m2!1sar!2seg"
+          width="100%"
+          height="300"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
       </div>
     </div>
-  </section>
+
+    <!-- Contact Form - المعدل بالـ IDs الصحيحة -->
+    <div class="contact-form">
+      <h2>Request a Quote</h2>
+      
+      <!-- رسالة النجاح/الخطأ -->
+      <div id="formMessage" style="display: none; padding: 15px; margin-bottom: 15px; border-radius: 5px;"></div>
+      
+      <form id="contactForm">
+        <div class="form-row">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required>
+        </div>
+        
+        <div class="form-row">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="Your email" required>
+        </div>
+        
+        <div class="form-row">
+          <label for="company">Company Name</label>
+          <input type="text" id="company" name="company" placeholder="Your company (optional)">
+        </div>
+        
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell us what products you're interested in..." required></textarea>
+        </div>
+        
+        <button type="submit" class="btn-primary" id="submitBtn">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
 
   <!-- Footer -->
 <!-- Footer -->

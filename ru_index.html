@@ -624,29 +624,32 @@
       </div>
     </div>
 
-    <form class="contact-form" onsubmit="event.preventDefault(); alert('Сообщение успешно отправлено');">
+        <form class="contact-form" id="contactForm">
+      <!-- رسالة النجاح/الخطأ -->
+      <div id="formMessage" style="display: none; padding: 15px; margin-bottom: 15px; border-radius: 5px;"></div>
+      
       <div class="form-row">
-        <label>Полное имя</label>
-        <input type="text" placeholder="Введите ваше имя" required />
+        <label for="name">Полное имя</label>
+        <input id="name" name="name" type="text" placeholder="Ваше имя" required />
       </div>
 
       <div class="form-row">
-        <label>Email</label>
-        <input type="email" placeholder="example@mail.com" required />
+        <label for="email">Электронная почта</label>
+        <input id="email" name="email" type="email" placeholder="example@mail.com" required />
       </div>
 
       <div class="form-row">
-        <label>Компания</label>
-        <input type="text" placeholder="Название компании (необязательно)" />
+        <label for="company">Название компании</label>
+        <input id="company" name="company" type="text" placeholder="Название компании (необязательно)" />
       </div>
 
       <div class="form-row">
-        <label>Сообщение</label>
-        <textarea rows="4" placeholder="Опишите интересующую продукцию и объемы"></textarea>
+        <label for="message">Сообщение</label>
+        <textarea id="message" name="message" rows="4" placeholder="Расскажите о требованиях к продукту и объему"></textarea>
       </div>
 
-      <button type="submit" class="btn btn-primary">
-        Запросить цену
+      <button type="submit" class="btn btn-primary" id="submitBtn">
+        Запросить коммерческое предложение
       </button>
     </form>
 
