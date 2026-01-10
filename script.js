@@ -1,3 +1,89 @@
+// ========================================
+// EmailJS Configuration & Form Handling
+// ========================================
+
+// Initialize EmailJS when document loads
+(function(){
+  emailjs.init("WBETKQwv9SmeIskZC"); // استبدل بـ Public Key الخاص بك
+})();
+
+// Handle contact form submission
+document.addEventListener('DOMContentLoaded', function() {
+  const contactForm = document.getElementById('contactForm');
+  
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+      
+      const submitBtn = document.getElementById('submitBtn');
+      const formMessage = document.getElementById('formMessage');
+      
+      // Disable button and show loading
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+      formMessage.style.display = 'none';
+      
+      // Get form data
+      const templateParams = {
+        from_name: document.getElementById('name').value,
+        from_email: document.getElementById('email').value,
+        company: document.getElementById('company').value || 'Not provided',
+        message: document.getElementById('message').value,
+        to_email: 'ceo@ecolandegypt.com'
+      };
+      
+      // Send email using EmailJS
+      emailjs.send('service_jnk6h78', 'template_jzf644g', templateParams)
+        .then(function(response) {
+          console.log('SUCCESS!', response.status, response.text);
+          
+          // Show success message
+          formMessage.textContent = 'Thank you! Your message has been sent successfully. We will contact you soon.';
+          formMessage.style.display = 'block';
+          formMessage.style.backgroundColor = '#d4edda';
+          formMessage.style.color = '#155724';
+          formMessage.style.border = '1px solid #c3e6cb';
+          formMessage.style.padding = '15px';
+          formMessage.style.borderRadius = '5px';
+          formMessage.style.marginBottom = '15px';
+          
+          // Reset form
+          contactForm.reset();
+          
+          // Re-enable button
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Request quote';
+          
+          // Hide message after 5 seconds
+          setTimeout(function() {
+            formMessage.style.display = 'none';
+          }, 5000);
+          
+        }, function(error) {
+          console.log('FAILED...', error);
+          
+          // Show error message
+          formMessage.textContent = 'Sorry, something went wrong. Please try again or contact us directly.';
+          formMessage.style.display = 'block';
+          formMessage.style.backgroundColor = '#f8d7da';
+          formMessage.style.color = '#721c24';
+          formMessage.style.border = '1px solid #f5c6cb';
+          formMessage.style.padding = '15px';
+          formMessage.style.borderRadius = '5px';
+          formMessage.style.marginBottom = '15px';
+          
+          // Re-enable button
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Request quote';
+        });
+    });
+  }
+});
+
+// ========================================
+// Original Script.js Code
+// ========================================
+
 document.addEventListener('DOMContentLoaded', function () {
 
   // Mobile nav toggle
@@ -73,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // ✅ Close menu when clicking outside
+  // Close menu when clicking outside
   document.addEventListener('click', function (e) {
     const menuOpen = navList.classList.contains('show');
     const clickedToggle = toggle.contains(e.target);
@@ -86,6 +172,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
 });
+
 document.querySelectorAll('.nav-toggle').forEach((toggle, i) => {
   const navList = document.querySelectorAll('.nav-list')[i];
 
@@ -170,4 +257,3 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
-
