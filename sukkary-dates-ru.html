@@ -38,14 +38,17 @@
       </button>
 
       <ul id="primary-menu" class="nav-list">
-        <li><a href="ru_index.html">Главная</a></li>
+        <li><a href="ru_index.html" class="active">Главная</a></li>
 
+        <!-- Dropdown Products -->
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle active">
-            Продукция <span class="arrow">▾</span>
+          <a href="#" class="dropdown-toggle">
+            Продукты <span class="arrow">▾</span>
           </a>
 
           <ul class="dropdown-menu">
+            
+            <!-- Fresh Vegetables -->
             <li class="dropdown-sub">
               <a href="#">Свежие овощи ▸</a>
               <ul class="dropdown-submenu">
@@ -55,20 +58,22 @@
                 <li><a href="sweetpotato-ru.html">Батат</a></li>
               </ul>
             </li>
-
+            
+            <!-- Frozen Vegetables -->
             <li class="dropdown-sub">
               <a href="#">Замороженные овощи ▸</a>
               <ul class="dropdown-submenu">
                 <li><a href="frozen-french-fries-ru.html">Картофель фри</a></li>
-                <li><a href="frozen-molokhia-ru.html">Молохия</a></li>
-                <li><a href="frozen-okra-ru.html">Бамия</a></li>
-                <li><a href="frozen-broccoli-ru.html">Брокколи</a></li>
-                <li><a href="frozen-spinach-ru.html">Шпинат</a></li>
-                <li><a href="frozen-green-peas-ru.html">Зеленый горошек</a></li>
-                <li><a href="frozen-mixed-vegetables-ru.html">Овощная смесь</a></li>
+                <li><a href="frozen-molokhia-ru.html">Молохия замороженная</a></li>
+                <li><a href="frozen-okra-ru.html">Бамия замороженная</a></li>
+                <li><a href="frozen-broccoli-ru.html">Брокколи замороженная</a></li>
+                <li><a href="frozen-spinach-ru.html">Шпинат замороженный</a></li>
+                <li><a href="frozen-green-peas-ru.html">Зелёный горошек замороженный</a></li>
+                <li><a href="frozen-mixed-vegetables-ru.html">Овощная смесь замороженная</a></li>
               </ul>
             </li>
-
+            
+            <!-- Citrus -->
             <li class="dropdown-sub">
               <a href="#">Цитрусовые ▸</a>
               <ul class="dropdown-submenu">
@@ -79,15 +84,17 @@
               </ul>
             </li>
 
+            <!-- Fresh Fruits -->
             <li class="dropdown-sub">
               <a href="#">Свежие фрукты ▸</a>
               <ul class="dropdown-submenu">
                 <li><a href="grapes-ru.html">Виноград</a></li>
-                <li><a href="pomegranate-ru.html">Гранат</a></li>
+                <li><a href="pomegranate-ru.html">Гранаты</a></li>
                 <li><a href="strawberry-ru.html">Клубника</a></li>
               </ul>
             </li>
 
+            <!-- Frozen Fruits -->
             <li class="dropdown-sub">
               <a href="#">Замороженные фрукты ▸</a>
               <ul class="dropdown-submenu">
@@ -95,47 +102,59 @@
               </ul>
             </li>
 
+            <!-- Dates -->
             <li class="dropdown-sub">
               <a href="#">Финики ▸</a>
               <ul class="dropdown-submenu">
-                <li><a href="sukkary-dates-ru.html">Суккари</a></li>
-                <li><a href="medjool-dates-ru.html">Меджул</a></li>
+                <li><a href="sukkary-dates-ru.html">Финики Суккари</a></li>
+                <li><a href="medjool-dates-ru.html">Финики Меджул</a></li>
               </ul>
             </li>
+
+            <li class="dropdown-sub">
+              <a href="#">Корма для животных▸</a>
+              <ul class="dropdown-submenu">
+                <li><a href="ru_alfalfa_page.html">Люцерна</a></li>
+              </ul>
+            </li>
+
           </ul>
         </li>
 
         <li><a href="ru_index.html#process">Процесс</a></li>
-        <li><a href="ru_index.html#faq">Вопросы</a></li>
+        <li><a href="ru_index.html#faq">FAQ</a></li>
         <li><a href="ru-contactus.html">О нас</a></li>
-        <li><a href="ru_index.html#contact" class="btn"><span>Запрос цены</span></a></li>
+        <li>
+          <a href="ru_index.html#contact" class="btn">
+            <span>Запросить цену</span>
+          </a>
+        </li>
 
-          <div class="lang-menu">
-            <button class="lang-btn" id="langToggle" aria-expanded="false">
-              🌐 Русский<span class="arrow">▾</span>
-            </button>
+        <!-- Language Switcher -->
+        <div class="lang-menu">
+          <button class="lang-btn" id="langToggle">
+            🌐 Русский <span class="arrow">▾</span>
+          </button>
 
-            <ul class="lang-dropdown" id="langDropdown">
-              <li>
-                <a href="index.html">
-                  <img src="assets/gb.svg.svg" alt="English">
-                  English
-                </a>
-              </li>
-              <li>
-                <a href="ar_index.html">
-                  <img src="assets/sa.svg.svg" alt="العربية">
-                  العربية
-                </a>
-              </li>
-              <li>
-                <a href="ru_index.html">
-                  <img src="assets/ru.svg.svg" alt="Русский">
-                  Русский
-                </a>
-              </li>
-            </ul>
-          </div>
+          <ul class="lang-dropdown" id="langDropdown">
+            <li>
+              <a href="index.html">
+                <img src="assets/gb.svg.svg" alt="English"> English
+              </a>
+            </li>
+            <li>
+              <a href="ar_index.html">
+                <img src="assets/sa.svg.svg" alt="العربية"> العربية
+              </a>
+            </li>
+            <li>
+              <a href="ru_index.html">
+                <img src="assets/ru.svg.svg" alt="Русский"> Русский
+              </a>
+            </li>
+          </ul>
+        </div>
+
       </ul>
     </nav>
   </div>
