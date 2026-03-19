@@ -361,12 +361,12 @@
     <p>© 2026 إيجيبت إيكولاند — جميع الحقوق محفوظة</p>
   </div>
 </footer>
-
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <script src="script.js"></script>
-
 <script>
 const toggle = document.querySelector('.nav-toggle');
 const navList = document.querySelector('.nav-list');
+
 toggle.addEventListener('click', () => {
   navList.classList.toggle('show');
 });
@@ -387,15 +387,12 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 </script>
-
 <script>
-const faqItems = document.querySelectorAll('.faq-item h3');
-faqItems.forEach(item => {
-  item.addEventListener('click', () => {
-    item.parentElement.classList.toggle('active');
-  });
-});
-</script>
+function translatePage(lang) {
+  const url = window.location.href;
+  const translateUrl =
+    `https://translate.google.com/translate?sl=en&tl=${lang}&u=${encodeURIComponent(url)}`;
 
-</body>
-</html>
+  window.location.href = translateUrl;
+}
+</script>

@@ -4,7 +4,7 @@
 
 // Initialize EmailJS when document loads
 (function(){
-  emailjs.init("WBETKQwv9SmeIskZC"); // استبدل بـ Public Key الخاص بك
+  emailjs.init("vTAKL68e1jxA9PTn2"); // استبدل بـ Public Key الخاص بك
 })();
 
 // Handle contact form submission
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
       };
       
       // Send email using EmailJS
-      emailjs.send('service_jnk6h78', 'template_jzf644g', templateParams)
+      emailjs.send('service_hlba7xs', 'template_0h4ru8o', templateParams)
         .then(function(response) {
           console.log('SUCCESS!', response.status, response.text);
           
@@ -79,6 +79,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
+
+
 
 // ========================================
 // Original Script.js Code
@@ -130,6 +132,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+  
   // Hero background slider
   const slides = document.querySelectorAll('.hero-slides .slide');
   let currentSlide = 0;
@@ -211,6 +214,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
+  
   
   // الـ sub-dropdowns
   const subDropdowns = document.querySelectorAll('.dropdown-sub > a');

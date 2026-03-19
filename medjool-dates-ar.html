@@ -400,7 +400,7 @@
     <p>© 2026 إيجيبت إيكولاند — جميع الحقوق محفوظة</p>
   </div>
 </footer>
-
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <script src="script.js"></script>
 <script>
 const toggle = document.querySelector('.nav-toggle');
@@ -435,15 +435,3 @@ function translatePage(lang) {
   window.location.href = translateUrl;
 }
 </script>
-<script>
-  const faqItems = document.querySelectorAll('.faq-item h3');
-
-  faqItems.forEach(item => {
-    item.addEventListener('click', () => {
-      const parent = item.parentElement;
-      parent.classList.toggle('active');
-    });
-  });
-</script>
-</body>
-</html>

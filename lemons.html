@@ -11,6 +11,7 @@
 <body>
 
 <!-- Header -->
+<!-- Header -->
 <header class="site-header">
   <div class="container header-inner">
     <div class="logo-with-name">
@@ -25,10 +26,10 @@
         <span class="sr-only">Toggle menu</span>
       </button>
       <ul id="primary-menu" class="nav-list">
-        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <!-- Dropdown Products -->
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle">Products <span class="arrow">▾</span></a>
+          <a href="#" class="dropdown-toggle , active">Products <span class="arrow">▾</span></a>
           <ul class="dropdown-menu">
             
             <!-- Fresh Vegetables -->
@@ -411,6 +412,7 @@
   </div>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <script src="script.js"></script>
 <script>
 const toggle = document.querySelector('.nav-toggle');
@@ -444,16 +446,6 @@ function translatePage(lang) {
 
   window.location.href = translateUrl;
 }
-</script>
-<script>
-  const faqItems = document.querySelectorAll('.faq-item h3');
-
-  faqItems.forEach(item => {
-    item.addEventListener('click', () => {
-      const parent = item.parentElement;
-      parent.classList.toggle('active');
-    });
-  });
 </script>
 </body>
 </html>
